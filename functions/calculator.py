@@ -19,4 +19,6 @@ def calculate(num1, operator, num2=None):
             raise ValueError(f"Не можна взяти корінь з від'ємного числа {num1}")
         return math.sqrt(num1)
     elif operator == "%":
+        if num2 == 0:
+            raise ZeroDivisionError("Ділення на нуль")
         return num1 % num2

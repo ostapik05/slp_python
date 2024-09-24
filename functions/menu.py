@@ -83,7 +83,7 @@ def menu(memory, available_operations, decimals, log_file, history):
         print("5. Показати історію обчислень")
         print("6. Налаштувати кількість десяткових знаків")
         print("0. Вийти")
-        choice = input("Виберіть опцію (0-5): ")
+        choice = input("Виберіть опцію (0-6): ")
         match choice:
             case "1":
                 memory, history = calculation_menu(

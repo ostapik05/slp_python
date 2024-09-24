@@ -3,8 +3,8 @@ from datetime import datetime
 
 def log_error(message, log_file):
     error_message = f"{str(datetime.now())} - {message}"
-    print(f"Помилка: {message}")  # Вивід на екран
-    write_to_file(error_message, log_file)  # Запис у лог-файл
+    print(f"Помилка: {message}")
+    write_to_file(error_message, log_file)
 
 
 def write_to_file(message, filepath):
