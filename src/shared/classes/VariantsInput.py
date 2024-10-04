@@ -1,7 +1,4 @@
-from abc import ABCMeta, abstractmethod
-
-
-class VariantsInput(ABCMeta):
+class VariantsInput:
 
     @staticmethod
     def input(message, options=None, warning_message=None, is_finit=False):
