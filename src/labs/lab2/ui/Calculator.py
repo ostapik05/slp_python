@@ -36,7 +36,7 @@ class Calculator:
         try:
             print(f"Decimals now: {self.decimals}")
             decimals = int(input("Input new amound of decimals: "))
-            return decimals
+            self.decimals = decimals
         except ValueError:
             print("It's not a integer, try again")
             self.set_decimals()
@@ -62,7 +62,9 @@ class Calculator:
                     num2 = self.memory.get()
                 else:
                     num2 = self.validator.to_float(num2_input)
-                if not self.validator.to_float(num2):
+                if not self.validator.to_float(
+                    num2
+                ) != 0.0 or not self.validator.to_float(num2):
                     raise ValueError(f"Wrong second number {num2}")
             else:
                 num2 = None
@@ -118,9 +120,9 @@ class Calculator:
         self.history.add(operation)
 
     def _last_result_to_str(self):
-        return self.operation.__str__()
+        return self.operation.to_string(self.decimals)
 
-    def _get_formatted_float(self, value):
+    def get_formatted_float(self, value):
         try:
             format_template = "{0:." + str(self.decimals) + "f}"
             return format_template.format(value)
@@ -130,7 +132,7 @@ class Calculator:
 
     def menu(self):
         while True:
-            formatted_memory = self._get_formatted_float(self.memory.get())
+            formatted_memory = self.get_formatted_float(self.memory.get())
             print("\n=== Console calculator ===")
             print(f"M: {formatted_memory}")
             print("1. Calculation")
@@ -166,7 +168,7 @@ class Calculator:
                 case "4":
                     self.memory.clear()
                 case "5":
-                    print(self.history.__str__())
+                    print(self.history.to_string(self.decimals))
                 case "6":
                     self.set_decimals()
                 case "0":

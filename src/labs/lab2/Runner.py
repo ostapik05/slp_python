@@ -10,3 +10,7 @@ class Runner(RunnerInterface):
             memory, unary_operations, double_operations, decimals, log_file
         )
         calculator.menu()
+
+
+if __name__ == "__main__":
+    Runner.run()

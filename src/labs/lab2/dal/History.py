@@ -20,12 +20,12 @@ class History:
     def clear(self):
         self.history = list()
 
-    def __str__(self) -> str:
+    def to_string(self, decimals) -> str:
         string = "History of calculations:\n"
         if not self.history:
             return string + "History empty.\n"
         for record in self.history:
             if isinstance(record, Operation):
-                string += record.__str__() + "\n"
+                string += record.to_string(decimals) + "\n"
 
         return string

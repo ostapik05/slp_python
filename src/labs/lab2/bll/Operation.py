@@ -1,3 +1,6 @@
+from builtins import float
+
+
 class Operation:
     def __init__(self, operation, num1, num2=None, result=None):
         self.operation = operation
@@ -17,15 +20,24 @@ class Operation:
     def empty(self):
         return self(None, None, None, None)
 
-    def __str__(self):
+    @staticmethod
+    def get_formatted_float(value, decimals):
+        try:
+            value = float(value)
+            format_str = "{0:." + str(decimals) + "f}"
+            return format_str.format(value)
+        except ValueError as e:
+            return value
+
+    def to_string(self, decimals):
         if self.result is None:
             result = ""
         else:
-            result = f" = {self.result}"
+            result = f" = {self.get_formatted_float(self.result, decimals)}"
         if self.num2 is None:
-            return f"{self.operation}{self.num1}{result}"
+            return f"{self.operation}{self.get_formatted_float(self.num1, decimals)}{result}"
         else:
-            return f"{self.num1} {self.operation} {self.num2}{result}"
+            return f"{self.get_formatted_float(self.num1,decimals)} {self.operation} {self.get_formatted_float(self.num2, decimals)}{result}"
 
     def is_complete(self):
         if self.result == None:
