@@ -8,13 +8,5 @@ class SettingsInterface(ABC):
         pass
 
     @abstractmethod
-    def save():
-        pass
-
-    @abstractmethod
-    def load():
-        pass
-
-    @abstractmethod
     def __str__():
         pass

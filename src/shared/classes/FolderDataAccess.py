@@ -1,13 +1,9 @@
-from shared.classes.ListDataAccess import ListDataAccess
-from shared.classes.FileDataAccess import FileDataAccess
+from shared.classes.KeyDataAccess import KeyDataAccess
 from shared.services.FileOperations import *
 from pathlib import Path
 
 
-# look like it better be a list
-# data access or something like
-# this to inherit from
-class FolderDataAccess(ListDataAccess):
+class FolderDataAccess(KeyDataAccess):
     def __init__(
         self, folder_path="assets/", is_without_extension=False, extensions=".txt"
     ):

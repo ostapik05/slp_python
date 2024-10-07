@@ -2,7 +2,10 @@ from abc import ABC, abstractmethod
 
 
 class UIInterface(ABC):
+    @abstractmethod
+    def show():
+        pass
 
     @abstractmethod
-    def menu():
+    def set_controller():
         pass

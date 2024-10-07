@@ -1,9 +1,14 @@
-class DataAccess:
-    def __init__(self):
-        self.data = None
+from typing import Generic, TypeVar
 
-    def set(self, data):
+T = TypeVar("T")
+
+
+class DataAccess(Generic[T]):
+    def __init__(self):
+        self.data: T = None
+
+    def set(self, data: T):
         self.data = data
 
-    def get(self):
+    def get(self) -> T:
         return self.data
