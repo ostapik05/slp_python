@@ -1,4 +1,4 @@
-from shared.interfaces.AsciiGeneratorInterface import AsciiGeneratorInterface
+from shared.classes.AsciiGenerator import AsciiGenerator
 from shared.interfaces.PaintTextInterface import PaintTextInterface
 from shared.classes.KeyDataAccess import KeyDataAccess
 from shared.classes.DataAccess import DataAccess
@@ -9,7 +9,7 @@ class AsciiController:
 
     def __init__(
         self,
-        generator: AsciiGeneratorInterface,
+        generator: AsciiGenerator,
         coloring: PaintTextInterface,
         arts_access: KeyDataAccess,
         settings_access: DataAccess[AsciiSettingsModel],
@@ -34,6 +34,14 @@ class AsciiController:
     def get_font(self):
         model = self._get_model()
         return model.font
+
+    def is_font_correct(self):
+        current_font = self.get_font()
+        fonts = self.get_fonts()
+        if current_font in fonts:
+            return True
+        else:
+            return False
 
     def set_font(self, font):
         if not font in self.get_fonts():

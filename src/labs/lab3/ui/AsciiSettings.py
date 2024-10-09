@@ -154,6 +154,9 @@ class AsciiSettingsUI:
         self.__controller.set_is_line_breaks(result)
 
     def see_example(self):
+        is_font_correct = self.__controller.is_font_correct()
+        if not is_font_correct:
+            return "Can't generate example, no such font\n CHANGE FONT TO AVAILABLE"
         example_text = "Settings for art"
         settings_info = self.__controller.get_settings_info()
         art = self.__controller.create_cutted_art(example_text)

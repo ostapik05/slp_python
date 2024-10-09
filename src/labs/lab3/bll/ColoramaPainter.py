@@ -12,6 +12,8 @@ class ColoramaPainter(PaintTextInterface):
         "magenta": Fore.MAGENTA,
         "cyan": Fore.CYAN,
         "white": Fore.WHITE,
+        "light_gray": "\x1b[37m",
+        "dark_gray": "\x1b[90m",
         "black": Fore.BLACK,
         "default": Style.RESET_ALL,
     }

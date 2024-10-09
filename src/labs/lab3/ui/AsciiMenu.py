@@ -35,6 +35,10 @@ class AsciiMenu(UIInterface):
         self.__settings_ui.show()
 
     def make_art(self):
+        is_font_correct = self.__controller.is_font_correct()
+        if not is_font_correct:
+            print("Can't generate example, no such font\n CHANGE FONT TO AVAILABLE")
+            return
         char_width = self.__controller.get_char_limit()
         if char_width == 0:
             print("Limits too low, can't create even 1 symbol, change settings")

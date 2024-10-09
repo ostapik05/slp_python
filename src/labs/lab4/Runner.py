@@ -4,4 +4,4 @@ from labs.lab3.AsciiFabric import AsciiFabric
 
 class Runner(RunnerInterface):
     def run():
-        AsciiFabric.pyfiglet().show()
+        AsciiFabric.custom().show()

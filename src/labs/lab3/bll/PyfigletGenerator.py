@@ -1,10 +1,8 @@
-import pyfiglet.fonts
-from shared.interfaces.AsciiGeneratorInterface import AsciiGeneratorInterface
+from shared.classes.AsciiGenerator import AsciiGenerator
 from pyfiglet import FigletFont, figlet_format
-import re
 
 
-class PyfigletGenerator(AsciiGeneratorInterface):
+class PyfigletGenerator(AsciiGenerator):
 
     @staticmethod
     def generate(data, **kwargs):
@@ -26,19 +24,6 @@ class PyfigletGenerator(AsciiGeneratorInterface):
     @staticmethod
     def get_fonts():
         return FigletFont.getFonts()
-
-    @staticmethod
-    def replace(data: str, bright_symbol, empty_symbol):
-        lines = data.splitlines()
-        replaced_lines = []
-
-        for line in lines:
-            replaced_line = "".join(
-                empty_symbol if char.isspace() else bright_symbol for char in line
-            )
-            replaced_lines.append(replaced_line)
-        replaced_data = "\n".join(replaced_lines)
-        return replaced_data
 
     @classmethod
     def get_font_char_height(cls, font_name):
@@ -65,20 +50,3 @@ class PyfigletGenerator(AsciiGeneratorInterface):
             len(cls.generate(char, **kwargs).splitlines()[0]) for char in widest_symbols
         )
         return max_width
-
-    @staticmethod
-    def alignment_text(text: str, alignment, width):
-        lines = text.splitlines()
-        aligned_text = []
-        if alignment == "right":
-            for row in lines:
-                aligned_text.append((" " * (width - len(row) - 1)) + row)
-        elif alignment == "center":
-            for row in lines:
-                aligned_text.append((" " * int(width - len(row) / 2)) + row)
-        elif alignment == "left":
-            for row in lines:
-                aligned_text.append(row + (" " * (width - len(row) - 1)))
-        else:
-            raise ValueError("Wrong aligned")
-        return "\n".join(aligned_text)

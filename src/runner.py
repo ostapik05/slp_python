@@ -2,7 +2,8 @@ from GlobalUI import GlobalUI
 
 
 def main():
-    GlobalUI.menu()
+
+    GlobalUI().menu()
 
 
 if __name__ == "__main__":
