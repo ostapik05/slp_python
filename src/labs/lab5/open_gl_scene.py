@@ -368,7 +368,6 @@ def reset_perspective():
 def display():
     global timer
     timer +=1
-    print(f"Display {timer}")
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
     glLoadIdentity()
     scene.draw()
@@ -431,8 +430,6 @@ def special_keyboard_up(key, x, y):
 
 
 def special_keyboard(key, x, y):
-    # if key in [GLUT_ACTIVE_ALT, GLUT_ACTIVE_CTRL, GLUT_ACTIVE_SHIFT, 112, 114, 116]:
-    #     return
     str_key = glut_keys_modifiers.get(key)
     if str_key:
         keyboard(str_key, x, y)
@@ -440,7 +437,12 @@ def special_keyboard(key, x, y):
 
 def keyboard_up(key, x, y):
     global pressed_keys
-    key = key.decode() if isinstance(key, bytes) else key
+    if isinstance(key, bytes):
+        try:
+            key = key.decode('utf-8')
+        except UnicodeDecodeError:
+            # TODO add other languages support
+            return
     pressed_keys.discard(key)
 
 
@@ -479,26 +481,6 @@ glut_keys_modifiers = {
     116: "alt",
 }
 
-# action_values = {
-#     'draw_points': {'mode': 'points', 'lambda': set_draw_mode('points')},
-#     'draw_edges': {'mode': 'edges', 'lambda': set_draw_mode('edges')},
-#     'draw_faces': {'mode': 'faces', 'lambda': set_draw_mode('faces')},
-#     'translate_left': {'x': -0.5, 'y': 0, 'z': 0, 'lambda': translate_figure_or_camera(-0.5, 0, 0)},
-#     'translate_right': {'x': 0.5, 'y': 0, 'z': 0, 'lambda': translate_figure_or_camera(0.5, 0, 0)},
-#     'translate_forward': {'x': 0, 'y': 0, 'z': -0.5, 'lambda': translate_figure_or_camera(0, 0, -0.5)},
-#     'translate_backward': {'x': 0, 'y': 0, 'z': 0.5, 'lambda': translate_figure_or_camera(0, 0, 0.5)},
-#     'translate_up': {'x': 0, 'y': 0.5, 'z': 0, 'lambda': translate_figure_or_camera(0, 0.5, 0)},
-#     'translate_down': {'x': 0, 'y': -0.5, 'z': 0, 'lambda': translate_figure_or_camera(0, -0.5, 0)},
-#     'rotate_x_plus': {'dx': 0, 'dy': 5, 'dz': 0, 'lambda': rotate_figure_or_camera(0, 5, 0)},
-#     'rotate_x_minus': {'dx': 0, 'dy': -5, 'dz': 0, 'lambda': rotate_figure_or_camera(0, -5, 0)},
-#     'rotate_y_plus': {'dx': 5, 'dy': 0, 'dz': 0, 'lambda': rotate_figure_or_camera(5, 0, 0)},
-#     'rotate_y_minus': {'dx': -5, 'dy': 0, 'dz': 0, 'lambda': rotate_figure_or_camera(-5, 0, 0)},
-#     'increase_render_distance': {'z_far': 10, 'lambda': change_camera_perspective(delta_z_far=10)},
-#     'decrease_render_distance': {'z_far': 10, 'lambda': change_camera_perspective(delta_z_far=-10)},
-#     'zoom_up': {'fovy': -5., 'lambda': change_camera_perspective(delta_fovy=-5)},
-#     'zoom_down': {'fovy': 5., 'lambda': change_camera_perspective(delta_fovy=5)},
-#     'exit': {'code': 0, 'lambda': lambda: glutLeaveMainLoop()}
-# }
 action_values = {
     'draw_points': {
         'action': set_draw_mode,
@@ -649,7 +631,7 @@ def keyboard(key, x, y):
         try:
             key = key.decode('utf-8')
         except UnicodeDecodeError:
-            print(f"Failed to decode key: {key}")
+            # TODO add other languages support
             return
     key.lower()
     pressed_keys.add(key)
