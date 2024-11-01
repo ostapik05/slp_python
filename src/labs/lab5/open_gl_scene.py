@@ -218,10 +218,8 @@ class Camera:
         self.aspect = delta_aspect
         self.aspect = max(aspect_min, min(aspect_max, delta_aspect))  # Ensures aspect ratio within plausible boundaries
 
-
     def update_z_near(self, delta_z_near):
         self.z_near = max(z_near_min, min(z_near_max, self.z_near + delta_z_near))  # Clamps the near clip plane distance
-
 
     def update_z_far(self, delta_z_far):
         self.z_far = max(z_far_min, min(z_far_max, self.z_far + delta_z_far))  # Clamps the far clip plane distance
@@ -278,7 +276,6 @@ class Scene:
 
             self.last_mouse_x = x
             self.last_mouse_y = y
-
         glutPostRedisplay()
 
     def draw(self):
@@ -355,8 +352,23 @@ def reshape(width, height):
     # fovy, aspect, z_near, z_far = scene.camera.get_perspective()
     # gluPerspective(fovy, aspect, z_near, z_far)
     # glMatrixMode(GL_MODELVIEW)
+timer = 0
+
+
+def reset_perspective():
+    glMatrixMode(GL_PROJECTION)
+    glLoadIdentity()
+    fov = scene.camera.fovy if scene.camera else 45.0
+    aspect = glutGet(GLUT_WINDOW_WIDTH) / max(glutGet(GLUT_WINDOW_HEIGHT), 1)
+    z_near = scene.camera.z_near if scene.camera else 1.0
+    z_far = scene.camera.z_far if scene.camera else 50.0
+    gluPerspective(fov, aspect, z_near, z_far)
+    glMatrixMode(GL_MODELVIEW)
 
 def display():
+    global timer
+    timer +=1
+    print(f"Display {timer}")
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
     glLoadIdentity()
     scene.draw()
@@ -364,10 +376,16 @@ def display():
 
 
 def reshape(width, height):
+    if height == 0:
+        height = 1
     glViewport(0, 0, width, height)
     glMatrixMode(GL_PROJECTION)
     glLoadIdentity()
-    gluPerspective(45, width / height, 1.0, 50.0)
+    fov = scene.camera.fovy if scene.camera else 45.
+    aspect = width / height if width and height else 1.5
+    z_near = scene.camera.z_near if scene.camera else 1.
+    z_far = scene.camera.z_far if scene.camera else 50.
+    gluPerspective(fov, aspect, z_near, z_far)
     glMatrixMode(GL_MODELVIEW)
 
 def set_draw_mode(draw_mode):
@@ -401,7 +419,7 @@ def change_camera_perspective(delta_fovy, aspect, delta_z_near, delta_z_far):
         camera.update_aspect(aspect)
     if delta_z_near is not None:
         camera.update_z_near(delta_z_near)
-
+    reset_perspective()
 
 pressed_keys = OrderedSet()
 
@@ -520,11 +538,11 @@ action_values = {
     },
     'rotate_x_plus': {
         'action': rotate_figure_or_camera,
-        'args': (0, 5, 0)
+        'args': (0, -5, 0)
     },
     'rotate_x_minus': {
         'action': rotate_figure_or_camera,
-        'args': (0, -5, 0)
+        'args': (0, 5, 0)
     },
     'rotate_y_plus': {
         'action': rotate_figure_or_camera,
@@ -588,8 +606,8 @@ SHIFT_CTRL_ALT = SHIFT | CTRL | ALT
 # Create the main dictionary with integer keys for each modifier combination
 shortcuts = {
     SHIFT: {
-        '+': 'increase_render_distance',
-        '-': 'decrease_render_distance',
+        '+': 'zoom_up',
+        '-': 'zoom_down',
     },
     CTRL: {
     },
@@ -671,6 +689,13 @@ def mouse(button, state, x, y):
         gluPerspective((x + y) % 180, 4. / 3., 1., 1000.)
     glutPostRedisplay()
 
+def wheel(wheel, direction, x, y):
+    if direction > 0:
+        execute_command('zoom_up')
+    else:
+        execute_command('zoom_down')
+    glutPostRedisplay()
+
 
 def motion(x, y):
     scene.handle_motion(x, y)
@@ -720,13 +745,13 @@ def init_glut():
     glutDisplayFunc(display)
     glutReshapeFunc(reshape)
     # Uncomment if you need special key handling
-    # glutSpecialFunc(special_keyboard)
-    # glutSpecialUpFunc(special_keyboard_up)
+    glutSpecialFunc(special_keyboard)
+    glutSpecialUpFunc(special_keyboard_up)
     glutKeyboardFunc(keyboard)
     glutKeyboardUpFunc(keyboard_up)
     glutMouseFunc(mouse)
     glutMotionFunc(motion)
-
+    glutMouseWheelFunc(wheel)
     glutMainLoop()
 
 
