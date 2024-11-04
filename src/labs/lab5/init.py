@@ -3,18 +3,30 @@ from labs.lab5.bll.CameraWrapper import Camera
 from labs.lab5.bll.FigureWrapper import FigureWrapper
 from labs.lab5.bll.Controller import Controller
 from labs.lab5.dal.Camera import CameraData
-from labs.lab5.config import *
 from labs.lab5.ui.Keyboard import KeyboardHandler
 from labs.lab5.ui.Mouse import MouseHandler
-from shared.classes.MenuBuilder import MenuBuilder
-from OpenGL.GL import *
-from OpenGL.GLUT import *
-from OpenGL.GLU import *
+from labs.lab5.ui.Ascii3DMenu import Ascii3DMenu
+from shared.classes.DictJsonDataAccess import DictJsonDataAccess
+from config.settings_paths import settings_path_lab5
 
+
+def camera_create():
+    settings = DictJsonDataAccess(settings_path_lab5)
+    camera_default_settings = settings.get('camera_default_settings')
+    position = camera_default_settings.get("default_position")
+    target = camera_default_settings.get("default_target")
+    up_vector = camera_default_settings.get("default_up_vector")
+    pitch = camera_default_settings.get("default_pitch")
+    yaw = camera_default_settings.get("default_yaw")
+    fovy = camera_default_settings.get("default_fovy")
+    aspect = camera_default_settings.get("default_aspect")
+    z_near = camera_default_settings.get("default_z_near")
+    z_far = camera_default_settings.get("default_z_far")
+    return Camera(CameraData(position, target, up_vector, pitch, yaw, fovy, aspect, z_near, z_far))
 
 def create_scene():
     scene = Scene()
-    camera = Camera(CameraData([0, 0, 5], [0, 0, 0], [0, 1, 0]))
+    camera = camera_create()
     scene.set_camera(camera)
     cube = FigureWrapper.create('Cube')
     cube.translate(4, -2, 1)
@@ -31,40 +43,19 @@ def create_scene():
     scene.add_figure(sphere)
     return scene
 
-def set_up(scene):
-    controller = Controller(scene)
-    keyboard_handler = KeyboardHandler(controller)
-    mouse_handler = MouseHandler(controller)
-    return controller, keyboard_handler, mouse_handler
 
-def init_glut(controller, keyboard_handler, mouse_handler):
-    glutInit()
-    glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_DEPTH | GLUT_STENCIL)
-    glutInitWindowSize(WINDOW_WIDTH, WINDOW_HEIGHT)
-    glutCreateWindow(GLUT_WINDOW_TITLE)
-    glMatrixMode(GL_PROJECTION)
-    glLoadIdentity()
-    gluPerspective(PERSPECTIVE_ANGLE, WINDOW_WIDTH / WINDOW_HEIGHT, NEAR_CLIP, FAR_CLIP)
-    glMatrixMode(GL_MODELVIEW)
-    glEnable(GL_DEPTH_TEST)
-    glEnable(GL_STENCIL_TEST)
-    glDisable(GL_LIGHTING)
-    glutDisplayFunc(controller.display)
-    glutReshapeFunc(controller.reshape)
-    glutSpecialFunc(keyboard_handler.special_keyboard)
-    glutSpecialUpFunc(keyboard_handler.special_keyboard_up)
-    glutKeyboardFunc(keyboard_handler.keyboard)
-    glutKeyboardUpFunc(keyboard_handler.keyboard_up)
-    glutMouseFunc(mouse_handler.mouse)
-    glutMotionFunc(mouse_handler.motion)
-    glutMouseWheelFunc(mouse_handler.wheel)
-    glutMainLoop()
-
-# def menu_init():
-#     menu = MenuBuilder().set_title(TITLE)
+def set_up(scene, settings_path):
+    keyboard_handler = KeyboardHandler()
+    mouse_handler = MouseHandler()
+    controller = Controller(scene, keyboard_handler, mouse_handler, settings_path)
+    return controller
 
 
-def main():
+def main(settings_path=settings_path_lab5):
     scene = create_scene()
-    controller, keyboard_handler, mouse_handler = set_up(scene)
-    init_glut(controller, keyboard_handler, mouse_handler)
+    controller = set_up(scene, settings_path_lab5)
+    menu = Ascii3DMenu(controller)
+    menu.show()
+
+if __name__ == '__main__':
+    main()

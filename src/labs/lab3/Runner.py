@@ -3,5 +3,6 @@ from labs.lab3.AsciiFabric import AsciiFabric
 
 
 class Runner(RunnerInterface):
+    @staticmethod
     def run():
         AsciiFabric.pyfiglet().show()

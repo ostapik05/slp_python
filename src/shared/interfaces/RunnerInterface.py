@@ -2,7 +2,11 @@ from abc import ABC, abstractmethod
 
 
 class RunnerInterface(ABC):
-
-    @abstractmethod
+    @staticmethod
     def run():
-        pass
+        raise NotImplementedError("Not implemented runner yet")
+
+
+
+# if __name__ == '__main__':
+#     Runner.run()

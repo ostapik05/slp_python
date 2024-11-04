@@ -1,4 +1,4 @@
-from data.lab2.init import *
+from config.settings_paths import settings_path_lab2
 from labs.lab2.ui.Calculator import Calculator
 from shared.interfaces.RunnerInterface import RunnerInterface
 
@@ -7,7 +7,7 @@ class Runner(RunnerInterface):
     @staticmethod
     def run():
         calculator = Calculator(
-            memory, unary_operations, double_operations, decimals, log_file
+            settings_path_lab2
         )
         calculator.menu()
 
