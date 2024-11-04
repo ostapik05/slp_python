@@ -1,30 +1,31 @@
+from colorama.ansi import set_title
+from pygments import highlight
+
 from labs.lab2.dal.Memory import Memory
 from labs.lab2.dal.Logger import Logger
 from labs.lab2.bll.Validator import Validator
 from labs.lab2.bll.Operation import Operation
 from labs.lab2.dal.History import History
 from math import sqrt
+from shared.classes.MenuBuilder import MenuBuilder
+from shared.classes.DictJsonDataAccess import DictJsonDataAccess
 
 
 class Calculator:
     def __init__(
-        self,
-        memory_value,
-        unary_operations,
-        double_operations,
-        decimals,
-        log_file,
+            self,
+            settings_path
     ):
-        self.unary_operations = unary_operations
-        self.double_operations = double_operations
-        self.decimals = decimals
-        self.history = History.empty()
+        self.settings = DictJsonDataAccess(settings_path)
+        self.unary_operations = self.settings.get("unary_operations")
+        self.double_operations = self.settings.get("double_operations")
+        self.decimals = self.settings.get("decimals")
+        self.history = History(self.settings.get("history"))
+        self.memory = Memory(self.settings.get("memory"))
         self.operation = Operation.empty()
-        self.validator = Validator(unary_operations, double_operations)
-        self.memory = Memory(memory_value)
-        # If can't write to file than logs to console
+        self.validator = Validator(self.unary_operations, self.double_operations)
         try:
-            self.logger = Logger.console_and_file(log_file)
+            self.logger = Logger.console_and_file(self.settings.get("log_file"))
         except Exception as e:
             print(f"{e} \nErrors only in console now")
             self.logger = Logger.console_only()
@@ -63,7 +64,7 @@ class Calculator:
                 else:
                     num2 = self.validator.to_float(num2_input)
                 if not self.validator.to_float(
-                    num2
+                        num2
                 ) != 0.0 or not self.validator.to_float(num2):
                     raise ValueError(f"Wrong second number {num2}")
             else:
@@ -96,7 +97,7 @@ class Calculator:
                         raise ZeroDivisionError("Division by zero")
                     operation.set_result(num1 / num2)
                 case "^":
-                    operation.set_result(num1**num2)
+                    operation.set_result(num1 ** num2)
                 case "√" | "sqrt":
                     if num1 < 0:
                         raise ValueError(f"Can't take square root from {num1}")
@@ -104,6 +105,8 @@ class Calculator:
                         operation.set_result(sqrt(num1))
                 case "%":
                     if num2 == 0:
+                        raise ZeroDivisionError("Division by zero")
+                    else:
                         operation.set_result(num1 % num2)
                 case _:
                     raise ValueError(f"Wrong operator{operator}")
@@ -130,49 +133,121 @@ class Calculator:
             self.logger.log_error(f"Can't format {value} into float, {e}")
             return value
 
+    def get_memory_title(self):
+        formatted_memory = self.get_formatted_float(self.memory.get())
+        return f"M: {formatted_memory}"
+
+    def _perform_calculation(self):
+        try:
+            self.set_operation()
+            self._calculate()
+            self._add_last_to_history()
+            print(self._last_result_to_str())
+        except Exception as e:
+            self.logger.log_error(e)
+            return
+
+    def _write_result_in_memory(self):
+        last_result = self.operation.get_result()
+        if last_result is None:
+            print("No available results")
+            return
+        self.memory.set(last_result)
+
+    def _add_result_to_memory(self):
+        last_result = self.operation.get_result()
+        if last_result is None:
+            print("No available results")
+            return
+        self.memory.add(last_result)
+
+    def _show_calculation_history(self):
+        print(self.history.to_string(self.decimals))
+
+    def _clear_calculation_history(self):
+        self.history.clear()
+
+    def _set_decimals_option(self):
+        self.set_decimals()
+
     def menu(self):
-        while True:
-            formatted_memory = self.get_formatted_float(self.memory.get())
-            print("\n=== Console calculator ===")
-            print(f"M: {formatted_memory}")
-            print("1. Calculation")
-            print("2. Wrote result in memory MS")
-            print("3. Add result to memory M+")
-            print("4. Set memory to 0 MC")
-            print("5. Show calculation history")
-            print("6. Set how much decimals to show")
-            print("0. Exit")
-            choice = input("Choose (0-6): ")
-            match choice:
-                case "1":
-                    try:
-                        self.set_operation()
-                        self._calculate()
-                        self._add_last_to_history()
-                        print(self._last_result_to_str())
-                    except Exception as e:
-                        self.logger.log_error(e)
-                        continue
-                case "2":
-                    last_result = self.operation.get_result()
-                    if last_result == None:
-                        print("No available results")
-                        continue
-                    self.memory.set(last_result)
-                case "3":
-                    last_result = self.operation.get_result()
-                    if last_result == None:
-                        print("No available results")
-                        continue
-                    self.memory.add(last_result)
-                case "4":
-                    self.memory.clear()
-                case "5":
-                    print(self.history.to_string(self.decimals))
-                case "6":
-                    self.set_decimals()
-                case "0":
-                    print("Exit.")
-                    break
-                case _:
-                    print("Wrong choise, try again.")
+        menu = (MenuBuilder()
+                .set_title("=== Console calculator ===")
+                .set_dynamic_title(self.get_memory_title)
+                .add_option("1", "1. Calculation", self._perform_calculation)
+                .add_option("2", "\n2. Wrote result in memory MS", self._write_result_in_memory)
+                .add_option("3", "\n3. Add result to memory M+", self._add_result_to_memory)
+                .add_option("4", "\n4. Set memory to 0 MC", self.memory.clear)
+                .add_option("5", "\n5. Show calculation history", self._show_calculation_history)
+                .add_option("6", "\n6. Clear calculation history", self._clear_calculation_history)
+                .add_option("7", "\n7. Set how many decimals to show", self._set_decimals_option)
+                .add_stop_options("\n0", "0. Exit")
+                .update_end_callback(self.save)
+                .set_input_text("Choose (0-6):")
+                .set_warning("Wrong input!")
+                .build())
+        menu.show()
+
+    # def menu(self):
+    #     menu = (MenuBuilder()
+    #             .set_title("\n=== Console calculator ===")
+    #             .set_dynamic_title(self.get_memory_title)
+    #             .add_option("1", "1. Calculation", )
+    #             .add_option("2", "2. Wrote result in memory MS")
+    #             .add_option("3", "3. Add result to memory M+")
+    #             .add_option("4", "4. Set memory to 0 MC")
+    #             .add_option("5", "5. Show calculation history")
+    #             .add_option("6", "6. Set how much decimals to show")
+    #             .add_option("0", "0. Exit")
+    #             .build())
+    #     while True:
+    #         print("\n=== Console calculator ===")
+    #         print("1. Calculation")
+    #         print("2. Wrote result in memory MS")
+    #         print("3. Add result to memory M+")
+    #         print("4. Set memory to 0 MC")
+    #         print("5. Show calculation history")
+    #         print("6. Set how much decimals to show")
+    #         print("0. Exit")
+    #         choice = input("Choose (0-6): ")
+    #         match choice:
+    #             case "1":
+    #                 try:
+    #                     self.set_operation()
+    #                     self._calculate()
+    #                     self._add_last_to_history()
+    #                     print(self._last_result_to_str())
+    #                 except Exception as e:
+    #                     self.logger.log_error(e)
+    #                     continue
+    #             case "2":
+    #                 last_result = self.operation.get_result()
+    #                 if last_result == None:
+    #                     print("No available results")
+    #                     continue
+    #                 self.memory.set(last_result)
+    #             case "3":
+    #                 last_result = self.operation.get_result()
+    #                 if last_result == None:
+    #                     print("No available results")
+    #                     continue
+    #                 self.memory.add(last_result)
+    #             case "4":
+    #                 self.memory.clear()
+    #             case "5":
+    #                 print(self.history.to_string(self.decimals))
+    #             case "6":
+    #                 self.set_decimals()
+    #             case "0":
+    #                 print("Exit.")
+    #                 break
+    #             case _:
+    #                 print("Wrong choise, try again.")
+    #     self.save()
+
+    def save(self):
+        memory = self.memory.get()
+        history = self.history.get()
+        self.settings.set("memory", memory)
+        self.settings.set("history", history)
+        self.settings.set("decimals", self.decimals)

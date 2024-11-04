@@ -28,18 +28,18 @@ class AsciiSettingsUI:
             .set_input_text("Choose: ")
             .set_warning("No such setting")
             .set_dynamic_title(self.see_example)
-            .add_option_without_attributes(
+            .add_option(
                 "1", "1. Replacing symbols\n", self.set_symbols
             )
-            .add_option_without_attributes("2", "2. Change font\n", self.set_font)
-            .add_option_without_attributes("3", "3. Change color\n", self.set_color)
-            .add_option_without_attributes("4", "4. Change width\n", self.set_width)
-            .add_option_without_attributes("5", "5. Change height\n", self.set_height)
-            .add_option_without_attributes(
+            .add_option("2", "2. Change font\n", self.set_font)
+            .add_option("3", "3. Change color\n", self.set_color)
+            .add_option("4", "4. Change width\n", self.set_width)
+            .add_option("5", "5. Change height\n", self.set_height)
+            .add_option(
                 "6", "6. Change alignment\n", self.set_alignment
             )
-            .add_option_without_attributes(
-                "7", "7. Change line breaking (word wraping)\n", self.set_line_breaking
+            .add_option(
+                "7", "7. Change line breaking (word wrapping)\n", self.set_line_breaking
             )
             .add_stop_options(["0", "Exit", "exit"], "0. Exit")
             .build()
@@ -159,5 +159,5 @@ class AsciiSettingsUI:
             return "Can't generate example, no such font\n CHANGE FONT TO AVAILABLE"
         example_text = "Settings for art"
         settings_info = self.__controller.get_settings_info()
-        art = self.__controller.create_cutted_art(example_text)
+        art = self.__controller.create_cut_art(example_text)
         return settings_info + f"\n '{example_text}' string example\n" + art

@@ -1,39 +1,28 @@
 from shared.classes.AsciiGenerator import AsciiGenerator
 from shared.interfaces.PaintTextInterface import PaintTextInterface
 from shared.classes.KeyDataAccess import KeyDataAccess
-from shared.classes.DataAccess import DataAccess
-from labs.lab3.dal.AsciiSettingsModel import AsciiSettingsModel
 
 
 class AsciiController:
 
     def __init__(
-        self,
-        generator: AsciiGenerator,
-        coloring: PaintTextInterface,
-        arts_access: KeyDataAccess,
-        settings_access: DataAccess[AsciiSettingsModel],
+            self,
+            generator: AsciiGenerator,
+            coloring: PaintTextInterface,
+            arts_access: KeyDataAccess,
+            settings_access: KeyDataAccess,
     ):
         self._generator = generator
         self._coloring = coloring
         self._arts_access = arts_access
-        # model = AsciiSettingsModel.default()
-        # settings_access.set(model)
-        self._settings_access = settings_access
+        self._settings = settings_access
         self.art = None
-
-    def _get_model(self) -> AsciiSettingsModel:
-        return self._settings_access.get()
-
-    def _set_model(self, model: AsciiSettingsModel):
-        return self._settings_access.set(model)
 
     def get_fonts(self):
         return self._generator.get_fonts()
 
     def get_font(self):
-        model = self._get_model()
-        return model.font
+        return self._settings.get("font")
 
     def is_font_correct(self):
         current_font = self.get_font()
@@ -46,61 +35,48 @@ class AsciiController:
     def set_font(self, font):
         if not font in self.get_fonts():
             raise ValueError("Font not in fonts list")
-        model = self._get_model()
-        model.font = font
-        self._set_model(model)
+        self._settings.set("font", font)
 
     def get_bright_symbol(self):
-        model = self._get_model()
-        return model.bright_symbol
+        return self._settings.get("bright_symbol")
 
     def get_empty_symbol(self):
-        model = self._get_model()
-        return model.empty_symbol
+        return self._settings.get("empty_symbol")
 
-    def set_bright_symbol(self, symbol):
-        if len(symbol) != 1:
+    def set_bright_symbol(self, bright_symbol):
+        if len(bright_symbol) != 1:
             raise ValueError("String with wrong lenghts, can't set symbol")
-        model = self._get_model()
-        model.bright_symbol = symbol
-        self._set_model(model)
+        self._settings.set("bright_symbol", bright_symbol)
 
-    def set_empty_symbol(self, symbol):
-        if len(symbol) != 1:
+    def set_empty_symbol(self, empty_symbol):
+        if len(empty_symbol) != 1:
             raise ValueError("String with wrong lenghts, can't set symbol")
-        model = self._get_model()
-        model.empty_symbol = symbol
-        self._set_model(model)
+        self._settings.set("empty_symbol", empty_symbol)
 
     def set_is_symbols_replace(self, is_symbols_replace):
         if is_symbols_replace not in [True, False]:
             raise ValueError("Try set non-bool value to using symbols")
-        model = self._get_model()
-        model.is_symbols_replace = is_symbols_replace
-        self._set_model(model)
+        self._settings.set("is_symbols_replace", is_symbols_replace)
 
     def get_is_symbols_replace(self):
-        model = self._get_model()
-        return model.is_symbols_replace
+        return self._settings.get("is_symbols_replace")
 
     def get_colors(self):
         return self._coloring.get_colors()
+    def get_color(self):
+        return self._settings.get("color")
 
     def set_color(self, color):
         if not color in self.get_colors():
             raise ValueError("Color not in colors list")
-        model = self._get_model()
-        model.color = color
-        self._set_model(model)
+        self._settings.set("color", color)
 
     def get_min_width(self):
-        model = self._get_model()
-        font = model.font
+        font = self.get_font()
         return self._generator.get_font_char_width(font)
 
     def get_min_height(self):
-        model = self._get_model()
-        font = model.font
+        font = self.get_font()
         return self._generator.get_font_char_height(font)
 
     def is_font_support_line_break(self):
@@ -125,20 +101,16 @@ class AsciiController:
         return symbols_in_row * cols
 
     def get_max_possible_width(self):
-        model = self._get_model()
-        return model.get_max_width()
+        return self._settings.get("max_width")
 
     def get_max_possible_height(self):
-        model = self._get_model()
-        return model.get_max_height()
+        return self._settings.get("max_height")
 
     def get_width(self):
-        model = self._get_model()
-        return model.width
+        return self._settings.get("width")
 
     def get_height(self):
-        model = self._get_model()
-        return model.height
+        return self._settings.get("height")
 
     def set_height(self, height):
         try:
@@ -146,49 +118,40 @@ class AsciiController:
         except:
             raise TypeError("Wrong type of width")
 
-        model = self._get_model()
-        max_height = model.get_max_height()
+        max_height = self.get_max_possible_height()
         min_height = self.get_min_height()
         if not min_height <= height <= max_height:
             raise ValueError("Height not in diapason")
-        model.height = height
-        self._set_model(model)
+        self._settings.set("height",height)
 
     def set_width(self, width):
         try:
             width = int(width)
         except:
             raise TypeError("Wrong type of width")
-        model = self._get_model()
-        max_width = model.get_max_width()
+
+        max_width = self.get_max_possible_width()
         min_width = self.get_min_width()
         if not min_width <= width <= max_width:
             raise ValueError("Width not in diapason")
-        model.width = width
-        self._settings_access.set(model)
+        self._settings.set("width", width)
 
     def get_alignment(self):
-        model = self._get_model()
-        alignment = model.alignment
-        return alignment
+        return self._settings.get("alignment")
 
     def set_alignment(self, alignment):
         options = ["left", "right", "center"]
         if alignment not in options:
             raise ValueError("Wrong alignment")
-        model = self._get_model()
-        model.alignment = alignment
-        self._settings_access.set(model)
+        self._settings.set("alignment", alignment)
 
     def get_is_line_breaks(self):
-        return self._get_model().is_line_breaks
+        return self._settings.get("is_line_breaks")
 
     def set_is_line_breaks(self, is_line_breaks):
         if is_line_breaks not in [True, False]:
             raise ValueError("Try set non-bool value to line breaking")
-        model = self._get_model()
-        model.is_line_breaks = is_line_breaks
-        self._set_model(model)
+        self._settings.set("is_line_breaks", is_line_breaks)
 
     def is_line_broken(self, art: str):
         is_symbol_replace = self.get_is_symbols_replace()
@@ -263,7 +226,7 @@ class AsciiController:
         return True
 
     def generate(self, text, width=None):
-        font = self._get_model().font
+        font = self.get_font()
         if width == None:
             width = self.get_width()
         kwargs = {"font": font, "width": width}
@@ -277,16 +240,16 @@ class AsciiController:
         return self._generator.replace(art, bright, empty)
 
     def paint(self, art):
-        color = self._get_model().color
+        color = self.get_color()
         return self._coloring.paint(art, color)
 
     def cut(self, text, width, height):
         lines = text.split("\n")
-        lines = lines[0 : height - 1]
-        cutted_lines = []
+        lines = lines[0: height - 1]
+        lines_to_return = []
         for line in lines:
-            cutted_lines.append(line[0 : width - 1])
-        return "\n".join(cutted_lines)
+            lines_to_return.append(line[0: width - 1])
+        return "\n".join(lines_to_return)
 
     def justify(self, text):
         alignment = self.get_alignment()
@@ -307,7 +270,7 @@ class AsciiController:
         painted_art = self.paint(justified_art)
         return painted_art
 
-    def create_cutted_art(self, text):
+    def create_cut_art(self, text):
         is_line_breaks = self.get_is_line_breaks()
         if not is_line_breaks:
             art = self.generate(text, 999)
@@ -320,10 +283,8 @@ class AsciiController:
         is_replace = self.get_is_symbols_replace()
         if is_replace:
             justified_art = self.replace(justified_art)
-
         painted_art = self.paint(justified_art)
         return painted_art
 
     def get_settings_info(self):
-        model = self._get_model()
-        return model.__str__()
+        return self._settings.__str__()

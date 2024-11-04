@@ -2,7 +2,10 @@ from OpenGL.GLUT import *
 
 
 class MouseHandler:
-    def __init__(self, controller):
+    def __init__(self, controller = None):
+        self.controller = controller
+
+    def set_controller(self, controller):
         self.controller = controller
 
     def mouse(self, button, state, x, y):

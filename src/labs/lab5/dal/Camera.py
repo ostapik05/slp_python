@@ -1,12 +1,7 @@
-import numpy as np
-from labs.lab5.config import *
-
-
 class CameraData:
-    def __init__(self, position: np.ndarray = default_position, target: np.ndarray = default_target,
-                 up_vector: np.ndarray = default_up_vector, pitch: float = default_pitch, yaw: float = default_yaw,
-                 fovy: float = default_fovy, aspect: float = default_aspect, z_near: float = default_z_near,
-                 z_far: float = default_z_far):
+    def __init__(self, position = [0, 0, 0], target =[0, 0, -1],
+                 up_vector =[0, 1, 0], pitch: float = 0.0, yaw: float = 0.0,
+                 fovy: float = 45.0, aspect: float = 1.33, z_near: float = 0.1, z_far: float = 1000.0):
         self.position = position
         self.target = target
         self.up_vector = up_vector

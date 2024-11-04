@@ -8,45 +8,7 @@ SHIFT_ALT = SHIFT | ALT
 CTRL_ALT = CTRL | ALT
 SHIFT_CTRL_ALT = SHIFT | CTRL | ALT
 
-shortcuts = {
-    SHIFT: {
-        '+': 'zoom_up',
-        '-': 'zoom_down',
-    },
-    CTRL: {
-    },
-    ALT: {
-    },
-    SHIFT_CTRL: {
-    },
-    SHIFT_ALT: {
-    },
-    CTRL_ALT: {
-    },
-    SHIFT_CTRL_ALT: {
-    }
-}
-
-action_keys = {
-    '1': 'draw_points',
-    '2': 'draw_edges',
-    '3': 'draw_faces',
-    'a': 'translate_left',
-    'd': 'translate_right',
-    'w': 'translate_forward',
-    's': 'translate_backward',
-    'r': 'translate_up',
-    'f': 'translate_down',
-    '+': 'increase_render_distance',
-    '-': 'decrease_render_distance',
-    'right': 'rotate_x_plus',
-    'left': 'rotate_x_minus',
-    'up': 'rotate_y_plus',
-    'down': 'rotate_y_minus',
-    'esc': 'exit',
-}
-
-glut_keys_modifiers = {
+keys_map = {
     27: 'esc',
     32: 'enter',
     '\x1b': 'esc',
@@ -73,9 +35,13 @@ glut_keys_modifiers = {
     GLUT_KEY_HOME: "home",
     GLUT_KEY_END: "end",
     GLUT_KEY_INSERT: "insert",
-    GLUT_ACTIVE_SHIFT: "shift",
-    GLUT_ACTIVE_CTRL: "ctrl",
-    GLUT_ACTIVE_ALT: "alt",
+    SHIFT: "shift",
+    CTRL: "ctrl",
+    ALT: "alt",
+    SHIFT_ALT: "shift_alt",
+    SHIFT_CTRL: "shift_ctr",
+    CTRL_ALT: "ctrl_alt",
+    SHIFT_CTRL_ALT: "shift_ctr_alt",
     112: "shift",
     114: "ctrl",
     116: "alt",

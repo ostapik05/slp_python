@@ -2,8 +2,7 @@ from typing import Generic, TypeVar
 
 T = TypeVar("T")
 
-
-class DataAccess(Generic[T]):
+class DataAccess:
     def __init__(self):
         self.data: T = None
 

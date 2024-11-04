@@ -1,5 +1,6 @@
-from shared.interfaces.UIInterface import UIInterface
-from shared.classes.JsonDataAccess import JsonDataAccess
+
+from shared.classes.DictJsonDataAccess import DictJsonDataAccess
+from config.settings_paths import settings_path_lab3
 from shared.classes.FolderDataAccess import FolderDataAccess
 from labs.lab3.bll.AsciiController import AsciiController
 from labs.lab3.bll.ColoramaPainter import ColoramaPainter
@@ -13,12 +14,11 @@ from labs.lab4.bll.CustomGenerator import CustomGenerator
 
 class AsciiFabric:
     def __init__(self, generator=PyfigletGenerator(), coloring=ColoramaPainter()):
-        arts_folder = "assets"
-        settings_file = "data/shared/ascii_settings.json"
-        settings_access = JsonDataAccess(settings_file)
+        settings_access = DictJsonDataAccess(settings_path_lab3)
+        __arts_folder = settings_access.get("__arts_folder")
         settings_ui: UIInterface = AsciiSettingsUI()
-        ascii_ui: UIInterface = AsciiMenu(settings_ui)
-        arts_access = FolderDataAccess(arts_folder, True, ".txt")
+        ascii_ui: UIInterface = AsciiMenu(settings_ui, arts_folder= __arts_folder)
+        arts_access = FolderDataAccess(__arts_folder, True, ".txt")
         controller = AsciiController(
             generator,
             coloring,

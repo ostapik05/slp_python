@@ -6,9 +6,10 @@ from labs.lab3.bll.AsciiController import AsciiController
 
 class AsciiMenu(UIInterface):
 
-    def __init__(self, settings_ui: UIInterface, controller: AsciiController = None):
+    def __init__(self, settings_ui: UIInterface, arts_folder = None, controller: AsciiController = None):
         self.__controller = controller
         self.__settings_ui = settings_ui
+        self.__arts_folder = arts_folder
 
     def set_controller(self, controller: AsciiController):
         self.__controller = controller
@@ -44,9 +45,9 @@ class AsciiMenu(UIInterface):
             print("Limits too low, can't create even 1 symbol, change settings")
             return
         message = (
-            f"Make art up to {char_width} chars"
-            + "\nIf want more change width, height, font or line breaking in settings"
-            + "\n Input text : "
+                f"Make art up to {char_width} chars"
+                + "\nIf want more change width, height, font or line breaking in settings"
+                + "\n Input text : "
         )
         input = StringInput().input(message, [1, char_width], "Too long")
         art = self.__controller.generate(input)
@@ -71,6 +72,8 @@ class AsciiMenu(UIInterface):
         limit = 30  # hardcode variable of key lenght
         input = StringInput().input(message, [1, limit], "Too long")
         self.__controller.save_art(input)
+        print(f"Save your art in {self.__arts_folder}/{input}.txt")
+
 
     def get_art(self):
         if self.__controller.is_art_exist():

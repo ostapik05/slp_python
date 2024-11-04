@@ -1,7 +1,6 @@
 import numpy as np
 from OpenGL.GLU import gluLookAt
 import math
-from labs.lab5.config import *
 from labs.lab5.dal.Camera import CameraData
 
 
@@ -17,8 +16,8 @@ class Camera:
             self.data = data
 
     @classmethod
-    def create(cls, position, target, up_vector, pitch=0, yaw=270, fovy=PERSPECTIVE_ANGLE,
-               aspect=WINDOW_WIDTH / WINDOW_HEIGHT, z_near=NEAR_CLIP, z_far=FAR_CLIP):
+    def create(cls, position, target, up_vector, pitch=0, yaw=-90.0, fovy=45.0,
+               aspect=1.77, z_near=0.1, z_far=100.0):
         data = CameraData(
             position=np.array(position, dtype=np.float32),
             target=np.array(target, dtype=np.float32),
@@ -60,22 +59,22 @@ class Camera:
         self.data.target += translation_vector
 
     def update_fovy(self, delta_fovy=0):
-        self.data.fovy = max(fovy_min, min(fovy_max, self.data.fovy + delta_fovy))
+        self.data.fovy = max(10, min(170, self.data.fovy + delta_fovy))
 
     def update_aspect(self, delta_aspect):
         if not delta_aspect:
             return
         self.data.aspect = delta_aspect
-        self.data.aspect = max(aspect_min,
-                               min(aspect_max, delta_aspect))  # Ensures aspect ratio within plausible boundaries
+        self.data.aspect = max(0.1,
+                               min(5, delta_aspect))  # Ensures aspect ratio within plausible boundaries
 
     def update_z_near(self, delta_z_near):
-        self.data.z_near = max(z_near_min,
-                               min(z_near_max, self.data.z_near + delta_z_near))  # Clamps the near clip plane distance
+        self.data.z_near = max(0.01,
+                               min(5.0, self.data.z_near + delta_z_near))  # Clamps the near clip plane distance
 
     def update_z_far(self, delta_z_far):
-        self.data.z_far = max(z_far_min,
-                              min(z_far_max, self.data.z_far + delta_z_far))  # Clamps the far clip plane distance
+        self.data.z_far = max(3.0,
+                              min(1000.0, self.data.z_far + delta_z_far))  # Clamps the far clip plane distance
 
     def get_perspective(self):
         return self.data.fovy, self.data.aspect, self.data.z_near, self.data.z_far

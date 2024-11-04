@@ -3,7 +3,7 @@ from ..dal.memory import *
 from ..dal.history import show_history, add_to_history
 from ..bll.calculator import calculate
 from ..bll.formatting import get_formatted_float
-
+from shared.classes.DictJsonDataAccess import DictJsonDataAccess
 
 def set_decimals(decimals, log_file):
     try:
@@ -72,7 +72,7 @@ def get_input(memory, available_operations, log_file):
         return get_input(memory, available_operations, log_file)
 
 
-def menu(memory, available_operations, decimals, log_file, history):
+def menu(settings, memory, available_operations, decimals, log_file, history):
     while True:
         print("\n=== Консольний калькулятор ===")
         print(f"M: {get_formatted_float(memory, decimals, log_file)}")
@@ -108,3 +108,16 @@ def menu(memory, available_operations, decimals, log_file, history):
                 break
             case _:
                 print("Неправильний вибір. Спробуйте ще раз.")
+    settings.set("memory", memory)
+    settings.set("history", history)
+    settings.set("decimals", decimals)
+
+
+def run(settings_path):
+    settings = DictJsonDataAccess(settings_path)
+    memory = settings.get("memory")
+    available_operations = settings.get("available_operations")
+    decimals = settings.get("decimals")
+    log_file = settings.get("log_file")
+    history = settings.get("history")
+    menu(settings,memory, available_operations, decimals, log_file, history)

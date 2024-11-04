@@ -2,19 +2,30 @@ class Menu:
     def __init__(self):
         self.options = {}
         self.attributes = {}
-        self.title = None
+        self.title = "Title"
         self.dynamic_title = None
         self.text = None
         self.bottom = None
-        self.input_text = None
-        self.warning = None
+        self.input_text = "Choose:"
+        self.warning = "Wrong option!"
         self.is_continue = True
+        self.end_callback = None
+        self.end_callback_attributes = None
 
     def set_title(self, title):
         self.title = title
 
     def set_dynamic_title(self, method):
         self.dynamic_title = method
+
+    def get_print_text(self):
+        parts = filter(None, [
+            self.title,
+            self.dynamic_title() if self.dynamic_title else None,
+            self.text,
+            self.bottom,
+        ])
+        return "\n".join(parts)
 
     def set_input_text(self, input_text):
         self.input_text = input_text
@@ -45,16 +56,17 @@ class Menu:
         if attributes:
             self.attributes[key] = attributes
 
+    def update_end_callback(self,method, **attributes):
+        if not callable(method):
+            raise ValueError("Wrong end callback")
+        self.end_callback = method
+        if attributes:
+            self.end_callback_attributes = attributes
+
     def show_text(self):
-        if self.dynamic_title:
-            dynamic_title = self.dynamic_title()
-            print(dynamic_title)
-        if self.title:
-            print(self.title)
-        if self.text:
-            print(self.text)
-        if self.bottom:
-            print(self.bottom)
+        text = self.get_print_text()
+        print(text)
+
 
     def get_input_and_execute(self):
         user_input = input(self.input_text)
@@ -73,6 +85,8 @@ class Menu:
             self.get_input_and_execute()
             if not self.is_continue:
                 break
+        if self.end_callback:
+            self.end_callback(self.attributes) if self.end_callback_attributes else self.end_callback()
 
 
 class MenuBuilder:
@@ -80,7 +94,6 @@ class MenuBuilder:
         self._menu = Menu()
 
     def set_title(self, title="Settings"):
-
         self._menu.set_title(title)
         return self
 
@@ -96,6 +109,10 @@ class MenuBuilder:
 
     def set_warning(self, warning="Wrong option!"):
         self._menu.set_warning(warning)
+        return self
+
+    def update_end_callback(self,end_callback, **attributes):
+        self._menu.update_end_callback(end_callback, **attributes)
         return self
 
     def add_stop_options(self, keys, message="Exit"):

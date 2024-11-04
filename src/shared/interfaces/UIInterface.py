@@ -3,9 +3,9 @@ from abc import ABC, abstractmethod
 
 class UIInterface(ABC):
     @abstractmethod
-    def show():
+    def show(self):
         pass
 
     @abstractmethod
-    def set_controller():
+    def set_controller(self):
         pass

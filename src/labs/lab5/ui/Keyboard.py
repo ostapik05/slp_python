@@ -1,17 +1,20 @@
-from labs.lab5.dal.Keyboard import glut_keys_modifiers
+from labs.lab5.dal.Keyboard import keys_map
 from OpenGL.GLUT import *
 
 class KeyboardHandler:
-    def __init__(self, controller):
+    def __init__(self, controller = None):
+        self.controller = controller
+
+    def set_controller(self, controller):
         self.controller = controller
 
     def special_keyboard_up(self, key, x, y):
-        str_key = glut_keys_modifiers.get(key)
+        str_key = keys_map.get(key)
         if str_key:
             self.keyboard_up(str_key, x, y)
 
     def special_keyboard(self, key, x, y):
-        str_key = glut_keys_modifiers.get(key)
+        str_key = keys_map.get(key)
         if str_key:
             self.keyboard(str_key, x, y)
 
@@ -27,6 +30,18 @@ class KeyboardHandler:
 
     def keyboard(self, key, x, y):
         modifiers = glutGetModifiers()
+        if isinstance(key, bytes):
+            try:
+                key = key.decode('utf-8')
+            except UnicodeDecodeError:
+                # TODO add other languages support
+                return
+        key.lower()
+        new_key = keys_map.get(key)
+        if new_key:
+            key = new_key
+        if modifiers:
+            modifiers = keys_map.get(key)
         self.controller.handle_keyboard(key, modifiers)
 
 
