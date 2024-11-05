@@ -8,3 +8,6 @@ lab_template
 tasks.md
 *copy.json
 .vscode
+.env
+.coverage
+.idea
