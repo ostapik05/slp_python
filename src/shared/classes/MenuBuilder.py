@@ -80,6 +80,7 @@ class Menu:
             method()
 
     def show(self):
+        self.is_continue = True
         while True:
             self.show_text()
             self.get_input_and_execute()

@@ -8,6 +8,19 @@ class JsonDataAccess(FileDataAccess):
         self.is_caching = is_caching
         super().__init__(file_path,False)
 
+    def _can_parse_json(self, is_can_be_empty = False):
+        try:
+            result = self.get()
+            if not is_can_be_empty and result == "":
+                return False
+            return True
+        except Exception:
+            return False
+
+
+    def validate_json(self, is_can_be_empty = False):
+        return self._can_parse_json(is_can_be_empty)
+
     def set(self, data: T):
         if self.is_caching:
             self.cache = data

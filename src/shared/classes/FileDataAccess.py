@@ -7,7 +7,7 @@ from shared.classes.DataAccess import DataAccess, T
 
 
 class FileDataAccess(DataAccess):
-    def __init__(self, file_path="assets/default.txt", is_caching=False):
+    def __init__(self, file_path="assets/2d ascii texts/default.txt", is_caching=False):
         try:
             ensure_file_exists(file_path)
         except Exception as e:

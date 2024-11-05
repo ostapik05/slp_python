@@ -3,13 +3,13 @@ from typing import Tuple
 
 class VariantsInput:
     @classmethod
-    def input(cls, message, options=None, warning_message=None, is_finit=False):
+    def input(cls, message, options=None, warning_message=None, is_finite=False):
         while True:
             value = input(message)
             if cls.validate(value, options):
                 return value
             cls.in_wrong(warning_message or "Invalid input", value)
-            if is_finit:
+            if is_finite:
                 break
 
     @classmethod
@@ -52,7 +52,7 @@ class BoolInput(VariantsInput):
         return input
 
     @classmethod
-    def input(cls, message, options=None, warning_message=None, is_finit=False):
+    def input(cls, message, options=None, warning_message=None, is_finite=False):
         true_options = options[0]
         try:
             false_options = options[1]
@@ -65,7 +65,7 @@ class BoolInput(VariantsInput):
             if cls.validate(value.lower(), false_options):
                 return False
             cls.in_wrong(warning_message or "Invalid input", value)
-            if is_finit:
+            if is_finite:
                 return False
 
 
@@ -77,7 +77,7 @@ class StringInput(VariantsInput):
         message,
         options=None | Tuple[int, int],
         warning_message=None,
-        is_finit=False,
+        is_finite=False,
     ):
         no_limit = False
         try:
@@ -93,5 +93,5 @@ class StringInput(VariantsInput):
             if NumberBetweenInput.validate(value_len, [lower_limit, upper_limit]):
                 return value
             cls.in_wrong(warning_message or "Invalid lenght of value", value)
-            if is_finit:
+            if is_finite:
                 break
