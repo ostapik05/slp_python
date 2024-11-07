@@ -23,7 +23,7 @@ class KeyboardHandler:
             try:
                 key = key.decode('utf-8')
             except UnicodeDecodeError:
-                # TODO add other languages support
+                #can add more languages here
                 return
         self.controller.handle_keyboard_up(key)
 
@@ -34,7 +34,7 @@ class KeyboardHandler:
             try:
                 key = key.decode('utf-8')
             except UnicodeDecodeError:
-                # TODO add other languages support
+                #can add more languages here
                 return
         key.lower()
         new_key = keys_map.get(key)
