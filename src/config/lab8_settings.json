@@ -1,0 +1,13 @@
+{
+  "assets_save_dir": [
+    "assets",
+    "visualizations"
+  ],
+  "activity_file_path": [
+    "data", "lab8", "activity.csv"
+  ],
+  "sleep_file_path": [
+    "data", "lab8", "sleep.csv"
+  ],
+  "default_file_name": "data.png"
+}
