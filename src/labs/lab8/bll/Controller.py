@@ -1,6 +1,9 @@
 from labs.lab8.bll.Plots import *
 from labs.lab8.dal.SettingsModel import SettingsModel
 from shared.services.relative_to_absolute_path import absolute
+import logging
+logger = logging.getLogger(__name__)
+
 class Controller:
     def __init__(self, settings:SettingsModel, activity_data, sleep_data):
         self.settings = settings
@@ -74,3 +77,11 @@ class Controller:
         if file_path:
             self.plot.savefig(file_path)
         self.plot.show()
+
+    def get_logger_path(self):
+        path = self.settings.get_logger_path()
+        if not path:
+            raise KeyError("There no logger path provided!")
+
+        absolute_path = absolute(path)
+        return absolute_path

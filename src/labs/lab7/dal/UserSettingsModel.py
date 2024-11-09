@@ -1,11 +1,13 @@
 from shared.classes.DictJsonDataAccess import DictJsonDataAccess
 from shared.services.relative_to_absolute_path import absolute
-
+import logging
+logger = logging.getLogger(__name__)
 
 class UserSettingsModel:
     def __init__(self, path):
         self.__settings = DictJsonDataAccess(path)
         if not self.__settings.validate(is_can_be_empty=False):
+            logger.critical("There no user settings file")
             raise KeyError("Settings doesn't exist")
 
     def get_selected_fields(self):

@@ -1,10 +1,13 @@
 from shared.classes.DictJsonDataAccess import DictJsonDataAccess
+import logging
+logger = logging.getLogger(__name__)
 
 class HistoryModel:
     def __init__(self, path, results_to_save = 5):
         self.__history = DictJsonDataAccess(path)
         self.results_to_save = results_to_save
         if not self.__history.validate(is_can_be_empty=True):
+            logger.critical("There no history file")
             raise KeyError("History file doesn't exist")
 
     def get_history(self):

@@ -4,6 +4,25 @@ from labs.lab8.dal.SettingsModel import SettingsModel
 from config.settings_paths import settings_path_lab8
 from labs.lab8.bll.Controller import Controller
 from labs.lab8.ui.UserInterface import UserInterface
+import logging
+
+def set_up_logging(file_path):
+    # Create a file handler
+    file_handler = logging.FileHandler(file_path)
+    file_handler.setLevel(logging.INFO)
+
+    # Create a stream handler
+    stream_handler = logging.StreamHandler()
+    stream_handler.setLevel(logging.WARNING)
+
+    # Set the logging format
+    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    file_handler.setFormatter(formatter)
+    stream_handler.setFormatter(formatter)
+
+    # Configure the root logger
+    logging.basicConfig(level=logging.DEBUG,
+                        handlers=[file_handler, stream_handler])
 
 def main():
     settings = SettingsModel(settings_path_lab8)
@@ -14,6 +33,8 @@ def main():
     activity = pd.read_csv(activity_path)
     sleep = pd.read_csv(sleep_path)
     controller = Controller(settings, activity, sleep)
+    logger_path = controller.get_logger_path()
+    set_up_logging(logger_path)
     user_interface = UserInterface(controller)
     user_interface.show()
 

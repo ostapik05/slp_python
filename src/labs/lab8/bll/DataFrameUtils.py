@@ -1,5 +1,6 @@
 import pandas as pd
-
+import logging
+logger = logging.getLogger(__name__)
 
 def split_date_column(data, date_column, new_prefix=None):
     data[date_column] = pd.to_datetime(data[date_column])

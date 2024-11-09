@@ -19,7 +19,7 @@ class FileHandler:
             dict_writer.writerows(data_dicts)
 
     @staticmethod
-    def save_to_txt(data, filename='data.txt'):
+    def save_to_text(data, filename='data.txt'):
         if not isinstance(data, str):
             data = str(data)
         with open(filename, 'w', encoding='utf-8') as f:

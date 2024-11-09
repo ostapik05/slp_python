@@ -1,7 +1,8 @@
 import matplotlib.pyplot as plt
 import seaborn as sns
 from labs.lab8.bll.DataFrameUtils import *
-
+import logging
+logger = logging.getLogger(__name__)
 
 
 def plot_steps_vs_calories(activity_source):

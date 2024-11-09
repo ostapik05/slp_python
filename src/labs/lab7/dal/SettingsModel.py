@@ -1,11 +1,12 @@
 from shared.classes.DictJsonDataAccess import DictJsonDataAccess
-from shared.services.FileOperations import ensure_file_exists
-
+import logging
+logger = logging.getLogger(__name__)
 
 class SettingsModel:
     def __init__(self, path):
         self.__settings = DictJsonDataAccess(path)
         if not self.__settings.validate(is_can_be_empty=False):
+            logger.critical("There no history file")
             raise KeyError("Settings empty or doesn't exist")
 
     def get_fields(self):
@@ -41,3 +42,5 @@ class SettingsModel:
 
     def get_attributes(self):
         return self.__settings.get('attributes')
+    def get_logger_path(self):
+        return self.__settings.get('logger_path')

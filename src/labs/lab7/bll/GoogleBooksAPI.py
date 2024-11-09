@@ -1,29 +1,40 @@
 import requests
+import logging
 
+logger = logging.getLogger(__name__)
 
 class GoogleBooksAPI:
-    def __init__(self, api_key = None):
+    def __init__(self, api_key=None):
         self.api_key = api_key
         self.base_url = "https://www.googleapis.com/books/v1/volumes"
 
-    def search(self, query, lang='en', start_index=0, max_results=40, fields=None):
+    def search(self, query, language='en', start_index=0, max_results_count=40, fields=None):
+        fields = ','.join(fields) if fields else None
+        params = {
+            'q': query,
+            'langRestrict': language,
+            'startIndex': start_index,
+            'maxResults': max_results_count,
+            'fields': fields
+        }
+        if self.api_key:
+            params['key'] = self.api_key
+
+        response = requests.get(self.base_url, params=params)
         try:
-            if fields:
-                fields = ','.join(fields)
-            params = {
-                'q': query,
-                # 'key': self.api_key,
-                'langRestrict': lang,
-                'startIndex': start_index,
-                'maxResults': max_results,
-                'fields':fields
-            }
-            if self.api_key:
-                params['key'] = self.api_key
-            response = requests.get(self.base_url, params=params)
             response.raise_for_status()
-            return response.json(), response.url
-        except requests.exceptions.HTTPError as http_err:
-            return {'error': str(http_err)}
-        except Exception as err:
-            return {'error': str(err)}
+        except requests.exceptions.RequestException as error:
+            return self._handle_error(error)
+
+        return response.json(), response.url
+
+    def _handle_error(self, error):
+        if isinstance(error, requests.exceptions.HTTPError):
+            logger.error(error)
+            return {'error': str(error)}
+        elif isinstance(error, requests.exceptions.ConnectionError):
+            logger.critical("There is no internet connection or connection error:", error)
+            return {'error': 'No internet connection or connection error: ' + str(error)}
+        else:
+            logger.critical("Error not related to connection or HTTP:", error)
+            return {'error': str(error)}

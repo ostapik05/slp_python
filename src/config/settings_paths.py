@@ -1,4 +1,7 @@
+from os import getcwd
 from shared.services.relative_to_absolute_path import absolute
+
+current_dir = getcwd()
 settings_path_lab1 = absolute(["config", "lab1_settings.json"])
 settings_path_lab2 = absolute(["config", "lab2_settings.json"])
 settings_path_lab3 = absolute(["config", "lab3_settings.json"])

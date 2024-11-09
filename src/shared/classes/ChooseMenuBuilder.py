@@ -21,8 +21,11 @@ class ChooseMenu:
 
     def set_selected(self, options):
         self.selected_options.clear()
-        for option in options:
-            self.selected_options.add(option)
+        if isinstance(options, str):
+            self.selected_options.add(options)
+        else:
+            for option in options:
+                self.selected_options.add(option)
         return self
 
     def set_choose_prompt(self, choose_prompt):

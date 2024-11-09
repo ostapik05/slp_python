@@ -48,6 +48,11 @@
     "lab7",
     "history.json"
   ],
+  "logger_path": [
+    "logs",
+    "lab7",
+    "lab.log"
+  ],
   "default_save_dir": [
     "assets",
     "api data"

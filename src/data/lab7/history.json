@@ -1,1 +1,520 @@
-{"history": [{"query": "Testing", "regex": "^195[5-9]|^19[6-9]", "regex_field": "Publishing date", "fields": ["Book title", "Image link", "Description", "Book subtitle", "Average rate", "Ratings count", "Preview", "Authors", "Publishing date"], "results": {"items": [{"volumeInfo": {"title": "Plant Integrity Assessment by the Acoustic Emission Testing Method", "subtitle": "Guidance Notes", "authors": ["Stuart Hewerdine"], "publishedDate": "1993", "description": "In some cases, acoustic emission testing is a convenient way of checking a vessel for invisible structural faults; in other cases the method is inappropriate for various reasons. This book sets out to help in deciding whether acoustic emission testing is the right method for a particular problem.", "imageLinks": {"thumbnail": "http://books.google.com/books/content?id=VOk_-S4z-p8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"}, "previewLink": "http://books.google.com.ua/books?id=VOk_-S4z-p8C&pg=PA22&dq=Testing&hl=&cd=2&source=gbs_api"}}, {"volumeInfo": {"title": "Electrical and Magnetic Methods of Nondestructive Testing", "authors": ["J Blitz"], "publishedDate": "1991-01-01", "description": "Electrical and Magnetic Methods of Nondestructive Testing presents a comprehensive account of the electrical and magnetic methods of nondestructive testing (NDT). The book begins with a discussion of the requirements for NDT and the criteria for the choice of a given method, followed by a summary of the general theory relating to electrical and magnetic testing techniques. Subsequent chapters discuss specific methods, including eddy current and flux-leakage techniques and microwave and potential drop methods. The appendix provides some useful programs for eddy current impedance analyses. These programs are in BASIC and can be run on PCs.", "averageRating": 5, "ratingsCount": 1, "imageLinks": {"thumbnail": "http://books.google.com/books/content?id=LgaalpAcZ4wC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"}, "previewLink": "http://books.google.com.ua/books?id=LgaalpAcZ4wC&pg=PA9&dq=Testing&hl=&cd=3&source=gbs_api"}}, {"volumeInfo": {"title": "Compression Testing of Homogeneous Materials and Composites", "subtitle": "A Symposium", "authors": ["Richard Chait", "Ralph Papirno"], "publishedDate": "1983", "imageLinks": {"thumbnail": "http://books.google.com/books/content?id=cR5pNv76HMgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"}, "previewLink": "http://books.google.com.ua/books?id=cR5pNv76HMgC&pg=PA175&dq=Testing&hl=&cd=7&source=gbs_api"}}, {"volumeInfo": {"title": "Manual on Low Cycle Fatigue Testing", "authors": ["American Society for Testing Materials"], "publishedDate": "1969", "imageLinks": {"thumbnail": "http://books.google.com/books/content?id=tjVHpEELitAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"}, "previewLink": "http://books.google.com.ua/books?id=tjVHpEELitAC&pg=PA106&dq=Testing&hl=&cd=12&source=gbs_api"}}, {"volumeInfo": {"title": "Nondestructive Testing of Pavements and Backcalculation of Moduli", "authors": ["Albert Jasper Bush", "Gilbert Y. Baladi"], "publishedDate": "1989", "imageLinks": {"thumbnail": "http://books.google.com/books/content?id=mGpL-g-b9LgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"}, "previewLink": "http://books.google.com.ua/books?id=mGpL-g-b9LgC&pg=PA155&dq=Testing&hl=&cd=13&source=gbs_api"}}]}}, {"query": "Testing", "regex": "^195[5-9]|^19[6-9]", "regex_field": "Publishing date", "fields": ["Book title", "Categories", "Authors", "Page count", "Publishing date"], "results": {"items": [{"volumeInfo": {"title": "Plant Integrity Assessment by the Acoustic Emission Testing Method", "authors": ["Stuart Hewerdine"], "publishedDate": "1993", "pageCount": 146, "categories": ["Technology & Engineering"]}}, {"volumeInfo": {"title": "Electrical and Magnetic Methods of Nondestructive Testing", "authors": ["J Blitz"], "publishedDate": "1991-01-01", "pageCount": 256, "categories": ["Technology & Engineering"]}}, {"volumeInfo": {"title": "Compression Testing of Homogeneous Materials and Composites", "authors": ["Richard Chait", "Ralph Papirno"], "publishedDate": "1983", "pageCount": 312, "categories": ["Technology & Engineering"]}}, {"volumeInfo": {"title": "Manual on Low Cycle Fatigue Testing", "authors": ["American Society for Testing Materials"], "publishedDate": "1969", "pageCount": 208, "categories": ["Alloys"]}}, {"volumeInfo": {"title": "Nondestructive Testing of Pavements and Backcalculation of Moduli", "authors": ["Albert Jasper Bush", "Gilbert Y. Baladi"], "publishedDate": "1989", "pageCount": 701, "categories": ["Kald\u0131r\u0131mlar-Deneme"]}}]}}, {"query": "Testing", "regex": "^195[5-9]|^19[6-9]", "regex_field": "Publishing date", "fields": ["Book title", "Image link", "Description", "Book subtitle", "Average rate", "Ratings count", "Preview", "Authors", "Publishing date"], "results": {"items": [{"volumeInfo": {"title": "Plant Integrity Assessment by the Acoustic Emission Testing Method", "subtitle": "Guidance Notes", "authors": ["Stuart Hewerdine"], "publishedDate": "1993", "description": "In some cases, acoustic emission testing is a convenient way of checking a vessel for invisible structural faults; in other cases the method is inappropriate for various reasons. This book sets out to help in deciding whether acoustic emission testing is the right method for a particular problem.", "imageLinks": {"thumbnail": "http://books.google.com/books/content?id=VOk_-S4z-p8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"}, "previewLink": "http://books.google.com.ua/books?id=VOk_-S4z-p8C&pg=PA22&dq=Testing&hl=&cd=2&source=gbs_api"}}, {"volumeInfo": {"title": "Electrical and Magnetic Methods of Nondestructive Testing", "authors": ["J Blitz"], "publishedDate": "1991-01-01", "description": "Electrical and Magnetic Methods of Nondestructive Testing presents a comprehensive account of the electrical and magnetic methods of nondestructive testing (NDT). The book begins with a discussion of the requirements for NDT and the criteria for the choice of a given method, followed by a summary of the general theory relating to electrical and magnetic testing techniques. Subsequent chapters discuss specific methods, including eddy current and flux-leakage techniques and microwave and potential drop methods. The appendix provides some useful programs for eddy current impedance analyses. These programs are in BASIC and can be run on PCs.", "averageRating": 5, "ratingsCount": 1, "imageLinks": {"thumbnail": "http://books.google.com/books/content?id=LgaalpAcZ4wC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"}, "previewLink": "http://books.google.com.ua/books?id=LgaalpAcZ4wC&pg=PA9&dq=Testing&hl=&cd=3&source=gbs_api"}}, {"volumeInfo": {"title": "Compression Testing of Homogeneous Materials and Composites", "subtitle": "A Symposium", "authors": ["Richard Chait", "Ralph Papirno"], "publishedDate": "1983", "imageLinks": {"thumbnail": "http://books.google.com/books/content?id=cR5pNv76HMgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"}, "previewLink": "http://books.google.com.ua/books?id=cR5pNv76HMgC&pg=PA175&dq=Testing&hl=&cd=7&source=gbs_api"}}, {"volumeInfo": {"title": "Manual on Low Cycle Fatigue Testing", "authors": ["American Society for Testing Materials"], "publishedDate": "1969", "imageLinks": {"thumbnail": "http://books.google.com/books/content?id=tjVHpEELitAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"}, "previewLink": "http://books.google.com.ua/books?id=tjVHpEELitAC&pg=PA106&dq=Testing&hl=&cd=12&source=gbs_api"}}, {"volumeInfo": {"title": "Nondestructive Testing of Pavements and Backcalculation of Moduli", "authors": ["Albert Jasper Bush", "Gilbert Y. Baladi"], "publishedDate": "1989", "imageLinks": {"thumbnail": "http://books.google.com/books/content?id=mGpL-g-b9LgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"}, "previewLink": "http://books.google.com.ua/books?id=mGpL-g-b9LgC&pg=PA155&dq=Testing&hl=&cd=13&source=gbs_api"}}]}}, {"query": "Testing", "regex": "^195[5-9]|^19[6-9]", "regex_field": "Publishing date", "fields": ["Book title", "Categories", "Authors", "Page count", "Publishing date"], "results": {"items": [{"volumeInfo": {"title": "Plant Integrity Assessment by the Acoustic Emission Testing Method", "authors": ["Stuart Hewerdine"], "publishedDate": "1993", "pageCount": 146, "categories": ["Technology & Engineering"]}}, {"volumeInfo": {"title": "Electrical and Magnetic Methods of Nondestructive Testing", "authors": ["J Blitz"], "publishedDate": "1991-01-01", "pageCount": 256, "categories": ["Technology & Engineering"]}}, {"volumeInfo": {"title": "Compression Testing of Homogeneous Materials and Composites", "authors": ["Richard Chait", "Ralph Papirno"], "publishedDate": "1983", "pageCount": 312, "categories": ["Technology & Engineering"]}}, {"volumeInfo": {"title": "Manual on Low Cycle Fatigue Testing", "authors": ["American Society for Testing Materials"], "publishedDate": "1969", "pageCount": 208, "categories": ["Alloys"]}}, {"volumeInfo": {"title": "Nondestructive Testing of Pavements and Backcalculation of Moduli", "authors": ["Albert Jasper Bush", "Gilbert Y. Baladi"], "publishedDate": "1989", "pageCount": 701, "categories": ["Kald\u0131r\u0131mlar-Deneme"]}}]}}, {"query": "Testing", "regex": "^195[5-9]|^19[6-9]", "regex_field": "Publishing date", "fields": ["Book title", "Image link", "Description", "Book subtitle", "Average rate", "Ratings count", "Preview", "Authors", "Publishing date"], "results": {"items": [{"volumeInfo": {"title": "Plant Integrity Assessment by the Acoustic Emission Testing Method", "subtitle": "Guidance Notes", "authors": ["Stuart Hewerdine"], "publishedDate": "1993", "description": "In some cases, acoustic emission testing is a convenient way of checking a vessel for invisible structural faults; in other cases the method is inappropriate for various reasons. This book sets out to help in deciding whether acoustic emission testing is the right method for a particular problem.", "imageLinks": {"thumbnail": "http://books.google.com/books/content?id=VOk_-S4z-p8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"}, "previewLink": "http://books.google.com.ua/books?id=VOk_-S4z-p8C&pg=PA22&dq=Testing&hl=&cd=2&source=gbs_api"}}, {"volumeInfo": {"title": "Electrical and Magnetic Methods of Nondestructive Testing", "authors": ["J Blitz"], "publishedDate": "1991-01-01", "description": "Electrical and Magnetic Methods of Nondestructive Testing presents a comprehensive account of the electrical and magnetic methods of nondestructive testing (NDT). The book begins with a discussion of the requirements for NDT and the criteria for the choice of a given method, followed by a summary of the general theory relating to electrical and magnetic testing techniques. Subsequent chapters discuss specific methods, including eddy current and flux-leakage techniques and microwave and potential drop methods. The appendix provides some useful programs for eddy current impedance analyses. These programs are in BASIC and can be run on PCs.", "averageRating": 5, "ratingsCount": 1, "imageLinks": {"thumbnail": "http://books.google.com/books/content?id=LgaalpAcZ4wC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"}, "previewLink": "http://books.google.com.ua/books?id=LgaalpAcZ4wC&pg=PA9&dq=Testing&hl=&cd=3&source=gbs_api"}}, {"volumeInfo": {"title": "Compression Testing of Homogeneous Materials and Composites", "subtitle": "A Symposium", "authors": ["Richard Chait", "Ralph Papirno"], "publishedDate": "1983", "imageLinks": {"thumbnail": "http://books.google.com/books/content?id=cR5pNv76HMgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"}, "previewLink": "http://books.google.com.ua/books?id=cR5pNv76HMgC&pg=PA175&dq=Testing&hl=&cd=7&source=gbs_api"}}, {"volumeInfo": {"title": "Manual on Low Cycle Fatigue Testing", "authors": ["American Society for Testing Materials"], "publishedDate": "1969", "imageLinks": {"thumbnail": "http://books.google.com/books/content?id=tjVHpEELitAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"}, "previewLink": "http://books.google.com.ua/books?id=tjVHpEELitAC&pg=PA106&dq=Testing&hl=&cd=12&source=gbs_api"}}, {"volumeInfo": {"title": "Nondestructive Testing of Pavements and Backcalculation of Moduli", "authors": ["Albert Jasper Bush", "Gilbert Y. Baladi"], "publishedDate": "1989", "imageLinks": {"thumbnail": "http://books.google.com/books/content?id=mGpL-g-b9LgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"}, "previewLink": "http://books.google.com.ua/books?id=mGpL-g-b9LgC&pg=PA155&dq=Testing&hl=&cd=13&source=gbs_api"}}]}}, {"query": "Testing", "regex": "^195[5-9]|^19[6-9]", "regex_field": "Publishing date", "fields": ["Book title", "Categories", "Authors", "Page count", "Publishing date"], "results": {"items": [{"volumeInfo": {"title": "Plant Integrity Assessment by the Acoustic Emission Testing Method", "authors": ["Stuart Hewerdine"], "publishedDate": "1993", "pageCount": 146, "categories": ["Technology & Engineering"]}}, {"volumeInfo": {"title": "Electrical and Magnetic Methods of Nondestructive Testing", "authors": ["J Blitz"], "publishedDate": "1991-01-01", "pageCount": 256, "categories": ["Technology & Engineering"]}}, {"volumeInfo": {"title": "Compression Testing of Homogeneous Materials and Composites", "authors": ["Richard Chait", "Ralph Papirno"], "publishedDate": "1983", "pageCount": 312, "categories": ["Technology & Engineering"]}}, {"volumeInfo": {"title": "Manual on Low Cycle Fatigue Testing", "authors": ["American Society for Testing Materials"], "publishedDate": "1969", "pageCount": 208, "categories": ["Alloys"]}}, {"volumeInfo": {"title": "Nondestructive Testing of Pavements and Backcalculation of Moduli", "authors": ["Albert Jasper Bush", "Gilbert Y. Baladi"], "publishedDate": "1989", "pageCount": 701, "categories": ["Kald\u0131r\u0131mlar-Deneme"]}}]}}, {"query": "Testing", "regex": "^195[5-9]|^19[6-9]", "regex_field": "Publishing date", "fields": ["Book title", "Image link", "Description", "Book subtitle", "Average rate", "Ratings count", "Preview", "Authors", "Publishing date"], "results": {"items": [{"volumeInfo": {"title": "Plant Integrity Assessment by the Acoustic Emission Testing Method", "subtitle": "Guidance Notes", "authors": ["Stuart Hewerdine"], "publishedDate": "1993", "description": "In some cases, acoustic emission testing is a convenient way of checking a vessel for invisible structural faults; in other cases the method is inappropriate for various reasons. This book sets out to help in deciding whether acoustic emission testing is the right method for a particular problem.", "imageLinks": {"thumbnail": "http://books.google.com/books/content?id=VOk_-S4z-p8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"}, "previewLink": "http://books.google.com.ua/books?id=VOk_-S4z-p8C&pg=PA22&dq=Testing&hl=&cd=2&source=gbs_api"}}, {"volumeInfo": {"title": "Electrical and Magnetic Methods of Nondestructive Testing", "authors": ["J Blitz"], "publishedDate": "1991-01-01", "description": "Electrical and Magnetic Methods of Nondestructive Testing presents a comprehensive account of the electrical and magnetic methods of nondestructive testing (NDT). The book begins with a discussion of the requirements for NDT and the criteria for the choice of a given method, followed by a summary of the general theory relating to electrical and magnetic testing techniques. Subsequent chapters discuss specific methods, including eddy current and flux-leakage techniques and microwave and potential drop methods. The appendix provides some useful programs for eddy current impedance analyses. These programs are in BASIC and can be run on PCs.", "averageRating": 5, "ratingsCount": 1, "imageLinks": {"thumbnail": "http://books.google.com/books/content?id=LgaalpAcZ4wC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"}, "previewLink": "http://books.google.com.ua/books?id=LgaalpAcZ4wC&pg=PA9&dq=Testing&hl=&cd=3&source=gbs_api"}}, {"volumeInfo": {"title": "Compression Testing of Homogeneous Materials and Composites", "subtitle": "A Symposium", "authors": ["Richard Chait", "Ralph Papirno"], "publishedDate": "1983", "imageLinks": {"thumbnail": "http://books.google.com/books/content?id=cR5pNv76HMgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"}, "previewLink": "http://books.google.com.ua/books?id=cR5pNv76HMgC&pg=PA175&dq=Testing&hl=&cd=7&source=gbs_api"}}, {"volumeInfo": {"title": "Manual on Low Cycle Fatigue Testing", "authors": ["American Society for Testing Materials"], "publishedDate": "1969", "imageLinks": {"thumbnail": "http://books.google.com/books/content?id=tjVHpEELitAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"}, "previewLink": "http://books.google.com.ua/books?id=tjVHpEELitAC&pg=PA106&dq=Testing&hl=&cd=12&source=gbs_api"}}, {"volumeInfo": {"title": "Nondestructive Testing of Pavements and Backcalculation of Moduli", "authors": ["Albert Jasper Bush", "Gilbert Y. Baladi"], "publishedDate": "1989", "imageLinks": {"thumbnail": "http://books.google.com/books/content?id=mGpL-g-b9LgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"}, "previewLink": "http://books.google.com.ua/books?id=mGpL-g-b9LgC&pg=PA155&dq=Testing&hl=&cd=13&source=gbs_api"}}]}}, {"query": "Testing", "regex": "^195[5-9]|^19[6-9]", "regex_field": "Publishing date", "fields": ["Book title", "Authors", "Publishing date"], "results": {"items": [{"volumeInfo": {"title": "Plant Integrity Assessment by the Acoustic Emission Testing Method", "authors": ["Stuart Hewerdine"], "publishedDate": "1993"}}, {"volumeInfo": {"title": "Electrical and Magnetic Methods of Nondestructive Testing", "authors": ["J Blitz"], "publishedDate": "1991-01-01"}}, {"volumeInfo": {"title": "Compression Testing of Homogeneous Materials and Composites", "authors": ["Richard Chait", "Ralph Papirno"], "publishedDate": "1983"}}, {"volumeInfo": {"title": "Manual on Low Cycle Fatigue Testing", "authors": ["American Society for Testing Materials"], "publishedDate": "1969"}}, {"volumeInfo": {"title": "Nondestructive Testing of Pavements and Backcalculation of Moduli", "authors": ["Albert Jasper Bush", "Gilbert Y. Baladi"], "publishedDate": "1989"}}]}}, {"query": "Testing", "regex": "^195[5-9]|^19[6-9]", "regex_field": "Publishing date", "fields": ["Book title", "Image link", "Description", "Book subtitle", "Average rate", "Ratings count", "Preview", "Authors", "Publishing date"], "results": {"items": [{"volumeInfo": {"title": "Plant Integrity Assessment by the Acoustic Emission Testing Method", "subtitle": "Guidance Notes", "authors": ["Stuart Hewerdine"], "publishedDate": "1993", "description": "In some cases, acoustic emission testing is a convenient way of checking a vessel for invisible structural faults; in other cases the method is inappropriate for various reasons. This book sets out to help in deciding whether acoustic emission testing is the right method for a particular problem.", "imageLinks": {"thumbnail": "http://books.google.com/books/content?id=VOk_-S4z-p8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"}, "previewLink": "http://books.google.com.ua/books?id=VOk_-S4z-p8C&pg=PA22&dq=Testing&hl=&cd=2&source=gbs_api"}}, {"volumeInfo": {"title": "Electrical and Magnetic Methods of Nondestructive Testing", "authors": ["J Blitz"], "publishedDate": "1991-01-01", "description": "Electrical and Magnetic Methods of Nondestructive Testing presents a comprehensive account of the electrical and magnetic methods of nondestructive testing (NDT). The book begins with a discussion of the requirements for NDT and the criteria for the choice of a given method, followed by a summary of the general theory relating to electrical and magnetic testing techniques. Subsequent chapters discuss specific methods, including eddy current and flux-leakage techniques and microwave and potential drop methods. The appendix provides some useful programs for eddy current impedance analyses. These programs are in BASIC and can be run on PCs.", "averageRating": 5, "ratingsCount": 1, "imageLinks": {"thumbnail": "http://books.google.com/books/content?id=LgaalpAcZ4wC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"}, "previewLink": "http://books.google.com.ua/books?id=LgaalpAcZ4wC&pg=PA9&dq=Testing&hl=&cd=3&source=gbs_api"}}, {"volumeInfo": {"title": "Compression Testing of Homogeneous Materials and Composites", "subtitle": "A Symposium", "authors": ["Richard Chait", "Ralph Papirno"], "publishedDate": "1983", "imageLinks": {"thumbnail": "http://books.google.com/books/content?id=cR5pNv76HMgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"}, "previewLink": "http://books.google.com.ua/books?id=cR5pNv76HMgC&pg=PA175&dq=Testing&hl=&cd=7&source=gbs_api"}}, {"volumeInfo": {"title": "Manual on Low Cycle Fatigue Testing", "authors": ["American Society for Testing Materials"], "publishedDate": "1969", "imageLinks": {"thumbnail": "http://books.google.com/books/content?id=tjVHpEELitAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"}, "previewLink": "http://books.google.com.ua/books?id=tjVHpEELitAC&pg=PA106&dq=Testing&hl=&cd=12&source=gbs_api"}}, {"volumeInfo": {"title": "Nondestructive Testing of Pavements and Backcalculation of Moduli", "authors": ["Albert Jasper Bush", "Gilbert Y. Baladi"], "publishedDate": "1989", "imageLinks": {"thumbnail": "http://books.google.com/books/content?id=mGpL-g-b9LgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"}, "previewLink": "http://books.google.com.ua/books?id=mGpL-g-b9LgC&pg=PA155&dq=Testing&hl=&cd=13&source=gbs_api"}}]}}]}
+{
+  "history": [
+    {
+      "query": "Testing",
+      "regex": "^20",
+      "regex_field": "Publishing date",
+      "fields": [
+        "Book title",
+        "Image link",
+        "Description",
+        "Book subtitle",
+        "Average rate",
+        "Ratings count",
+        "Preview",
+        "Authors",
+        "Publishing date"
+      ],
+      "results": {
+        "items": [
+          {
+            "volumeInfo": {
+              "title": "Effective Software Testing",
+              "subtitle": "50 Specific Ways to Improve Your Testing",
+              "authors": [
+                "Elfriede Dustin"
+              ],
+              "publishedDate": "2002",
+              "description": "With the advent of agile methodologies, testing is becoming the responsibility of more and more team members. In this new book, noted testing expert Dustin imparts the best of her collected wisdom. She presents 50 specific tips for a better testing program. These 50 tips are divided into ten sections, and presented so as to mirror the chronology of a software project.",
+              "averageRating": 3,
+              "ratingsCount": 7,
+              "imageLinks": {
+                "thumbnail": "http://books.google.com/books/content?id=K0qWBUOAf6IC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+              },
+              "previewLink": "http://books.google.com.ua/books?id=K0qWBUOAf6IC&pg=PA241&dq=Testing&hl=&cd=1&source=gbs_api"
+            }
+          },
+          {
+            "volumeInfo": {
+              "title": "Stress-testing the Banking System",
+              "subtitle": "Methodologies and Applications",
+              "authors": [
+                "Mario Quagliariello"
+              ],
+              "publishedDate": "2009-10-15",
+              "description": "Stress tests are used in risk management by banks in order to determine how certain crisis scenarios would affect the value of their portfolios, and by public authorities for financial stability purposes. Until the first half of 2007, interest in stress-testing was largely restricted to practitioners. Since then, the global financial system has been hit by deep turbulences, including the fallout from sub-prime mortgage lending. Many observers have pointed out that the severity of the crisis has been largely due to its unexpected nature and have claimed that a more extensive use of stress-testing methodologies would have helped to alleviate the repercussions of the crisis. This book analyses the theoretical underpinnings, as well as the practical aspects, of applying such methodologies. Building on the experience gained by the economists of many national and international financial authorities, it provides an updated toolkit for both practitioners and academics.",
+              "imageLinks": {
+                "thumbnail": "http://books.google.com/books/content?id=v56hKnsJxk8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+              },
+              "previewLink": "http://books.google.com.ua/books?id=v56hKnsJxk8C&pg=PA18&dq=Testing&hl=&cd=4&source=gbs_api"
+            }
+          },
+          {
+            "volumeInfo": {
+              "title": "Software Engineering and Testing",
+              "authors": [
+                "B. B. Agarwal",
+                "S. P. Tayal",
+                "Mahesh Gupta"
+              ],
+              "publishedDate": "2010",
+              "description": "This book is designed for use as an introductory software engineering course or as a reference for programmers. Up-to-date text uses both theory applications to design reliable, error-free software. Includes a companion CD-ROM with source code third-party software engineering applications.",
+              "averageRating": 4,
+              "ratingsCount": 3,
+              "imageLinks": {
+                "thumbnail": "http://books.google.com/books/content?id=ZoF06z4dhQ4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+              },
+              "previewLink": "http://books.google.com.ua/books?id=ZoF06z4dhQ4C&pg=PA39&dq=Testing&hl=&cd=5&source=gbs_api"
+            }
+          },
+          {
+            "volumeInfo": {
+              "title": "Agile Testing",
+              "subtitle": "A Practical Guide for Testers and Agile Teams",
+              "authors": [
+                "Lisa Crispin",
+                "Janet Gregory"
+              ],
+              "publishedDate": "2008-12-30",
+              "description": "Testing is a key component of agile development. The widespread adoption of agile methods has brought the need for effective testing into the limelight, and agile projects have transformed the role of testers. Much of a tester\u2019s function, however, remains largely misunderstood. What is the true role of a tester? Do agile teams actually need members with QA backgrounds? What does it really mean to be an \u201cagile tester?\u201d Two of the industry\u2019s most experienced agile testing practitioners and consultants, Lisa Crispin and Janet Gregory, have teamed up to bring you the definitive answers to these questions and many others. In Agile Testing, Crispin and Gregory define agile testing and illustrate the tester\u2019s role with examples from real agile teams. They teach you how to use the agile testing quadrants to identify what testing is needed, who should do it, and what tools might help. The book chronicles an agile software development iteration from the viewpoint of a tester and explains the seven key success factors of agile testing. Readers will come away from this book understanding How to get testers engaged in agile development Where testers and QA managers fit on an agile team What to look for when hiring an agile tester How to transition from a traditional cycle to agile development How to complete testing activities in short iterations How to use tests to successfully guide development How to overcome barriers to test automation This book is a must for agile testers, agile teams, their managers, and their customers.",
+              "imageLinks": {
+                "thumbnail": "http://books.google.com/books/content?id=68_lhPvoKS8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+              },
+              "previewLink": "http://books.google.com.ua/books?id=68_lhPvoKS8C&pg=PA251&dq=Testing&hl=&cd=6&source=gbs_api"
+            }
+          },
+          {
+            "volumeInfo": {
+              "title": "Web Security Testing Cookbook",
+              "subtitle": "Systematic Techniques to Find Problems Fast",
+              "authors": [
+                "Paco Hope",
+                "Ben Walther"
+              ],
+              "publishedDate": "2008-10-14",
+              "description": "Among the tests you perform on web applications, security testing is perhaps the most important, yet it's often the most neglected. The recipes in the Web Security Testing Cookbook demonstrate how developers and testers can check for the most common web security issues, while conducting unit tests, regression tests, or exploratory tests. Unlike ad hoc security assessments, these recipes are repeatable, concise, and systematic-perfect for integrating into your regular test suite. Recipes cover the basics from observing messages between clients and servers to multi-phase tests that script the login and execution of web application features. By the end of the book, you'll be able to build tests pinpointed at Ajax functions, as well as large multi-step tests for the usual suspects: cross-site scripting and injection attacks. This book helps you: Obtain, install, and configure useful-and free-security testing tools Understand how your application communicates with users, so you can better simulate attacks in your tests Choose from many different methods that simulate common attacks such as SQL injection, cross-site scripting, and manipulating hidden form fields Make your tests repeatable by using the scripts and examples in the recipes as starting points for automated tests Don't live in dread of the midnight phone call telling you that your site has been hacked. With Web Security Testing Cookbook and the free tools used in the book's examples, you can incorporate security coverage into your test suite, and sleep in peace.",
+              "averageRating": 3.5,
+              "ratingsCount": 4,
+              "imageLinks": {
+                "thumbnail": "http://books.google.com/books/content?id=VmrSJ3V-s_MC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+              },
+              "previewLink": "http://books.google.com.ua/books?id=VmrSJ3V-s_MC&pg=PA1&dq=Testing&hl=&cd=8&source=gbs_api"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "query": "Python",
+      "regex": "^201[5-9]|^202",
+      "regex_field": "Publishing date",
+      "fields": [
+        "Book title",
+        "Authors",
+        "Type",
+        "Publishing date"
+      ],
+      "results": {
+        "items": [
+          {
+            "volumeInfo": {
+              "title": "Python Concurrency with asyncio",
+              "authors": [
+                "Matthew Fowler"
+              ],
+              "publishedDate": "2022-03-15",
+              "printType": "BOOK"
+            }
+          },
+          {
+            "volumeInfo": {
+              "title": "Fluent Python",
+              "authors": [
+                "Luciano Ramalho"
+              ],
+              "publishedDate": "2015",
+              "printType": "BOOK"
+            }
+          },
+          {
+            "volumeInfo": {
+              "title": "Python for Programmers",
+              "authors": [
+                "Paul Deitel",
+                "Harvey Deitel"
+              ],
+              "publishedDate": "2019-03-15",
+              "printType": "BOOK"
+            }
+          },
+          {
+            "volumeInfo": {
+              "title": "Programming the Raspberry Pi, Second Edition: Getting Started with Python",
+              "authors": [
+                "Simon Monk"
+              ],
+              "publishedDate": "2015-10-05",
+              "printType": "BOOK"
+            }
+          },
+          {
+            "volumeInfo": {
+              "title": "Programming the Intel Edison: Getting Started with Processing and Python",
+              "authors": [
+                "Donald Norris"
+              ],
+              "publishedDate": "2015-10-13",
+              "printType": "BOOK"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "query": "Python",
+      "regex": "^201[5-9]|^202",
+      "regex_field": "Publishing date",
+      "fields": [
+        "Book title",
+        "Image link",
+        "Description",
+        "Book subtitle",
+        "Average rate",
+        "Ratings count",
+        "Preview",
+        "Authors",
+        "Publishing date"
+      ],
+      "results": {
+        "items": [
+          {
+            "volumeInfo": {
+              "title": "Python Concurrency with asyncio",
+              "authors": [
+                "Matthew Fowler"
+              ],
+              "publishedDate": "2022-03-15",
+              "description": "Learn how to speed up slow Python code with concurrent programming and the cutting-edge asyncio library. Use coroutines and tasks alongside async/await syntax to run code concurrently Build web APIs and make concurrency web requests with aiohttp Run thousands of SQL queries concurrently Create a map-reduce job that can process gigabytes of data concurrently Use threading with asyncio to mix blocking code with asyncio code Python is flexible, versatile, and easy to learn. It can also be very slow compared to lower-level languages. Python Concurrency with asyncio teaches you how to boost Python's performance by applying a variety of concurrency techniques. You'll learn how the complex-but-powerful asyncio library can achieve concurrency with just a single thread and use asyncio's APIs to run multiple web requests and database queries simultaneously. The book covers using asyncio with the entire Python concurrency landscape, including multiprocessing and multithreading. About the technology It\u2019s easy to overload standard Python and watch your programs slow to a crawl. Th e asyncio library was built to solve these problems by making it easy to divide and schedule tasks. It seamlessly handles multiple operations concurrently, leading to apps that are lightning fast and scalable. About the book Python Concurrency with asyncio introduces asynchronous, parallel, and concurrent programming through hands-on Python examples. Hard-to-grok concurrency topics are broken down into simple flowcharts that make it easy to see how your tasks are running. You\u2019ll learn how to overcome the limitations of Python using asyncio to speed up slow web servers and microservices. You\u2019ll even combine asyncio with traditional multiprocessing techniques for huge improvements to performance. What's inside Build web APIs and make concurrency web requests with aiohttp Run thousands of SQL queries concurrently Create a map-reduce job that can process gigabytes of data concurrently Use threading with asyncio to mix blocking code with asyncio code About the reader For intermediate Python programmers. No previous experience of concurrency required. About the author Matthew Fowler has over 15 years of software engineering experience in roles from architect to engineering director. Table of Contents 1 Getting to know asyncio 2 asyncio basics 3 A first asyncio application 4 Concurrent web requests 5 Non-blocking database drivers 6 Handling CPU-bound work 7 Handling blocking work with threads 8 Streams 9 Web applications 10 Microservices 11 Synchronization 12 Asynchronous queues 13 Managing subprocesses 14 Advanced asyncio",
+              "imageLinks": {
+                "thumbnail": "http://books.google.com/books/content?id=M9xdEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+              },
+              "previewLink": "http://books.google.com.ua/books?id=M9xdEAAAQBAJ&pg=PT410&dq=Python&hl=&cd=10&source=gbs_api"
+            }
+          },
+          {
+            "volumeInfo": {
+              "title": "Fluent Python",
+              "authors": [
+                "Luciano Ramalho"
+              ],
+              "publishedDate": "2015",
+              "description": "Explains how to write idiomatic, effective Python code by leveraging its best features. Python's simplicity quickly lets you become productive with it, but this often means you aren't using everything the language has to offer. By taking you through Python's key language features and libraries, this practical book shows you how to make your code shorter, faster, and more readable all at the same time. --From publisher description.",
+              "imageLinks": {
+                "thumbnail": "http://books.google.com/books/content?id=NXB-_bcY-esC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+              },
+              "previewLink": "http://books.google.com.ua/books?id=NXB-_bcY-esC&q=Python&dq=Python&hl=&cd=12&source=gbs_api"
+            }
+          },
+          {
+            "volumeInfo": {
+              "title": "Python for Programmers",
+              "authors": [
+                "Paul Deitel",
+                "Harvey Deitel"
+              ],
+              "publishedDate": "2019-03-15",
+              "description": "The professional programmer\u2019s Deitel\u00ae guide to Python\u00ae with introductory artificial intelligence case studies Written for programmers with a background in another high-level language, Python for Programmers uses hands-on instruction to teach today\u2019s most compelling, leading-edge computing technologies and programming in Python\u2013one of the world\u2019s most popular and fastest-growing languages. Please read the Table of Contents diagram inside the front cover and the Preface for more details. In the context of 500+, real-world examples ranging from individual snippets to 40 large scripts and full implementation case studies, you\u2019ll use the interactive IPython interpreter with code in Jupyter Notebooks to quickly master the latest Python coding idioms. After covering Python Chapters 1-5 and a few key parts of Chapters 6-7, you\u2019ll be able to handle significant portions of the hands-on introductory AI case studies in Chapters 11-16, which are loaded with cool, powerful, contemporary examples. These include natural language processing, data mining Twitter\u00ae for sentiment analysis, cognitive computing with IBM\u00ae WatsonTM, supervised machine learning with classification and regression, unsupervised machine learning with clustering, computer vision through deep learning and convolutional neural networks, deep learning with recurrent neural networks, big data with Hadoop\u00ae, SparkTM and NoSQL databases, the Internet of Things and more. You\u2019ll also work directly or indirectly with cloud-based services, including Twitter, Google TranslateTM, IBM Watson, Microsoft\u00ae Azure\u00ae, OpenMapQuest, PubNub and more. Features 500+ hands-on, real-world, live-code examples from snippets to case studies IPython + code in Jupyter\u00ae Notebooks Library-focused: Uses Python Standard Library and data science libraries to accomplish significant tasks with minimal code Rich Python coverage: Control statements, functions, strings, files, JSON serialization, CSV, exceptions Procedural, functional-style and object-oriented programming Collections: Lists, tuples, dictionaries, sets, NumPy arrays, pandas Series & DataFrames Static, dynamic and interactive visualizations Data experiences with real-world datasets and data sources Intro to Data Science sections: AI, basic stats, simulation, animation, random variables, data wrangling, regression AI, big data and cloud data science case studies: NLP, data mining Twitter\u00ae, IBM\u00ae WatsonTM, machine learning, deep learning, computer vision, Hadoop\u00ae, SparkTM, NoSQL, IoT Open-source libraries: NumPy, pandas, Matplotlib, Seaborn, Folium, SciPy, NLTK, TextBlob, spaCy, Textatistic, Tweepy, scikit-learn\u00ae, Keras and more Accompanying code examples are available here: http://ptgmedia.pearsoncmg.com/imprint_downloads/informit/bookreg/9780135224335/9780135224335_examples.zip. Register your product for convenient access to downloads, updates, and/or corrections as they become available. See inside book for more information.",
+              "imageLinks": {
+                "thumbnail": "http://books.google.com/books/content?id=LauMDwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+              },
+              "previewLink": "http://books.google.com.ua/books?id=LauMDwAAQBAJ&q=Python&dq=Python&hl=&cd=15&source=gbs_api"
+            }
+          },
+          {
+            "volumeInfo": {
+              "title": "Programming the Raspberry Pi, Second Edition: Getting Started with Python",
+              "authors": [
+                "Simon Monk"
+              ],
+              "publishedDate": "2015-10-05",
+              "description": "An updated guide to programming your own Raspberry Pi projects Learn to create inventive programs and fun games on your powerful Raspberry Pi\u2014with no programming experience required. This practical TAB book has been revised to fully cover the new Raspberry Pi 2, including upgrades to the Raspbian operating system. Discover how to configure hardware and software, write Python scripts, create user-friendly GUIs, and control external electronics. DIY projects include a hangman game, RGB LED controller, digital clock, and RasPiRobot complete with an ultrasonic rangefinder. Set up your Raspberry Pi and explore its features Navigate files, folders, and menus Write Python programs using the IDLE editor Use strings, lists, functions, and dictionaries Work with modules, classes, and methods Create user-friendly games using Pygame Build intuitive user interfaces with Tkinter Attach external electronics through the GPIO port Add powerful Web features to your projects",
+              "imageLinks": {
+                "thumbnail": "http://books.google.com/books/content?id=NyGSCgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+              },
+              "previewLink": "http://books.google.com.ua/books?id=NyGSCgAAQBAJ&pg=PA26&dq=Python&hl=&cd=16&source=gbs_api"
+            }
+          },
+          {
+            "volumeInfo": {
+              "title": "Programming the Intel Edison: Getting Started with Processing and Python",
+              "authors": [
+                "Donald Norris"
+              ],
+              "publishedDate": "2015-10-13",
+              "description": "Learn To Easily Create Robotic, IoT, and Wearable Electronic Gadgets!Get up-and-running building cutting-edge Edison devices with help from this DIY guide. Programming the Intel Edison: Getting Started with Processing and Python lays out the Edison\u2019s powerful features and teaches the basics of Internet-enabled embedded programming. Discover how to set up components, connect your PC or Mac, build Python applications, and use USB, WiFi, and Bluetooth connections. Start-to-finish example projects include a motor controller, home temperature system, robotic car, and wearable hospital alert sensor. Explore the capabilities and features of the Edison Connect Sparkfun, Break-out, and Arduino boards Program your Edison through the Arduino IDE Set up USB, GPIO, WiFi, and Bluetooth connections",
+              "imageLinks": {
+                "thumbnail": "http://books.google.com/books/content?id=9XqGCgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+              },
+              "previewLink": "http://books.google.com.ua/books?id=9XqGCgAAQBAJ&pg=PA84&dq=Python&hl=&cd=21&source=gbs_api"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "query": "Python",
+      "regex": "^201[7-9]|^202",
+      "regex_field": "Publishing date",
+      "fields": [
+        "Book title",
+        "Authors",
+        "Type",
+        "Publishing date"
+      ],
+      "results": {
+        "items": [
+          {
+            "volumeInfo": {
+              "title": "Python Concurrency with asyncio",
+              "authors": [
+                "Matthew Fowler"
+              ],
+              "publishedDate": "2022-03-15",
+              "printType": "BOOK"
+            }
+          },
+          {
+            "volumeInfo": {
+              "title": "Python for Programmers",
+              "authors": [
+                "Paul Deitel",
+                "Harvey Deitel"
+              ],
+              "publishedDate": "2019-03-15",
+              "printType": "BOOK"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "query": "Python",
+      "regex": "^201[7-9]|^202",
+      "regex_field": "Publishing date",
+      "fields": [
+        "Book title",
+        "Image link",
+        "Description",
+        "Book subtitle",
+        "Average rate",
+        "Ratings count",
+        "Preview",
+        "Authors",
+        "Publishing date"
+      ],
+      "results": {
+        "items": [
+          {
+            "volumeInfo": {
+              "title": "Python Concurrency with asyncio",
+              "authors": [
+                "Matthew Fowler"
+              ],
+              "publishedDate": "2022-03-15",
+              "description": "Learn how to speed up slow Python code with concurrent programming and the cutting-edge asyncio library. Use coroutines and tasks alongside async/await syntax to run code concurrently Build web APIs and make concurrency web requests with aiohttp Run thousands of SQL queries concurrently Create a map-reduce job that can process gigabytes of data concurrently Use threading with asyncio to mix blocking code with asyncio code Python is flexible, versatile, and easy to learn. It can also be very slow compared to lower-level languages. Python Concurrency with asyncio teaches you how to boost Python's performance by applying a variety of concurrency techniques. You'll learn how the complex-but-powerful asyncio library can achieve concurrency with just a single thread and use asyncio's APIs to run multiple web requests and database queries simultaneously. The book covers using asyncio with the entire Python concurrency landscape, including multiprocessing and multithreading. About the technology It\u2019s easy to overload standard Python and watch your programs slow to a crawl. Th e asyncio library was built to solve these problems by making it easy to divide and schedule tasks. It seamlessly handles multiple operations concurrently, leading to apps that are lightning fast and scalable. About the book Python Concurrency with asyncio introduces asynchronous, parallel, and concurrent programming through hands-on Python examples. Hard-to-grok concurrency topics are broken down into simple flowcharts that make it easy to see how your tasks are running. You\u2019ll learn how to overcome the limitations of Python using asyncio to speed up slow web servers and microservices. You\u2019ll even combine asyncio with traditional multiprocessing techniques for huge improvements to performance. What's inside Build web APIs and make concurrency web requests with aiohttp Run thousands of SQL queries concurrently Create a map-reduce job that can process gigabytes of data concurrently Use threading with asyncio to mix blocking code with asyncio code About the reader For intermediate Python programmers. No previous experience of concurrency required. About the author Matthew Fowler has over 15 years of software engineering experience in roles from architect to engineering director. Table of Contents 1 Getting to know asyncio 2 asyncio basics 3 A first asyncio application 4 Concurrent web requests 5 Non-blocking database drivers 6 Handling CPU-bound work 7 Handling blocking work with threads 8 Streams 9 Web applications 10 Microservices 11 Synchronization 12 Asynchronous queues 13 Managing subprocesses 14 Advanced asyncio",
+              "imageLinks": {
+                "thumbnail": "http://books.google.com/books/content?id=M9xdEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+              },
+              "previewLink": "http://books.google.com.ua/books?id=M9xdEAAAQBAJ&pg=PT410&dq=Python&hl=&cd=10&source=gbs_api"
+            }
+          },
+          {
+            "volumeInfo": {
+              "title": "Python for Programmers",
+              "authors": [
+                "Paul Deitel",
+                "Harvey Deitel"
+              ],
+              "publishedDate": "2019-03-15",
+              "description": "The professional programmer\u2019s Deitel\u00ae guide to Python\u00ae with introductory artificial intelligence case studies Written for programmers with a background in another high-level language, Python for Programmers uses hands-on instruction to teach today\u2019s most compelling, leading-edge computing technologies and programming in Python\u2013one of the world\u2019s most popular and fastest-growing languages. Please read the Table of Contents diagram inside the front cover and the Preface for more details. In the context of 500+, real-world examples ranging from individual snippets to 40 large scripts and full implementation case studies, you\u2019ll use the interactive IPython interpreter with code in Jupyter Notebooks to quickly master the latest Python coding idioms. After covering Python Chapters 1-5 and a few key parts of Chapters 6-7, you\u2019ll be able to handle significant portions of the hands-on introductory AI case studies in Chapters 11-16, which are loaded with cool, powerful, contemporary examples. These include natural language processing, data mining Twitter\u00ae for sentiment analysis, cognitive computing with IBM\u00ae WatsonTM, supervised machine learning with classification and regression, unsupervised machine learning with clustering, computer vision through deep learning and convolutional neural networks, deep learning with recurrent neural networks, big data with Hadoop\u00ae, SparkTM and NoSQL databases, the Internet of Things and more. You\u2019ll also work directly or indirectly with cloud-based services, including Twitter, Google TranslateTM, IBM Watson, Microsoft\u00ae Azure\u00ae, OpenMapQuest, PubNub and more. Features 500+ hands-on, real-world, live-code examples from snippets to case studies IPython + code in Jupyter\u00ae Notebooks Library-focused: Uses Python Standard Library and data science libraries to accomplish significant tasks with minimal code Rich Python coverage: Control statements, functions, strings, files, JSON serialization, CSV, exceptions Procedural, functional-style and object-oriented programming Collections: Lists, tuples, dictionaries, sets, NumPy arrays, pandas Series & DataFrames Static, dynamic and interactive visualizations Data experiences with real-world datasets and data sources Intro to Data Science sections: AI, basic stats, simulation, animation, random variables, data wrangling, regression AI, big data and cloud data science case studies: NLP, data mining Twitter\u00ae, IBM\u00ae WatsonTM, machine learning, deep learning, computer vision, Hadoop\u00ae, SparkTM, NoSQL, IoT Open-source libraries: NumPy, pandas, Matplotlib, Seaborn, Folium, SciPy, NLTK, TextBlob, spaCy, Textatistic, Tweepy, scikit-learn\u00ae, Keras and more Accompanying code examples are available here: http://ptgmedia.pearsoncmg.com/imprint_downloads/informit/bookreg/9780135224335/9780135224335_examples.zip. Register your product for convenient access to downloads, updates, and/or corrections as they become available. See inside book for more information.",
+              "imageLinks": {
+                "thumbnail": "http://books.google.com/books/content?id=LauMDwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+              },
+              "previewLink": "http://books.google.com.ua/books?id=LauMDwAAQBAJ&q=Python&dq=Python&hl=&cd=15&source=gbs_api"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "query": "Python",
+      "regex": "^201[7-9]|^202",
+      "regex_field": "Publishing date",
+      "fields": [
+        "Book title",
+        "Authors",
+        "Type",
+        "Publishing date"
+      ],
+      "results": {
+        "items": [
+          {
+            "volumeInfo": {
+              "title": "Python Concurrency with asyncio",
+              "authors": [
+                "Matthew Fowler"
+              ],
+              "publishedDate": "2022-03-15",
+              "printType": "BOOK"
+            }
+          },
+          {
+            "volumeInfo": {
+              "title": "Python for Programmers",
+              "authors": [
+                "Paul Deitel",
+                "Harvey Deitel"
+              ],
+              "publishedDate": "2019-03-15",
+              "printType": "BOOK"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "query": "Python",
+      "regex": "^201[7-9]|^202",
+      "regex_field": "Publishing date",
+      "fields": [
+        "Book title",
+        "Image link",
+        "Description",
+        "Book subtitle",
+        "Average rate",
+        "Ratings count",
+        "Preview",
+        "Authors",
+        "Publishing date"
+      ],
+      "results": {
+        "items": [
+          {
+            "volumeInfo": {
+              "title": "Python Concurrency with asyncio",
+              "authors": [
+                "Matthew Fowler"
+              ],
+              "publishedDate": "2022-03-15",
+              "description": "Learn how to speed up slow Python code with concurrent programming and the cutting-edge asyncio library. Use coroutines and tasks alongside async/await syntax to run code concurrently Build web APIs and make concurrency web requests with aiohttp Run thousands of SQL queries concurrently Create a map-reduce job that can process gigabytes of data concurrently Use threading with asyncio to mix blocking code with asyncio code Python is flexible, versatile, and easy to learn. It can also be very slow compared to lower-level languages. Python Concurrency with asyncio teaches you how to boost Python's performance by applying a variety of concurrency techniques. You'll learn how the complex-but-powerful asyncio library can achieve concurrency with just a single thread and use asyncio's APIs to run multiple web requests and database queries simultaneously. The book covers using asyncio with the entire Python concurrency landscape, including multiprocessing and multithreading. About the technology It\u2019s easy to overload standard Python and watch your programs slow to a crawl. Th e asyncio library was built to solve these problems by making it easy to divide and schedule tasks. It seamlessly handles multiple operations concurrently, leading to apps that are lightning fast and scalable. About the book Python Concurrency with asyncio introduces asynchronous, parallel, and concurrent programming through hands-on Python examples. Hard-to-grok concurrency topics are broken down into simple flowcharts that make it easy to see how your tasks are running. You\u2019ll learn how to overcome the limitations of Python using asyncio to speed up slow web servers and microservices. You\u2019ll even combine asyncio with traditional multiprocessing techniques for huge improvements to performance. What's inside Build web APIs and make concurrency web requests with aiohttp Run thousands of SQL queries concurrently Create a map-reduce job that can process gigabytes of data concurrently Use threading with asyncio to mix blocking code with asyncio code About the reader For intermediate Python programmers. No previous experience of concurrency required. About the author Matthew Fowler has over 15 years of software engineering experience in roles from architect to engineering director. Table of Contents 1 Getting to know asyncio 2 asyncio basics 3 A first asyncio application 4 Concurrent web requests 5 Non-blocking database drivers 6 Handling CPU-bound work 7 Handling blocking work with threads 8 Streams 9 Web applications 10 Microservices 11 Synchronization 12 Asynchronous queues 13 Managing subprocesses 14 Advanced asyncio",
+              "imageLinks": {
+                "thumbnail": "http://books.google.com/books/content?id=M9xdEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+              },
+              "previewLink": "http://books.google.com.ua/books?id=M9xdEAAAQBAJ&pg=PT410&dq=Python&hl=&cd=10&source=gbs_api"
+            }
+          },
+          {
+            "volumeInfo": {
+              "title": "Python for Programmers",
+              "authors": [
+                "Paul Deitel",
+                "Harvey Deitel"
+              ],
+              "publishedDate": "2019-03-15",
+              "description": "The professional programmer\u2019s Deitel\u00ae guide to Python\u00ae with introductory artificial intelligence case studies Written for programmers with a background in another high-level language, Python for Programmers uses hands-on instruction to teach today\u2019s most compelling, leading-edge computing technologies and programming in Python\u2013one of the world\u2019s most popular and fastest-growing languages. Please read the Table of Contents diagram inside the front cover and the Preface for more details. In the context of 500+, real-world examples ranging from individual snippets to 40 large scripts and full implementation case studies, you\u2019ll use the interactive IPython interpreter with code in Jupyter Notebooks to quickly master the latest Python coding idioms. After covering Python Chapters 1-5 and a few key parts of Chapters 6-7, you\u2019ll be able to handle significant portions of the hands-on introductory AI case studies in Chapters 11-16, which are loaded with cool, powerful, contemporary examples. These include natural language processing, data mining Twitter\u00ae for sentiment analysis, cognitive computing with IBM\u00ae WatsonTM, supervised machine learning with classification and regression, unsupervised machine learning with clustering, computer vision through deep learning and convolutional neural networks, deep learning with recurrent neural networks, big data with Hadoop\u00ae, SparkTM and NoSQL databases, the Internet of Things and more. You\u2019ll also work directly or indirectly with cloud-based services, including Twitter, Google TranslateTM, IBM Watson, Microsoft\u00ae Azure\u00ae, OpenMapQuest, PubNub and more. Features 500+ hands-on, real-world, live-code examples from snippets to case studies IPython + code in Jupyter\u00ae Notebooks Library-focused: Uses Python Standard Library and data science libraries to accomplish significant tasks with minimal code Rich Python coverage: Control statements, functions, strings, files, JSON serialization, CSV, exceptions Procedural, functional-style and object-oriented programming Collections: Lists, tuples, dictionaries, sets, NumPy arrays, pandas Series & DataFrames Static, dynamic and interactive visualizations Data experiences with real-world datasets and data sources Intro to Data Science sections: AI, basic stats, simulation, animation, random variables, data wrangling, regression AI, big data and cloud data science case studies: NLP, data mining Twitter\u00ae, IBM\u00ae WatsonTM, machine learning, deep learning, computer vision, Hadoop\u00ae, SparkTM, NoSQL, IoT Open-source libraries: NumPy, pandas, Matplotlib, Seaborn, Folium, SciPy, NLTK, TextBlob, spaCy, Textatistic, Tweepy, scikit-learn\u00ae, Keras and more Accompanying code examples are available here: http://ptgmedia.pearsoncmg.com/imprint_downloads/informit/bookreg/9780135224335/9780135224335_examples.zip. Register your product for convenient access to downloads, updates, and/or corrections as they become available. See inside book for more information.",
+              "imageLinks": {
+                "thumbnail": "http://books.google.com/books/content?id=LauMDwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+              },
+              "previewLink": "http://books.google.com.ua/books?id=LauMDwAAQBAJ&q=Python&dq=Python&hl=&cd=15&source=gbs_api"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "query": "Python",
+      "regex": "^201[7-9]|^202",
+      "regex_field": "Publishing date",
+      "fields": [
+        "Book title",
+        "Authors",
+        "Type",
+        "Publishing date"
+      ],
+      "results": {
+        "items": [
+          {
+            "volumeInfo": {
+              "title": "Python Concurrency with asyncio",
+              "authors": [
+                "Matthew Fowler"
+              ],
+              "publishedDate": "2022-03-15",
+              "printType": "BOOK"
+            }
+          },
+          {
+            "volumeInfo": {
+              "title": "Python for Programmers",
+              "authors": [
+                "Paul Deitel",
+                "Harvey Deitel"
+              ],
+              "publishedDate": "2019-03-15",
+              "printType": "BOOK"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "query": "Python",
+      "regex": "^201[7-9]|^202",
+      "regex_field": "Publishing date",
+      "fields": [
+        "Book title",
+        "Image link",
+        "Description",
+        "Book subtitle",
+        "Average rate",
+        "Ratings count",
+        "Preview",
+        "Authors",
+        "Publishing date"
+      ],
+      "results": {
+        "items": [
+          {
+            "volumeInfo": {
+              "title": "Python Concurrency with asyncio",
+              "authors": [
+                "Matthew Fowler"
+              ],
+              "publishedDate": "2022-03-15",
+              "description": "Learn how to speed up slow Python code with concurrent programming and the cutting-edge asyncio library. Use coroutines and tasks alongside async/await syntax to run code concurrently Build web APIs and make concurrency web requests with aiohttp Run thousands of SQL queries concurrently Create a map-reduce job that can process gigabytes of data concurrently Use threading with asyncio to mix blocking code with asyncio code Python is flexible, versatile, and easy to learn. It can also be very slow compared to lower-level languages. Python Concurrency with asyncio teaches you how to boost Python's performance by applying a variety of concurrency techniques. You'll learn how the complex-but-powerful asyncio library can achieve concurrency with just a single thread and use asyncio's APIs to run multiple web requests and database queries simultaneously. The book covers using asyncio with the entire Python concurrency landscape, including multiprocessing and multithreading. About the technology It\u2019s easy to overload standard Python and watch your programs slow to a crawl. Th e asyncio library was built to solve these problems by making it easy to divide and schedule tasks. It seamlessly handles multiple operations concurrently, leading to apps that are lightning fast and scalable. About the book Python Concurrency with asyncio introduces asynchronous, parallel, and concurrent programming through hands-on Python examples. Hard-to-grok concurrency topics are broken down into simple flowcharts that make it easy to see how your tasks are running. You\u2019ll learn how to overcome the limitations of Python using asyncio to speed up slow web servers and microservices. You\u2019ll even combine asyncio with traditional multiprocessing techniques for huge improvements to performance. What's inside Build web APIs and make concurrency web requests with aiohttp Run thousands of SQL queries concurrently Create a map-reduce job that can process gigabytes of data concurrently Use threading with asyncio to mix blocking code with asyncio code About the reader For intermediate Python programmers. No previous experience of concurrency required. About the author Matthew Fowler has over 15 years of software engineering experience in roles from architect to engineering director. Table of Contents 1 Getting to know asyncio 2 asyncio basics 3 A first asyncio application 4 Concurrent web requests 5 Non-blocking database drivers 6 Handling CPU-bound work 7 Handling blocking work with threads 8 Streams 9 Web applications 10 Microservices 11 Synchronization 12 Asynchronous queues 13 Managing subprocesses 14 Advanced asyncio",
+              "imageLinks": {
+                "thumbnail": "http://books.google.com/books/content?id=M9xdEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+              },
+              "previewLink": "http://books.google.com.ua/books?id=M9xdEAAAQBAJ&pg=PT410&dq=Python&hl=&cd=10&source=gbs_api"
+            }
+          },
+          {
+            "volumeInfo": {
+              "title": "Python for Programmers",
+              "authors": [
+                "Paul Deitel",
+                "Harvey Deitel"
+              ],
+              "publishedDate": "2019-03-15",
+              "description": "The professional programmer\u2019s Deitel\u00ae guide to Python\u00ae with introductory artificial intelligence case studies Written for programmers with a background in another high-level language, Python for Programmers uses hands-on instruction to teach today\u2019s most compelling, leading-edge computing technologies and programming in Python\u2013one of the world\u2019s most popular and fastest-growing languages. Please read the Table of Contents diagram inside the front cover and the Preface for more details. In the context of 500+, real-world examples ranging from individual snippets to 40 large scripts and full implementation case studies, you\u2019ll use the interactive IPython interpreter with code in Jupyter Notebooks to quickly master the latest Python coding idioms. After covering Python Chapters 1-5 and a few key parts of Chapters 6-7, you\u2019ll be able to handle significant portions of the hands-on introductory AI case studies in Chapters 11-16, which are loaded with cool, powerful, contemporary examples. These include natural language processing, data mining Twitter\u00ae for sentiment analysis, cognitive computing with IBM\u00ae WatsonTM, supervised machine learning with classification and regression, unsupervised machine learning with clustering, computer vision through deep learning and convolutional neural networks, deep learning with recurrent neural networks, big data with Hadoop\u00ae, SparkTM and NoSQL databases, the Internet of Things and more. You\u2019ll also work directly or indirectly with cloud-based services, including Twitter, Google TranslateTM, IBM Watson, Microsoft\u00ae Azure\u00ae, OpenMapQuest, PubNub and more. Features 500+ hands-on, real-world, live-code examples from snippets to case studies IPython + code in Jupyter\u00ae Notebooks Library-focused: Uses Python Standard Library and data science libraries to accomplish significant tasks with minimal code Rich Python coverage: Control statements, functions, strings, files, JSON serialization, CSV, exceptions Procedural, functional-style and object-oriented programming Collections: Lists, tuples, dictionaries, sets, NumPy arrays, pandas Series & DataFrames Static, dynamic and interactive visualizations Data experiences with real-world datasets and data sources Intro to Data Science sections: AI, basic stats, simulation, animation, random variables, data wrangling, regression AI, big data and cloud data science case studies: NLP, data mining Twitter\u00ae, IBM\u00ae WatsonTM, machine learning, deep learning, computer vision, Hadoop\u00ae, SparkTM, NoSQL, IoT Open-source libraries: NumPy, pandas, Matplotlib, Seaborn, Folium, SciPy, NLTK, TextBlob, spaCy, Textatistic, Tweepy, scikit-learn\u00ae, Keras and more Accompanying code examples are available here: http://ptgmedia.pearsoncmg.com/imprint_downloads/informit/bookreg/9780135224335/9780135224335_examples.zip. Register your product for convenient access to downloads, updates, and/or corrections as they become available. See inside book for more information.",
+              "imageLinks": {
+                "thumbnail": "http://books.google.com/books/content?id=LauMDwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+              },
+              "previewLink": "http://books.google.com.ua/books?id=LauMDwAAQBAJ&q=Python&dq=Python&hl=&cd=15&source=gbs_api"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

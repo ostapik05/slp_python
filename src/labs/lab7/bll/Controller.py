@@ -1,7 +1,7 @@
-from os.path import join
+from dataclasses import field
 
 from requests import HTTPError
-
+import logging
 from labs.lab7.bll.ItemExtraction import extract_data_items
 from labs.lab7.bll.GoogleBooksAPI import GoogleBooksAPI
 from labs.lab7.bll.InputParser import InputParser
@@ -11,18 +11,22 @@ from labs.lab7.dal.HistoryModel import HistoryModel
 from labs.lab7.dal.UserSettingsModel import UserSettingsModel
 from shared.services.relative_to_absolute_path import absolute
 
+logger = logging.getLogger(__name__)
+
 
 class Controller:
+    PUBLISHING_DATE_FIELD = "Publishing date"
+    REGEX_FOR_DATE = '^201[7-9]|^202'
+    LAST_QUERY = "Python"
     def __init__(self, settings: SettingsModel, history: HistoryModel, user_settings: UserSettingsModel,
                  api: GoogleBooksAPI):
         self.settings = settings
         self.history = history
         self.user_settings = user_settings
         self.api = api
-        self.last_query = "Testing"
-        self.last_regex = '^195[5-9]|^19[6-9]'
-        self.regex_field_name = "Publishing date"
-
+        self.last_query = self.LAST_QUERY
+        self.last_regex = self.REGEX_FOR_DATE
+        self.regex_field_name = self.PUBLISHING_DATE_FIELD
 
     def set_last_query(self, query):
         self.last_query = query
@@ -33,12 +37,9 @@ class Controller:
     def set_regex_field_name(self, field):
         self.regex_field_name = field
 
-    def clean_regex_field_name(self):
+    def clear_regex_field_name(self):
         self.last_regex = None
         self.regex_field_name = None
-
-    # ^201[8-9]|202
-    # ^201[7-9]|202
 
     @staticmethod
     def is_regex(query):
@@ -55,18 +56,21 @@ class Controller:
             new_data = {"items": new_data}
         return new_data
 
-
     def search_for_table(self):
-        if not self.get_is_table():
-            return None
-        table_fields = self.user_settings.get_table_fields()
-        return self.search(table_fields), table_fields
+        return self._search_generic(self.get_is_table, self.user_settings.get_table_fields, "table")
 
     def search_for_list(self):
-        if not self.get_is_list():
+        return self._search_generic(self.get_is_list, self.user_settings.get_list_fields, "list")
+
+    def _search_generic(self, check_func, fields_func, search_type):
+        if not check_func():
             return None
-        list_fields = self.user_settings.get_list_fields()
-        return self.search(list_fields), list_fields
+        fields = fields_func()
+        try:
+            return self.search(fields), fields
+        except Exception as e:
+            logger.error(f"Get error in {search_type} search!", exc_info=e)
+            raise
 
     def search(self, fields_names=None):
         query = self.last_query
@@ -81,17 +85,19 @@ class Controller:
         items = []
         start_index = 0
         total_items = None
-
         while len(items) < items_amount and (total_items is None or start_index < total_items):
-            is_total_items = True if total_items is None else False
-            response, total_items = self._fetch_additional_results(
-                query, lang, start_index, max_results, fields, is_total_items
-            )
-            current_batch_results = response
-            items.extend(current_batch_results)
-            start_index += max_results
-            if len(items) >= items_amount:
+            is_total_items = total_items is None
+            try:
+                response, total_items = self._fetch_additional_results(
+                    query, lang, start_index, max_results, fields, is_total_items
+                )
+            except Exception as e:
+                logger.error("Get error in general search!", exc_info=e)
+                raise
+            if not response:
                 break
+            items.extend(response)
+            start_index += max_results
         result = {"items": items[:items_amount]}
         self.add_to_history(query, self.last_regex, self.regex_field_name, fields_names, result)
         return result
@@ -103,39 +109,41 @@ class Controller:
         try:
             temp_result, url = self.api.search(query, lang, start_index, max_results, fields)
             temp_result = self._apply_regex_if_needed(temp_result)
+            if not temp_result['items']:
+                return [], None
             total_items = temp_result.get("totalItems") if is_total_items else None
             return temp_result["items"], total_items
         except HTTPError as e:
+            logger.error("Get HTTP error when fetching results", exc_info=e)
             raise Exception(f"Bad API response: {e}") from e
         except Exception as e:
+            logger.error("Get non-HTTP error", exc_info=e)
             raise Exception(str(e)) from e
 
     def _apply_regex_if_needed(self, data):
         return self.do_regex(data) if self.last_regex and self.regex_field_name else data
 
     def name_to_field(self, field_name, fields_dict=None):
-        if not fields_dict:
+        if fields_dict is None:
             fields_dict = self.settings.get_fields()
+        field_name = str(field_name)
         return fields_dict.get(field_name)
 
     def names_to_fields(self, fields_names):
         fields = []
-        if fields_names is None:
-            return fields
         fields_dict = self.settings.get_fields()
-        for name in fields_names:
+        for name in fields_names or []:
             field = self.name_to_field(name, fields_dict)
             if field:
                 fields.append(field)
         return fields
 
     def do_regex(self, data):
-        regex = self.last_regex
-        field = self.name_to_field(self.regex_field_name)
-        if not regex or not field:
+        if not self.last_regex or not self.regex_field_name:
+            logger.critical("Wrong using of function do_regex, not checked data before")
             raise ValueError("No regex and field to do regex")
-        result = self.parse_query(data, field, regex)
-        return result
+        field = self.name_to_field(self.regex_field_name)
+        return self.parse_query(data, field, self.last_regex)
 
     def get_regex_field_name(self):
         return self.regex_field_name
@@ -148,12 +156,10 @@ class Controller:
 
     def get_selected_fields(self, mode):
         if mode == "List":
-            fields = self.user_settings.get_list_fields()
-        elif mode == "Table":
-            fields = self.user_settings.get_table_fields()
-        else:
-            raise ValueError("Wrong mode")
-        return fields
+            return self.user_settings.get_list_fields()
+        if mode == "Table":
+            return self.user_settings.get_table_fields()
+        raise ValueError("Wrong mode")
 
     def set_selected(self, chosen_fields, mode="List"):
         if mode == "List":
@@ -197,28 +203,38 @@ class Controller:
         return self.settings.get_default_save_dir()
 
     def get_default_save_dir(self):
-        save_path = self._get_default_save_dir()
-        path = absolute(save_path)
-        return path
+        return absolute(self._get_default_save_dir())
+
+    def get_logger_path(self):
+        path = self.settings.get_logger_path()
+        if not path:
+            raise KeyError("There no logger path provided!")
+        
+        absolute_path = absolute(path)
+        return absolute_path
 
     def get_default_file_name(self):
         return self.settings.get_default_file_name()
-        
+
     def get_field_styles(self):
         return self.user_settings.get_field_styles()
 
-    def flat_search(self, mode = "List"):
-        if mode == "List":
-            data, selected_fields = self.search_for_list()
-        elif mode == "Table":
-            data, selected_fields = self.search_for_table()
-        else:
-            raise ValueError("Wrong mode")
+    def flat_search(self, mode="List"):
+        data, selected_fields = (self.search_for_list() if mode == "List"
+                                 else self.search_for_table())
         fields_dict = self.settings.get_fields()
         extracted_items = extract_data_items(data, selected_fields, fields_dict)
         return extracted_items, selected_fields
 
-    def save_to_json(self,file_path):
+    def save(self, file_path, data=None):
+        if file_path.endswith('.json'):
+            self.save_to_json(file_path)
+        elif file_path.endswith('.csv'):
+            self.save_to_csv(file_path)
+        else:
+            FileHandler.save_to_text(data, file_path)
+
+    def save_to_json(self, file_path):
         result = {}
         if self.get_is_table():
             data = self.search_for_table()
@@ -237,13 +253,3 @@ class Controller:
             data, data_fields = self.flat_search("List")
             list_path = file_path.replace('.csv', '_list.csv')
             FileHandler.save_to_csv(data, data_fields, list_path)
-
-    def save(self, file_path, data = None):
-        if file_path.endswith('.txt'):
-            FileHandler.save_to_txt(data, file_path)
-        elif file_path.endswith('.csv'):
-            self.save_to_csv(file_path)
-        elif file_path.endswith('.json'):
-            self.save_to_json(file_path)
-        else:
-            raise ValueError("Invalid file extension. Allowed extensions are: .txt, .csv, .json")

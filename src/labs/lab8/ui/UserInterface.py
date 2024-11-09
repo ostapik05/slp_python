@@ -4,6 +4,8 @@ from shared.classes.Input import BoolInput
 import tkinter as tk
 from tkinter import filedialog
 import pyautogui
+import logging
+logger = logging.getLogger(__name__)
 
 class UserInterface:
     def __init__(self, controller: Controller):

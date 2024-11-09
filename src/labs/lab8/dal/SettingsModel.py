@@ -1,5 +1,6 @@
 from shared.classes.DictJsonDataAccess import DictJsonDataAccess
-
+import logging
+logger = logging.getLogger(__name__)
 
 class SettingsModel:
     def __init__(self, path):
@@ -18,3 +19,6 @@ class SettingsModel:
 
     def get_default_file_name(self):
         return self.__settings.get('default_file_name')
+
+    def get_logger_path(self):
+        return self.__settings.get('logger_path')

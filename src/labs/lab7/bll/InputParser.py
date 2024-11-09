@@ -1,5 +1,6 @@
 import re
-
+import logging
+logger = logging.getLogger(__name__)
 
 class InputParser:
     @staticmethod
@@ -8,7 +9,11 @@ class InputParser:
             re.compile(query_string)
             return True
         except re.error:
+            logger.debug("Invalid regex")
             return False
+    @staticmethod
+    def test_is_regex_invalid_regex(self):
+        self.assertFalse(InputParser.is_regex("{[]{"))
 
     @staticmethod
     def parse_query(data, field, query):
@@ -28,3 +33,4 @@ class InputParser:
             else:
                 return None
         return data
+

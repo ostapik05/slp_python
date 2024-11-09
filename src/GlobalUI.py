@@ -1,7 +1,9 @@
 from importlib import import_module
 from shared.classes.MenuBuilder import MenuBuilder
 
-use_lab = 7
+
+#for try specific lab, otherwise set to None
+use_lab = None
 
 class GlobalUI:
     def __init__(self):
@@ -27,6 +29,8 @@ class GlobalUI:
             .add_option("5", "5. ASCII 3d\n", self.__run_lab, number=5)
             .add_option("6", "6. Run tests\n", self.__run_lab, number=6)
             .add_option("7", "7. Run API program\n", self.__run_lab, number=7)
+            .add_option("8", "8. Data visualization\n", self.__run_lab, number=8)
+            # .add_option("7", "7. Run API program\n", self.__run_lab, number=7)
             .add_stop_options(["e", "0", "exit", "Exit"], "\n0.Exit(e)")
             .build()
         )
