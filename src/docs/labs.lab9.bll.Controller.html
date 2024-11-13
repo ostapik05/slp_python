@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module labs.lab9.bll.Controller</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="labs.html" class="white">labs</a>.<a href="labs.lab9.html" class="white">lab9</a>.<a href="labs.lab9.bll.html" class="white">bll</a>.Controller</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Coleg0%5Cdesktop%5C%D1%81%D0%BF%D0%B5%D1%86%D1%96%D0%B0%D0%BB%D1%96%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D1%96%20%D0%BC%D0%BF%5Clabs%5Csrc%5Clabs%5Clab9%5Cbll%5Ccontroller.py">c:\users\oleg0\desktop\спеціалізовані мп\labs\src\labs\lab9\bll\controller.py</a></td></tr></table>
+    <p></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="logging.html">logging</a><br>
+<a href="os.html">os</a><br>
+</td><td class="multicolumn"><a href="pydoc.html">pydoc</a><br>
+<a href="subprocess.html">subprocess</a><br>
+</td><td class="multicolumn"><a href="webbrowser.html">webbrowser</a><br>
+</td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="labs.lab9.bll.Controller.html#Controller">Controller</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Controller">class <strong>Controller</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Controller">Controller</a>(settings:&nbsp;labs.lab9.dal.SettingsModel.SettingsModel)<br>
+&nbsp;<br>
+<a href="#Controller">Controller</a>&nbsp;class&nbsp;handles&nbsp;document&nbsp;directory&nbsp;paths&nbsp;and&nbsp;logging&nbsp;paths,<br>
+generating&nbsp;documents&nbsp;and&nbsp;rendering&nbsp;module&nbsp;documentation.<br>
+&nbsp;<br>
+Methods<br>
+-------<br>
+<a href="#Controller-__init__">__init__</a>(settings:&nbsp;SettingsModel)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Initializes&nbsp;the&nbsp;<a href="#Controller">Controller</a>&nbsp;with&nbsp;given&nbsp;settings.<br>
+&nbsp;<br>
+<a href="#Controller-get_docs_dir">get_docs_dir</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Returns&nbsp;the&nbsp;absolute&nbsp;path&nbsp;of&nbsp;the&nbsp;documents&nbsp;directory.<br>
+&nbsp;<br>
+<a href="#Controller-get_logger_path">get_logger_path</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Returns&nbsp;the&nbsp;absolute&nbsp;path&nbsp;of&nbsp;the&nbsp;logger&nbsp;path.<br>
+&nbsp;<br>
+<a href="#Controller-generate_docs">generate_docs</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Generates&nbsp;documentation&nbsp;in&nbsp;the&nbsp;documents&nbsp;directory.<br>
+&nbsp;<br>
+<a href="#Controller-get_module_docs_text">get_module_docs_text</a>(module_name)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Returns&nbsp;the&nbsp;documentation&nbsp;text&nbsp;for&nbsp;a&nbsp;given&nbsp;module.<br>
+&nbsp;<br>
+<a href="#Controller-open_pydoc_browser">open_pydoc_browser</a>(module_name)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Opens&nbsp;the&nbsp;documentation&nbsp;for&nbsp;a&nbsp;given&nbsp;module&nbsp;in&nbsp;a&nbsp;web&nbsp;browser.<br>
+&nbsp;<br>
+<a href="#Controller-get_root_path">get_root_path</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Returns&nbsp;the&nbsp;root&nbsp;directory&nbsp;path.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="Controller-__init__"><strong>__init__</strong></a>(self, settings: labs.lab9.dal.SettingsModel.SettingsModel)</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<dl><dt><a name="Controller-generate_docs"><strong>generate_docs</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Controller-get_docs_dir"><strong>get_docs_dir</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Controller-get_logger_path"><strong>get_logger_path</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Controller-get_root_path"><strong>get_root_path</strong></a>(self)</dt></dl>
+
+<hr>
+Static methods defined here:<br>
+<dl><dt><a name="Controller-get_module_docs_text"><strong>get_module_docs_text</strong></a>(module_name)</dt></dl>
+
+<dl><dt><a name="Controller-open_pydoc_browser"><strong>open_pydoc_browser</strong></a>(module_name)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>current_dir</strong> = r'C:\Users\oleg0\Desktop\Спеціалізовані МП\labs\src\docs'<br>
+<strong>logger</strong> = &lt;Logger labs.lab9.bll.Controller (WARNING)&gt;</td></tr></table>
+</body></html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module labs.lab7.dal.SettingsModel</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="labs.html" class="white">labs</a>.<a href="labs.lab7.html" class="white">lab7</a>.<a href="labs.lab7.dal.html" class="white">dal</a>.SettingsModel</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Coleg0%5Cdesktop%5C%D1%81%D0%BF%D0%B5%D1%86%D1%96%D0%B0%D0%BB%D1%96%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D1%96%20%D0%BC%D0%BF%5Clabs%5Csrc%5Clabs%5Clab7%5Cdal%5Csettingsmodel.py">c:\users\oleg0\desktop\спеціалізовані мп\labs\src\labs\lab7\dal\settingsmodel.py</a></td></tr></table>
+    <p></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="logging.html">logging</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="labs.lab7.dal.SettingsModel.html#SettingsModel">SettingsModel</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="SettingsModel">class <strong>SettingsModel</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#SettingsModel">SettingsModel</a>(path)<br>
+&nbsp;<br>
+<a href="#SettingsModel">SettingsModel</a><br>
+&nbsp;<br>
+This&nbsp;class&nbsp;provides&nbsp;a&nbsp;model&nbsp;for&nbsp;accessing&nbsp;various&nbsp;user&nbsp;settings&nbsp;stored&nbsp;in&nbsp;a&nbsp;JSON&nbsp;file.<br>
+The&nbsp;settings&nbsp;are&nbsp;accessed&nbsp;through&nbsp;a&nbsp;data&nbsp;access&nbsp;layer,&nbsp;and&nbsp;the&nbsp;class&nbsp;offers&nbsp;multiple<br>
+methods&nbsp;to&nbsp;fetch&nbsp;specific&nbsp;settings.<br>
+&nbsp;<br>
+Methods<br>
+-------<br>
+<a href="#SettingsModel-__init__">__init__</a>(path):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Initializes&nbsp;the&nbsp;<a href="#SettingsModel">SettingsModel</a>&nbsp;with&nbsp;the&nbsp;given&nbsp;path&nbsp;to&nbsp;the&nbsp;JSON&nbsp;file.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Raises&nbsp;an&nbsp;exception&nbsp;if&nbsp;the&nbsp;settings&nbsp;file&nbsp;is&nbsp;empty&nbsp;or&nbsp;doesn't&nbsp;exist.<br>
+&nbsp;<br>
+<a href="#SettingsModel-get_fields">get_fields</a>():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Returns&nbsp;the&nbsp;'fields'&nbsp;setting&nbsp;from&nbsp;the&nbsp;JSON&nbsp;file.<br>
+&nbsp;<br>
+<a href="#SettingsModel-get_fields_keys">get_fields_keys</a>():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;keys&nbsp;from&nbsp;the&nbsp;'fields'&nbsp;setting.<br>
+&nbsp;<br>
+<a href="#SettingsModel-get_user_settings_path">get_user_settings_path</a>():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Returns&nbsp;the&nbsp;'user_settings_path'&nbsp;setting&nbsp;from&nbsp;the&nbsp;JSON&nbsp;file.<br>
+&nbsp;<br>
+<a href="#SettingsModel-get_history_path">get_history_path</a>():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Returns&nbsp;the&nbsp;'history_path'&nbsp;setting&nbsp;from&nbsp;the&nbsp;JSON&nbsp;file.<br>
+&nbsp;<br>
+<a href="#SettingsModel-get_languages">get_languages</a>():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Returns&nbsp;the&nbsp;'languages'&nbsp;setting&nbsp;from&nbsp;the&nbsp;JSON&nbsp;file.<br>
+&nbsp;<br>
+<a href="#SettingsModel-get_max_results">get_max_results</a>():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Returns&nbsp;the&nbsp;'max_results'&nbsp;setting&nbsp;from&nbsp;the&nbsp;JSON&nbsp;file.<br>
+&nbsp;<br>
+<a href="#SettingsModel-get_default_save_dir">get_default_save_dir</a>():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Returns&nbsp;the&nbsp;'default_save_dir'&nbsp;setting&nbsp;from&nbsp;the&nbsp;JSON&nbsp;file.<br>
+&nbsp;<br>
+<a href="#SettingsModel-get_default_file_name">get_default_file_name</a>():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Returns&nbsp;the&nbsp;'default_file_name'&nbsp;setting&nbsp;from&nbsp;the&nbsp;JSON&nbsp;file.<br>
+&nbsp;<br>
+<a href="#SettingsModel-get_results_to_save">get_results_to_save</a>():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Returns&nbsp;the&nbsp;'results_to_save'&nbsp;setting&nbsp;from&nbsp;the&nbsp;JSON&nbsp;file.<br>
+&nbsp;<br>
+<a href="#SettingsModel-get_colors">get_colors</a>():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Returns&nbsp;the&nbsp;'colors'&nbsp;setting&nbsp;from&nbsp;the&nbsp;JSON&nbsp;file.<br>
+&nbsp;<br>
+<a href="#SettingsModel-get_attributes">get_attributes</a>():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Returns&nbsp;the&nbsp;'attributes'&nbsp;setting&nbsp;from&nbsp;the&nbsp;JSON&nbsp;file.<br>
+&nbsp;<br>
+<a href="#SettingsModel-get_logger_path">get_logger_path</a>():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Returns&nbsp;the&nbsp;'logger_path'&nbsp;setting&nbsp;from&nbsp;the&nbsp;JSON&nbsp;file.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="SettingsModel-__init__"><strong>__init__</strong></a>(self, path)</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<dl><dt><a name="SettingsModel-get_attributes"><strong>get_attributes</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="SettingsModel-get_colors"><strong>get_colors</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="SettingsModel-get_default_file_name"><strong>get_default_file_name</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="SettingsModel-get_default_save_dir"><strong>get_default_save_dir</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="SettingsModel-get_fields"><strong>get_fields</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="SettingsModel-get_fields_keys"><strong>get_fields_keys</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="SettingsModel-get_history_path"><strong>get_history_path</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="SettingsModel-get_languages"><strong>get_languages</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="SettingsModel-get_logger_path"><strong>get_logger_path</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="SettingsModel-get_max_results"><strong>get_max_results</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="SettingsModel-get_results_to_save"><strong>get_results_to_save</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="SettingsModel-get_user_settings_path"><strong>get_user_settings_path</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>logger</strong> = &lt;Logger labs.lab7.dal.SettingsModel (WARNING)&gt;</td></tr></table>
+</body></html>

@@ -1,0 +1,10 @@
+{
+  "docs_save_dir": [
+    "docs"
+  ],
+  "logger_path": [
+    "logs",
+    "lab9",
+    "lab.log"
+  ]
+}

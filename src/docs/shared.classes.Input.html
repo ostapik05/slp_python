@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module shared.classes.Input</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="shared.html" class="white">shared</a>.<a href="shared.classes.html" class="white">classes</a>.Input</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Coleg0%5Cdesktop%5C%D1%81%D0%BF%D0%B5%D1%86%D1%96%D0%B0%D0%BB%D1%96%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D1%96%20%D0%BC%D0%BF%5Clabs%5Csrc%5Cshared%5Cclasses%5Cinput.py">c:\users\oleg0\desktop\спеціалізовані мп\labs\src\shared\classes\input.py</a></td></tr></table>
+    <p></p>
+<p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="shared.classes.Input.html#VariantsInput">VariantsInput</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="shared.classes.Input.html#BoolInput">BoolInput</a>
+</dt><dt class="heading-text"><a href="shared.classes.Input.html#NumberBetweenInput">NumberBetweenInput</a>
+</dt><dt class="heading-text"><a href="shared.classes.Input.html#StringInput">StringInput</a>
+</dt></dl>
+</dd>
+</dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="BoolInput">class <strong>BoolInput</strong></a>(<a href="shared.classes.Input.html#VariantsInput">VariantsInput</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#BoolInput">BoolInput</a>&nbsp;class&nbsp;for&nbsp;handling&nbsp;boolean&nbsp;input&nbsp;from&nbsp;the&nbsp;user.&nbsp;It&nbsp;provides&nbsp;methods&nbsp;to&nbsp;capture&nbsp;and&nbsp;validate&nbsp;user&nbsp;input&nbsp;as&nbsp;boolean&nbsp;values.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="shared.classes.Input.html#BoolInput">BoolInput</a></dd>
+<dd><a href="shared.classes.Input.html#VariantsInput">VariantsInput</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Class methods defined here:<br>
+<dl><dt><a name="BoolInput-default"><strong>default</strong></a>(message=None)</dt></dl>
+
+<dl><dt><a name="BoolInput-input"><strong>input</strong></a>(message, options=None, warning_message=None, is_finite=False)</dt></dl>
+
+<hr>
+Class methods inherited from <a href="shared.classes.Input.html#VariantsInput">VariantsInput</a>:<br>
+<dl><dt><a name="BoolInput-in_wrong"><strong>in_wrong</strong></a>(value, message)</dt></dl>
+
+<dl><dt><a name="BoolInput-validate"><strong>validate</strong></a>(value, options=None)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="shared.classes.Input.html#VariantsInput">VariantsInput</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="NumberBetweenInput">class <strong>NumberBetweenInput</strong></a>(<a href="shared.classes.Input.html#VariantsInput">VariantsInput</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code">class&nbsp;<a href="#NumberBetweenInput">NumberBetweenInput</a>(<a href="#VariantsInput">VariantsInput</a>):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Validates&nbsp;whether&nbsp;a&nbsp;given&nbsp;value&nbsp;falls&nbsp;within&nbsp;a&nbsp;specified&nbsp;integer&nbsp;range.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Methods:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#NumberBetweenInput-validate">validate</a>(value,&nbsp;options):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Validates&nbsp;that&nbsp;a&nbsp;value&nbsp;is&nbsp;an&nbsp;integer&nbsp;within&nbsp;a&nbsp;specified&nbsp;range.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="shared.classes.Input.html#NumberBetweenInput">NumberBetweenInput</a></dd>
+<dd><a href="shared.classes.Input.html#VariantsInput">VariantsInput</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Class methods defined here:<br>
+<dl><dt><a name="NumberBetweenInput-validate"><strong>validate</strong></a>(value, options: Tuple[int, int])</dt></dl>
+
+<hr>
+Class methods inherited from <a href="shared.classes.Input.html#VariantsInput">VariantsInput</a>:<br>
+<dl><dt><a name="NumberBetweenInput-in_wrong"><strong>in_wrong</strong></a>(value, message)</dt></dl>
+
+<dl><dt><a name="NumberBetweenInput-input"><strong>input</strong></a>(message, options=None, warning_message=None, is_finite=False)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="shared.classes.Input.html#VariantsInput">VariantsInput</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="StringInput">class <strong>StringInput</strong></a>(<a href="shared.classes.Input.html#VariantsInput">VariantsInput</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code">class&nbsp;<a href="#StringInput">StringInput</a>(<a href="#VariantsInput">VariantsInput</a>):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Validates&nbsp;whether&nbsp;a&nbsp;given&nbsp;value&nbsp;length&nbsp;falls&nbsp;within&nbsp;a&nbsp;specified&nbsp;integer&nbsp;range.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Methods:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#StringInput-validate">validate</a>(value,&nbsp;options):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Validates&nbsp;that&nbsp;a&nbsp;value&nbsp;is&nbsp;an&nbsp;integer&nbsp;within&nbsp;a&nbsp;specified&nbsp;range.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="shared.classes.Input.html#StringInput">StringInput</a></dd>
+<dd><a href="shared.classes.Input.html#VariantsInput">VariantsInput</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Class methods defined here:<br>
+<dl><dt><a name="StringInput-input"><strong>input</strong></a>(
+    message,
+    options=typing.Optional[typing.Tuple[int, int]],
+    warning_message=None,
+    is_finite=False
+)</dt></dl>
+
+<hr>
+Class methods inherited from <a href="shared.classes.Input.html#VariantsInput">VariantsInput</a>:<br>
+<dl><dt><a name="StringInput-in_wrong"><strong>in_wrong</strong></a>(value, message)</dt></dl>
+
+<dl><dt><a name="StringInput-validate"><strong>validate</strong></a>(value, options=None)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="shared.classes.Input.html#VariantsInput">VariantsInput</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="VariantsInput">class <strong>VariantsInput</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code">class&nbsp;<a href="#VariantsInput">VariantsInput</a>:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;utility&nbsp;class&nbsp;for&nbsp;handling&nbsp;user&nbsp;input&nbsp;with&nbsp;validation&nbsp;against&nbsp;a&nbsp;set&nbsp;of&nbsp;options.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Methods<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-------<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#VariantsInput-input">input</a>(cls,&nbsp;message,&nbsp;options=None,&nbsp;warning_message=None,&nbsp;is_finite=False)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prompts&nbsp;the&nbsp;user&nbsp;for&nbsp;input&nbsp;and&nbsp;validates&nbsp;the&nbsp;input&nbsp;against&nbsp;a&nbsp;set&nbsp;of&nbsp;options.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#VariantsInput-validate">validate</a>(cls,&nbsp;value,&nbsp;options=None)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Validates&nbsp;the&nbsp;user's&nbsp;input.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#VariantsInput-in_wrong">in_wrong</a>(cls,&nbsp;value,&nbsp;message)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prints&nbsp;a&nbsp;warning&nbsp;message&nbsp;when&nbsp;the&nbsp;user&nbsp;input&nbsp;is&nbsp;invalid.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Class methods defined here:<br>
+<dl><dt><a name="VariantsInput-in_wrong"><strong>in_wrong</strong></a>(value, message)</dt></dl>
+
+<dl><dt><a name="VariantsInput-input"><strong>input</strong></a>(message, options=None, warning_message=None, is_finite=False)</dt></dl>
+
+<dl><dt><a name="VariantsInput-validate"><strong>validate</strong></a>(value, options=None)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>Tuple</strong> = typing.Tuple</td></tr></table>
+</body></html>

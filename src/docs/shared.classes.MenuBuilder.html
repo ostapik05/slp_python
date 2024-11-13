@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module shared.classes.MenuBuilder</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="shared.html" class="white">shared</a>.<a href="shared.classes.html" class="white">classes</a>.MenuBuilder</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Coleg0%5Cdesktop%5C%D1%81%D0%BF%D0%B5%D1%86%D1%96%D0%B0%D0%BB%D1%96%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D1%96%20%D0%BC%D0%BF%5Clabs%5Csrc%5Cshared%5Cclasses%5Cmenubuilder.py">c:\users\oleg0\desktop\спеціалізовані мп\labs\src\shared\classes\menubuilder.py</a></td></tr></table>
+    <p></p>
+<p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="shared.classes.MenuBuilder.html#Menu">Menu</a>
+</dt><dt class="heading-text"><a href="shared.classes.MenuBuilder.html#MenuBuilder">MenuBuilder</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Menu">class <strong>Menu</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code">Class&nbsp;representing&nbsp;a&nbsp;menu&nbsp;system&nbsp;for&nbsp;console&nbsp;applications.<br>
+&nbsp;<br>
+class&nbsp;<a href="#Menu">Menu</a>:<br>
+&nbsp;<br>
+def&nbsp;<a href="#Menu-__init__">__init__</a>(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Initialize&nbsp;the&nbsp;<a href="#Menu">Menu</a>&nbsp;with&nbsp;default&nbsp;properties,&nbsp;including&nbsp;options,&nbsp;attributes,&nbsp;and&nbsp;various&nbsp;text&nbsp;elements.<br>
+&nbsp;<br>
+def&nbsp;<a href="#Menu-set_title">set_title</a>(self,&nbsp;title):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Set&nbsp;a&nbsp;static&nbsp;title&nbsp;for&nbsp;the&nbsp;menu.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Parameters:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;(str):&nbsp;The&nbsp;title&nbsp;of&nbsp;the&nbsp;menu.<br>
+&nbsp;<br>
+def&nbsp;<a href="#Menu-set_dynamic_title">set_dynamic_title</a>(self,&nbsp;method):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Set&nbsp;a&nbsp;dynamic&nbsp;title&nbsp;method&nbsp;for&nbsp;the&nbsp;menu.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Parameters:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;method&nbsp;(function):&nbsp;Function&nbsp;to&nbsp;call&nbsp;for&nbsp;generating&nbsp;the&nbsp;dynamic&nbsp;title.<br>
+&nbsp;<br>
+def&nbsp;<a href="#Menu-get_print_text">get_print_text</a>(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Get&nbsp;the&nbsp;concatenated&nbsp;text&nbsp;of&nbsp;the&nbsp;menu,&nbsp;including&nbsp;title,&nbsp;dynamic&nbsp;title,&nbsp;and&nbsp;various&nbsp;text&nbsp;sections.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;str:&nbsp;The&nbsp;formatted&nbsp;menu&nbsp;text.<br>
+&nbsp;<br>
+def&nbsp;<a href="#Menu-set_input_text">set_input_text</a>(self,&nbsp;input_text):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Set&nbsp;the&nbsp;text&nbsp;prompt&nbsp;for&nbsp;input.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Parameters:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;input_text&nbsp;(str):&nbsp;The&nbsp;input&nbsp;prompt&nbsp;text.<br>
+&nbsp;<br>
+def&nbsp;<a href="#Menu-set_warning">set_warning</a>(self,&nbsp;warning):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Set&nbsp;the&nbsp;warning&nbsp;message&nbsp;to&nbsp;display&nbsp;for&nbsp;invalid&nbsp;input.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Parameters:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;warning&nbsp;(str):&nbsp;The&nbsp;warning&nbsp;message.<br>
+&nbsp;<br>
+def&nbsp;<a href="#Menu-stop">stop</a>(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Stop&nbsp;the&nbsp;menu&nbsp;loop.<br>
+&nbsp;<br>
+def&nbsp;<a href="#Menu-update_option">update_option</a>(self,&nbsp;key,&nbsp;message,&nbsp;method,&nbsp;**attributes):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Add&nbsp;or&nbsp;update&nbsp;an&nbsp;option&nbsp;in&nbsp;the&nbsp;menu,&nbsp;including&nbsp;associated&nbsp;message&nbsp;and&nbsp;attributes.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Parameters:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;key&nbsp;(str):&nbsp;The&nbsp;key&nbsp;for&nbsp;this&nbsp;menu&nbsp;option.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;message&nbsp;(str):&nbsp;The&nbsp;message&nbsp;to&nbsp;display&nbsp;for&nbsp;this&nbsp;option.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;method&nbsp;(function):&nbsp;The&nbsp;function&nbsp;to&nbsp;execute&nbsp;when&nbsp;this&nbsp;option&nbsp;is&nbsp;selected.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**attributes:&nbsp;Additional&nbsp;attributes&nbsp;for&nbsp;the&nbsp;option.<br>
+&nbsp;<br>
+def&nbsp;<a href="#Menu-update_end_option">update_end_option</a>(self,&nbsp;key,&nbsp;message,&nbsp;method,&nbsp;**attributes):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Add&nbsp;or&nbsp;update&nbsp;an&nbsp;end&nbsp;option&nbsp;in&nbsp;the&nbsp;menu,&nbsp;including&nbsp;associated&nbsp;message&nbsp;and&nbsp;attributes.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Parameters:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;key&nbsp;(str):&nbsp;The&nbsp;key&nbsp;for&nbsp;this&nbsp;end&nbsp;menu&nbsp;option.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;message&nbsp;(str):&nbsp;The&nbsp;message&nbsp;to&nbsp;display&nbsp;for&nbsp;this&nbsp;option.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;method&nbsp;(function):&nbsp;The&nbsp;function&nbsp;to&nbsp;execute&nbsp;when&nbsp;this&nbsp;option&nbsp;is&nbsp;selected.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**attributes:&nbsp;Additional&nbsp;attributes&nbsp;for&nbsp;the&nbsp;option.<br>
+&nbsp;<br>
+def&nbsp;<a href="#Menu-update_end_callback">update_end_callback</a>(self,&nbsp;method,&nbsp;**attributes):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Set&nbsp;a&nbsp;callback&nbsp;function&nbsp;to&nbsp;be&nbsp;called&nbsp;when&nbsp;the&nbsp;menu&nbsp;loop&nbsp;ends.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Parameters:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;method&nbsp;(function):&nbsp;The&nbsp;callback&nbsp;function.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**attributes:&nbsp;Additional&nbsp;attributes&nbsp;for&nbsp;the&nbsp;callback.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Raises:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ValueError:&nbsp;If&nbsp;the&nbsp;provided&nbsp;method&nbsp;is&nbsp;not&nbsp;callable.<br>
+&nbsp;<br>
+def&nbsp;<a href="#Menu-show_text">show_text</a>(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Display&nbsp;the&nbsp;menu&nbsp;text&nbsp;in&nbsp;the&nbsp;console.<br>
+&nbsp;<br>
+def&nbsp;<a href="#Menu-get_input_and_execute">get_input_and_execute</a>(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Get&nbsp;user&nbsp;input&nbsp;and&nbsp;execute&nbsp;the&nbsp;associated&nbsp;menu&nbsp;option.<br>
+&nbsp;<br>
+def&nbsp;<a href="#Menu-show">show</a>(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Display&nbsp;the&nbsp;menu&nbsp;and&nbsp;process&nbsp;user&nbsp;input&nbsp;until&nbsp;the&nbsp;menu&nbsp;is&nbsp;stopped.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="Menu-__init__"><strong>__init__</strong></a>(self)</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<dl><dt><a name="Menu-get_input_and_execute"><strong>get_input_and_execute</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Menu-get_print_text"><strong>get_print_text</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Menu-set_dynamic_title"><strong>set_dynamic_title</strong></a>(self, method)</dt></dl>
+
+<dl><dt><a name="Menu-set_input_text"><strong>set_input_text</strong></a>(self, input_text)</dt></dl>
+
+<dl><dt><a name="Menu-set_title"><strong>set_title</strong></a>(self, title)</dt></dl>
+
+<dl><dt><a name="Menu-set_warning"><strong>set_warning</strong></a>(self, warning)</dt></dl>
+
+<dl><dt><a name="Menu-show"><strong>show</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Menu-show_text"><strong>show_text</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Menu-stop"><strong>stop</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Menu-update_end_callback"><strong>update_end_callback</strong></a>(self, method, **attributes)</dt></dl>
+
+<dl><dt><a name="Menu-update_end_option"><strong>update_end_option</strong></a>(self, key, message, method, **attributes)</dt></dl>
+
+<dl><dt><a name="Menu-update_option"><strong>update_option</strong></a>(self, key, message, method, **attributes)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="MenuBuilder">class <strong>MenuBuilder</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#MenuBuilder">MenuBuilder</a>&nbsp;is&nbsp;a&nbsp;class&nbsp;that&nbsp;facilitates&nbsp;the&nbsp;construction&nbsp;and&nbsp;customization&nbsp;of&nbsp;a&nbsp;menu&nbsp;by&nbsp;providing&nbsp;a&nbsp;chainable&nbsp;API.<br>
+&nbsp;<br>
+Methods<br>
+-------<br>
+<a href="#MenuBuilder-__init__">__init__</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Initializes&nbsp;a&nbsp;new&nbsp;instance&nbsp;of&nbsp;<a href="#MenuBuilder">MenuBuilder</a>&nbsp;with&nbsp;a&nbsp;default&nbsp;<a href="#Menu">Menu</a>&nbsp;<a href="builtins.html#object">object</a>.<br>
+&nbsp;<br>
+<a href="#MenuBuilder-set_title">set_title</a>(title="Settings")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Sets&nbsp;the&nbsp;title&nbsp;of&nbsp;the&nbsp;menu.&nbsp;Default&nbsp;is&nbsp;"Settings".<br>
+&nbsp;<br>
+<a href="#MenuBuilder-set_dynamic_title">set_dynamic_title</a>(method=lambda:&nbsp;"dynamic&nbsp;title")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Sets&nbsp;a&nbsp;dynamic&nbsp;title&nbsp;using&nbsp;a&nbsp;callable&nbsp;method.&nbsp;Default&nbsp;method&nbsp;returns&nbsp;"dynamic&nbsp;title".<br>
+&nbsp;<br>
+<a href="#MenuBuilder-set_input_text">set_input_text</a>(input_text="Choose:&nbsp;")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Sets&nbsp;the&nbsp;input&nbsp;prompt&nbsp;text&nbsp;for&nbsp;the&nbsp;menu.&nbsp;Default&nbsp;is&nbsp;"Choose:&nbsp;".<br>
+&nbsp;<br>
+<a href="#MenuBuilder-set_warning">set_warning</a>(warning="Wrong&nbsp;option!")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Sets&nbsp;the&nbsp;warning&nbsp;message&nbsp;for&nbsp;invalid&nbsp;menu&nbsp;options.&nbsp;Default&nbsp;is&nbsp;"Wrong&nbsp;option!".<br>
+&nbsp;<br>
+<a href="#MenuBuilder-update_end_callback">update_end_callback</a>(end_callback,&nbsp;**attributes)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Updates&nbsp;the&nbsp;end&nbsp;callback&nbsp;with&nbsp;any&nbsp;specified&nbsp;attributes.<br>
+&nbsp;<br>
+<a href="#MenuBuilder-add_stop_options">add_stop_options</a>(keys,&nbsp;message="Exit")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Adds&nbsp;options&nbsp;to&nbsp;stop&nbsp;the&nbsp;menu&nbsp;based&nbsp;on&nbsp;specified&nbsp;keys.&nbsp;Default&nbsp;message&nbsp;is&nbsp;"Exit".<br>
+&nbsp;<br>
+<a href="#MenuBuilder-add_option">add_option</a>(key,&nbsp;message,&nbsp;method,&nbsp;**attributes)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Adds&nbsp;an&nbsp;option&nbsp;to&nbsp;the&nbsp;menu&nbsp;with&nbsp;a&nbsp;specified&nbsp;key,&nbsp;message,&nbsp;and&nbsp;method.&nbsp;Additional&nbsp;attributes&nbsp;can&nbsp;also&nbsp;be&nbsp;provided.<br>
+&nbsp;<br>
+<a href="#MenuBuilder-add_option_without_attributes">add_option_without_attributes</a>(key,&nbsp;message,&nbsp;method)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Adds&nbsp;an&nbsp;option&nbsp;to&nbsp;the&nbsp;menu&nbsp;with&nbsp;a&nbsp;specified&nbsp;key,&nbsp;message,&nbsp;and&nbsp;method&nbsp;without&nbsp;additional&nbsp;attributes.<br>
+&nbsp;<br>
+<a href="#MenuBuilder-update_attribute">update_attribute</a>(key,&nbsp;value)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Updates&nbsp;an&nbsp;attribute&nbsp;of&nbsp;the&nbsp;menu&nbsp;with&nbsp;a&nbsp;specified&nbsp;key&nbsp;and&nbsp;value.<br>
+&nbsp;<br>
+<a href="#MenuBuilder-stop_on_invalid_input">stop_on_invalid_input</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Stops&nbsp;the&nbsp;menu&nbsp;execution&nbsp;on&nbsp;invalid&nbsp;input.<br>
+&nbsp;<br>
+<a href="#MenuBuilder-build">build</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Constructs&nbsp;and&nbsp;returns&nbsp;the&nbsp;final&nbsp;<a href="#Menu">Menu</a>&nbsp;<a href="builtins.html#object">object</a>.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="MenuBuilder-__init__"><strong>__init__</strong></a>(self)</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<dl><dt><a name="MenuBuilder-add_option"><strong>add_option</strong></a>(self, key, message, method, **attributes)</dt></dl>
+
+<dl><dt><a name="MenuBuilder-add_option_without_attributes"><strong>add_option_without_attributes</strong></a>(self, key, message, method)</dt></dl>
+
+<dl><dt><a name="MenuBuilder-add_stop_options"><strong>add_stop_options</strong></a>(self, keys, message='Exit')</dt></dl>
+
+<dl><dt><a name="MenuBuilder-build"><strong>build</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="MenuBuilder-set_dynamic_title"><strong>set_dynamic_title</strong></a>(
+    self,
+    method=&lt;function MenuBuilder.&lt;lambda&gt; at 0x000001AC389C9300&gt;
+)</dt></dl>
+
+<dl><dt><a name="MenuBuilder-set_input_text"><strong>set_input_text</strong></a>(self, input_text='Choose: ')</dt></dl>
+
+<dl><dt><a name="MenuBuilder-set_title"><strong>set_title</strong></a>(self, title='Settings')</dt></dl>
+
+<dl><dt><a name="MenuBuilder-set_warning"><strong>set_warning</strong></a>(self, warning='Wrong option!')</dt></dl>
+
+<dl><dt><a name="MenuBuilder-stop_on_invalid_input"><strong>stop_on_invalid_input</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="MenuBuilder-update_attribute"><strong>update_attribute</strong></a>(self, key, value)</dt></dl>
+
+<dl><dt><a name="MenuBuilder-update_end_callback"><strong>update_end_callback</strong></a>(self, end_callback, **attributes)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

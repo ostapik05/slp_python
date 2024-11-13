@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module labs.lab1.ui.menu</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="labs.html" class="white">labs</a>.<a href="labs.lab1.html" class="white">lab1</a>.<a href="labs.lab1.ui.html" class="white">ui</a>.menu</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Coleg0%5Cdesktop%5C%D1%81%D0%BF%D0%B5%D1%86%D1%96%D0%B0%D0%BB%D1%96%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D1%96%20%D0%BC%D0%BF%5Clabs%5Csrc%5Clabs%5Clab1%5Cui%5Cmenu.py">c:\users\oleg0\desktop\спеціалізовані мп\labs\src\labs\lab1\ui\menu.py</a></td></tr></table>
+    <p></p>
+<p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-calculation_menu"><strong>calculation_menu</strong></a>(memory, available_operations, decimals, log_file, history)</dt><dd><span class="code">Perform&nbsp;a&nbsp;calculation&nbsp;on&nbsp;parameters&nbsp;entered&nbsp;by&nbsp;the&nbsp;user&nbsp;previously.<br>
+:param&nbsp;memory:&nbsp;Stores&nbsp;previous&nbsp;calculations&nbsp;or&nbsp;results&nbsp;that&nbsp;can&nbsp;be&nbsp;reused&nbsp;in&nbsp;subsequent&nbsp;operations.<br>
+:param&nbsp;available_operations:&nbsp;A&nbsp;list&nbsp;of&nbsp;arithmetic&nbsp;operations&nbsp;that&nbsp;are&nbsp;supported&nbsp;(e.g.,&nbsp;'+',&nbsp;'-',&nbsp;'*',&nbsp;'/').<br>
+:param&nbsp;decimals:&nbsp;Number&nbsp;of&nbsp;decimal&nbsp;places&nbsp;to&nbsp;format&nbsp;the&nbsp;result.<br>
+:param&nbsp;log_file:&nbsp;File&nbsp;path&nbsp;or&nbsp;buffer&nbsp;where&nbsp;error&nbsp;logs&nbsp;and&nbsp;information&nbsp;will&nbsp;be&nbsp;recorded.<br>
+:param&nbsp;history:&nbsp;A&nbsp;list&nbsp;that&nbsp;records&nbsp;all&nbsp;previous&nbsp;calculations&nbsp;including&nbsp;operators,&nbsp;operands,&nbsp;and&nbsp;results.<br>
+:return:&nbsp;Updated&nbsp;memory&nbsp;and&nbsp;calculation&nbsp;history&nbsp;after&nbsp;performing&nbsp;the&nbsp;operation&nbsp;and&nbsp;managing&nbsp;errors.</span></dd></dl>
+ <dl><dt><a name="-get_input"><strong>get_input</strong></a>(memory, available_operations, log_file)</dt><dd><span class="code">Function&nbsp;to&nbsp;get&nbsp;valid&nbsp;user&nbsp;input<br>
+:param&nbsp;memory:&nbsp;Value&nbsp;stored&nbsp;in&nbsp;memory,&nbsp;can&nbsp;be&nbsp;reused&nbsp;by&nbsp;inputting&nbsp;'mr'.<br>
+:param&nbsp;available_operations:&nbsp;List&nbsp;of&nbsp;valid&nbsp;operations&nbsp;(e.g.,&nbsp;'+',&nbsp;'-',&nbsp;'√',&nbsp;'sqrt')&nbsp;that&nbsp;the&nbsp;user&nbsp;can&nbsp;choose&nbsp;from.<br>
+:param&nbsp;log_file:&nbsp;Path&nbsp;to&nbsp;the&nbsp;log&nbsp;file&nbsp;where&nbsp;errors&nbsp;should&nbsp;be&nbsp;logged.<br>
+:return:&nbsp;A&nbsp;tuple&nbsp;containing&nbsp;the&nbsp;first&nbsp;number,&nbsp;the&nbsp;operator,&nbsp;and&nbsp;the&nbsp;second&nbsp;number&nbsp;(or&nbsp;None&nbsp;if&nbsp;not&nbsp;applicable).</span></dd></dl>
+ <dl><dt><a name="-is_valid_operator"><strong>is_valid_operator</strong></a>(operator, available_operations, log_file)</dt><dd><span class="code">Check&nbsp;is&nbsp;operator&nbsp;is&nbsp;valid<br>
+:param&nbsp;operator:&nbsp;The&nbsp;operator&nbsp;to&nbsp;be&nbsp;validated<br>
+:param&nbsp;available_operations:&nbsp;A&nbsp;list&nbsp;of&nbsp;valid&nbsp;operations<br>
+:param&nbsp;log_file:&nbsp;The&nbsp;file&nbsp;where&nbsp;errors&nbsp;should&nbsp;be&nbsp;logged<br>
+:return:&nbsp;True&nbsp;if&nbsp;the&nbsp;operator&nbsp;is&nbsp;valid,&nbsp;otherwise&nbsp;False</span></dd></dl>
+ <dl><dt><a name="-menu"><strong>menu</strong></a>(settings, memory, available_operations, decimals, log_file, history)</dt><dd><span class="code">Function&nbsp;to&nbsp;navigate&nbsp;the&nbsp;user&nbsp;interface.<br>
+:param&nbsp;settings:&nbsp;Application&nbsp;settings&nbsp;object&nbsp;for&nbsp;storing&nbsp;and&nbsp;retrieving&nbsp;configurations.<br>
+:param&nbsp;memory:&nbsp;Current&nbsp;value&nbsp;stored&nbsp;in&nbsp;memory.<br>
+:param&nbsp;available_operations:&nbsp;List&nbsp;of&nbsp;operations&nbsp;that&nbsp;the&nbsp;calculator&nbsp;can&nbsp;perform.<br>
+:param&nbsp;decimals:&nbsp;Number&nbsp;of&nbsp;decimal&nbsp;places&nbsp;to&nbsp;display&nbsp;in&nbsp;the&nbsp;results.<br>
+:param&nbsp;log_file:&nbsp;File&nbsp;path&nbsp;for&nbsp;saving&nbsp;logs.<br>
+:param&nbsp;history:&nbsp;List&nbsp;of&nbsp;past&nbsp;calculation&nbsp;results.<br>
+:return:&nbsp;None</span></dd></dl>
+ <dl><dt><a name="-run"><strong>run</strong></a>(settings_path)</dt><dd><span class="code">Function&nbsp;set&nbsp;up&nbsp;parameters&nbsp;and&nbsp;run&nbsp;the&nbsp;menu.<br>
+:param&nbsp;settings_path:&nbsp;Path&nbsp;to&nbsp;the&nbsp;settings&nbsp;JSON&nbsp;file<br>
+:return:&nbsp;None</span></dd></dl>
+ <dl><dt><a name="-set_decimals"><strong>set_decimals</strong></a>(decimals, log_file)</dt><dd><span class="code">Function&nbsp;to&nbsp;let&nbsp;user&nbsp;change&nbsp;decimal&nbsp;settings<br>
+:param&nbsp;decimals:&nbsp;The&nbsp;current&nbsp;number&nbsp;of&nbsp;decimal&nbsp;places&nbsp;to&nbsp;be&nbsp;used.<br>
+:param&nbsp;log_file:&nbsp;The&nbsp;file&nbsp;where&nbsp;errors&nbsp;will&nbsp;be&nbsp;logged.<br>
+:return:&nbsp;The&nbsp;new&nbsp;number&nbsp;of&nbsp;decimal&nbsp;places&nbsp;entered&nbsp;by&nbsp;the&nbsp;user&nbsp;or&nbsp;the&nbsp;old&nbsp;value&nbsp;in&nbsp;case&nbsp;of&nbsp;an&nbsp;error.</span></dd></dl>
+</td></tr></table>
+</body></html>
