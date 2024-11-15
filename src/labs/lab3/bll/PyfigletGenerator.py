@@ -1,8 +1,29 @@
-from shared.classes.AsciiGenerator import AsciiGenerator
 from pyfiglet import FigletFont, figlet_format
+
+from shared.classes.ascii_generator import AsciiGenerator
 
 
 class PyfigletGenerator(AsciiGenerator):
+    """
+    PyfigletGenerator class for generating ASCII art using the pyfiglet library.
+
+    Methods
+    -------
+    generate(data, **kwargs):
+        Generate ASCII art for the given data using specified fonts and settings.
+
+    is_font_break_lines(cls, font):
+        Determines if a given font will break lines for texts that are too wide.
+
+    get_fonts():
+        Retrieves a list of available fonts in the pyfiglet library.
+
+    get_font_char_height(cls, font_name):
+        Returns the height of characters for the specified font.
+
+    get_font_char_width(cls, font_name):
+        Returns the width of characters for the specified font.
+    """
 
     @staticmethod
     def generate(data, **kwargs):

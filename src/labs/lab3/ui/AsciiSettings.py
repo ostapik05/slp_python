@@ -1,15 +1,69 @@
-from shared.classes.MenuBuilder import MenuBuilder
-from shared.classes.Input import (
-    VariantsInput,
-    BoolInput,
-    StringInput,
-    NumberBetweenInput,
-)
-
 from labs.lab3.bll.AsciiController import AsciiController
+from shared.classes.input import (
+    BoolInput,
+    NumberBetweenInput,
+    StringInput,
+    VariantsInput,
+)
+from shared.classes.menu_builder import MenuBuilder
 
 
 class AsciiSettingsUI:
+    """
+    AsciiSettingsUI
+
+    This class represents the user interface for ASCII art settings. It is responsible for displaying various settings menus and options to the user and obtaining their input to configure the ASCII art generation.
+
+    Methods
+    -------
+    __init__(self, controller: AsciiController = None)
+        Initializes the AsciiSettingsUI instance with an optional AsciiController instance.
+
+    set_controller(self, controller: AsciiController)
+        Sets the AsciiController instance for this UI and rebuilds the main menu.
+
+    show(self)
+        Displays the main menu to the user.
+
+    __menu_build(self)
+        Builds and configures the main settings menu.
+
+    set_symbols(self)
+        Displays the menu for configuring symbol replacements used in ASCII art.
+
+    get_symbols_replacement_info(self)
+        Retrieves current symbol replacement settings from the controller.
+
+    set_alignment(self)
+        Allows the user to set text alignment for the ASCII art.
+
+    set_bright_symbol(self)
+        Allows the user to set the symbol used for bright areas in the ASCII art.
+
+    set_empty_symbol(self)
+        Allows the user to set the symbol used for empty areas in the ASCII art.
+
+    set_is_replace_symbols(self)
+        Allows the user to enable or disable symbol replacement.
+
+    set_color(self)
+        Allows the user to set the color for the ASCII art.
+
+    set_font(self)
+        Allows the user to set the font used in the ASCII art.
+
+    set_width(self)
+        Allows the user to set the width of the ASCII art.
+
+    set_height(self)
+        Allows the user to set the height of the ASCII art.
+
+    set_line_breaking(self)
+        Allows the user to enable or disable line breaking (word wrapping) during ASCII art generation.
+
+    see_example(self)
+        Provides an example of the current settings applied to a sample text.
+    """
 
     def __init__(self, controller: AsciiController = None):
         self.__controller = controller
@@ -28,16 +82,12 @@ class AsciiSettingsUI:
             .set_input_text("Choose: ")
             .set_warning("No such setting")
             .set_dynamic_title(self.see_example)
-            .add_option(
-                "1", "1. Replacing symbols\n", self.set_symbols
-            )
+            .add_option("1", "1. Replacing symbols\n", self.set_symbols)
             .add_option("2", "2. Change font\n", self.set_font)
             .add_option("3", "3. Change color\n", self.set_color)
             .add_option("4", "4. Change width\n", self.set_width)
             .add_option("5", "5. Change height\n", self.set_height)
-            .add_option(
-                "6", "6. Change alignment\n", self.set_alignment
-            )
+            .add_option("6", "6. Change alignment\n", self.set_alignment)
             .add_option(
                 "7", "7. Change line breaking (word wrapping)\n", self.set_line_breaking
             )
@@ -71,7 +121,7 @@ class AsciiSettingsUI:
         empty = self.__controller.get_empty_symbol()
         is_replace_symbols = self.__controller.get_is_symbols_replace()
         return (
-            f"Current symbols:"
+            "Current symbols:"
             + f"\n bright: {bright}"
             + f"\n empty: {empty}"
             + f"\n replacing: {is_replace_symbols}"

@@ -1,8 +1,25 @@
-from shared.interfaces.PaintTextInterface import PaintTextInterface
 from colorama import Fore, Style
+
+from shared.interfaces.paint_text_interface import PaintTextInterface
 
 
 class ColoramaPainter(PaintTextInterface):
+    """
+    ColoramaPainter is a class that implements the PaintTextInterface. It provides text painting capabilities using color codes from the `colorama` library.
+
+    Attributes:
+    -----------
+    color_map : dict
+        A mapping between color names (as keys) and their corresponding `colorama` color codes (as values).
+
+    Methods:
+    --------
+    paint(cls, text, color):
+        Paints the given text with the specified color if it's supported.
+
+    get_colors(cls):
+        Returns a list of all supported colors.
+    """
 
     color_map = {
         "red": Fore.RED,

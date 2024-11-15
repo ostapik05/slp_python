@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module labs.lab8.bll.DataFrameUtils</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="labs.html" class="white">labs</a>.<a href="labs.lab8.html" class="white">lab8</a>.<a href="labs.lab8.bll.html" class="white">bll</a>.DataFrameUtils</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Coleg0%5Cdesktop%5C%D1%81%D0%BF%D0%B5%D1%86%D1%96%D0%B0%D0%BB%D1%96%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D1%96%20%D0%BC%D0%BF%5Clabs%5Csrc%5Clabs%5Clab8%5Cbll%5Cdataframeutils.py">c:\users\oleg0\desktop\спеціалізовані мп\labs\src\labs\lab8\bll\dataframeutils.py</a></td></tr></table>
+    <p></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="logging.html">logging</a><br>
+</td><td class="multicolumn"><a href="pandas.html">pandas</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-change_naps"><strong>change_naps</strong></a>(df, column)</dt><dd><span class="code">:param&nbsp;df:&nbsp;The&nbsp;DataFrame&nbsp;containing&nbsp;the&nbsp;data&nbsp;to&nbsp;be&nbsp;processed.<br>
+:param&nbsp;column:&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;column&nbsp;in&nbsp;the&nbsp;DataFrame&nbsp;where&nbsp;the&nbsp;function&nbsp;will&nbsp;apply&nbsp;the&nbsp;nap&nbsp;classification.<br>
+:return:&nbsp;The&nbsp;modified&nbsp;DataFrame&nbsp;with&nbsp;updated&nbsp;values&nbsp;in&nbsp;the&nbsp;specified&nbsp;column,&nbsp;categorizing&nbsp;entries&nbsp;as&nbsp;"With&nbsp;nap"&nbsp;or&nbsp;"Without&nbsp;nap"&nbsp;based&nbsp;on&nbsp;their&nbsp;content.</span></dd></dl>
+ <dl><dt><a name="-combine_columns"><strong>combine_columns</strong></a>(df, col1, col2, new_col)</dt><dd><span class="code">:param&nbsp;df:&nbsp;DataFrame&nbsp;containing&nbsp;the&nbsp;columns&nbsp;to&nbsp;be&nbsp;combined<br>
+:param&nbsp;col1:&nbsp;Name&nbsp;of&nbsp;the&nbsp;first&nbsp;column&nbsp;to&nbsp;be&nbsp;combined,&nbsp;containing&nbsp;day&nbsp;values<br>
+:param&nbsp;col2:&nbsp;Name&nbsp;of&nbsp;the&nbsp;second&nbsp;column&nbsp;to&nbsp;be&nbsp;combined,&nbsp;containing&nbsp;month&nbsp;values<br>
+:param&nbsp;new_col:&nbsp;Name&nbsp;of&nbsp;the&nbsp;new&nbsp;column&nbsp;to&nbsp;be&nbsp;created,&nbsp;containing&nbsp;the&nbsp;combined&nbsp;datetime&nbsp;values<br>
+:return:&nbsp;DataFrame&nbsp;with&nbsp;the&nbsp;new&nbsp;combined&nbsp;column&nbsp;added</span></dd></dl>
+ <dl><dt><a name="-combine_dataframes_on_columns"><strong>combine_dataframes_on_columns</strong></a>(df1, df2, columns)</dt><dd><span class="code">:param&nbsp;df1:&nbsp;First&nbsp;dataframe&nbsp;to&nbsp;be&nbsp;combined.<br>
+:type&nbsp;df1:&nbsp;pandas.DataFrame<br>
+:param&nbsp;df2:&nbsp;Second&nbsp;dataframe&nbsp;to&nbsp;be&nbsp;combined.<br>
+:type&nbsp;df2:&nbsp;pandas.DataFrame<br>
+:param&nbsp;columns:&nbsp;List&nbsp;of&nbsp;column&nbsp;pairs&nbsp;(tuples)&nbsp;to&nbsp;merge&nbsp;on,&nbsp;where&nbsp;each&nbsp;tuple&nbsp;represents&nbsp;the&nbsp;column&nbsp;names&nbsp;in&nbsp;the&nbsp;respective&nbsp;dataframes.<br>
+:type&nbsp;columns:&nbsp;list&nbsp;of&nbsp;tuple<br>
+:return:&nbsp;Combined&nbsp;dataframe&nbsp;with&nbsp;columns&nbsp;merged&nbsp;on&nbsp;specified&nbsp;column&nbsp;pairs.<br>
+:rtype:&nbsp;pandas.DataFrame</span></dd></dl>
+ <dl><dt><a name="-remove_column_by_name"><strong>remove_column_by_name</strong></a>(df, column_name)</dt><dd><span class="code">:param&nbsp;df:&nbsp;The&nbsp;input&nbsp;dataframe&nbsp;from&nbsp;which&nbsp;a&nbsp;column&nbsp;needs&nbsp;to&nbsp;be&nbsp;removed<br>
+:type&nbsp;df:&nbsp;pandas.DataFrame<br>
+&nbsp;<br>
+:param&nbsp;column_name:&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;column&nbsp;that&nbsp;needs&nbsp;to&nbsp;be&nbsp;removed&nbsp;from&nbsp;the&nbsp;dataframe<br>
+:type&nbsp;column_name:&nbsp;str<br>
+&nbsp;<br>
+:return:&nbsp;None</span></dd></dl>
+ <dl><dt><a name="-remove_columns_by_names"><strong>remove_columns_by_names</strong></a>(df, column_names)</dt><dd><span class="code">:param&nbsp;df:&nbsp;DataFrame&nbsp;from&nbsp;which&nbsp;columns&nbsp;should&nbsp;be&nbsp;removed.<br>
+:type&nbsp;df:&nbsp;pandas.DataFrame<br>
+:param&nbsp;column_names:&nbsp;List&nbsp;of&nbsp;column&nbsp;names&nbsp;to&nbsp;be&nbsp;removed&nbsp;from&nbsp;the&nbsp;DataFrame.<br>
+:type&nbsp;column_names:&nbsp;list&nbsp;of&nbsp;str<br>
+:return:&nbsp;DataFrame&nbsp;with&nbsp;specified&nbsp;columns&nbsp;removed.<br>
+:rtype:&nbsp;pandas.DataFrame</span></dd></dl>
+ <dl><dt><a name="-remove_rows_with_empty_cells"><strong>remove_rows_with_empty_cells</strong></a>(df)</dt><dd><span class="code">:param&nbsp;df:&nbsp;A&nbsp;Pandas&nbsp;DataFrame&nbsp;from&nbsp;which&nbsp;rows&nbsp;with&nbsp;any&nbsp;empty&nbsp;cells&nbsp;should&nbsp;be&nbsp;removed.<br>
+:return:&nbsp;A&nbsp;new&nbsp;DataFrame&nbsp;with&nbsp;rows&nbsp;containing&nbsp;empty&nbsp;cells&nbsp;dropped.</span></dd></dl>
+ <dl><dt><a name="-round_all_columns"><strong>round_all_columns</strong></a>(df)</dt><dd><span class="code">:param&nbsp;df:&nbsp;A&nbsp;pandas&nbsp;DataFrame&nbsp;whose&nbsp;numerical&nbsp;columns&nbsp;need&nbsp;to&nbsp;be&nbsp;rounded&nbsp;to&nbsp;the&nbsp;nearest&nbsp;integer.<br>
+:return:&nbsp;A&nbsp;pandas&nbsp;DataFrame&nbsp;with&nbsp;all&nbsp;numerical&nbsp;columns&nbsp;rounded&nbsp;to&nbsp;the&nbsp;nearest&nbsp;integer.</span></dd></dl>
+ <dl><dt><a name="-scale"><strong>scale</strong></a>(row, hour_name, minute_name, is_two_days, middle)</dt><dd><span class="code">:param&nbsp;row:&nbsp;Dictionary&nbsp;containing&nbsp;time&nbsp;data&nbsp;with&nbsp;keys&nbsp;corresponding&nbsp;to&nbsp;`hour_name`&nbsp;and&nbsp;`minute_name`.<br>
+:param&nbsp;hour_name:&nbsp;Key&nbsp;in&nbsp;the&nbsp;`row`&nbsp;dictionary&nbsp;representing&nbsp;the&nbsp;hour.<br>
+:param&nbsp;minute_name:&nbsp;Key&nbsp;in&nbsp;the&nbsp;`row`&nbsp;dictionary&nbsp;representing&nbsp;the&nbsp;minute.<br>
+:param&nbsp;is_two_days:&nbsp;Boolean&nbsp;indicating&nbsp;if&nbsp;the&nbsp;time&nbsp;calculation&nbsp;should&nbsp;account&nbsp;for&nbsp;a&nbsp;two-day&nbsp;span.<br>
+:param&nbsp;middle:&nbsp;Hour&nbsp;in&nbsp;the&nbsp;range&nbsp;0-24&nbsp;used&nbsp;as&nbsp;the&nbsp;midpoint&nbsp;to&nbsp;determine&nbsp;if&nbsp;hours&nbsp;should&nbsp;increment&nbsp;by&nbsp;24&nbsp;due&nbsp;to&nbsp;spanning&nbsp;two&nbsp;days.<br>
+:return:&nbsp;Time&nbsp;in&nbsp;hours&nbsp;as&nbsp;a&nbsp;float,&nbsp;rounded&nbsp;to&nbsp;two&nbsp;decimal&nbsp;places.</span></dd></dl>
+ <dl><dt><a name="-scale_hour_minute"><strong>scale_hour_minute</strong></a>(
+    df,
+    hour_name,
+    minute_name,
+    new_hour_name,
+    is_two_days=False,
+    middle=15
+)</dt><dd><span class="code">:param&nbsp;df:&nbsp;DataFrame&nbsp;containing&nbsp;the&nbsp;data&nbsp;to&nbsp;be&nbsp;scaled.<br>
+:param&nbsp;hour_name:&nbsp;Name&nbsp;of&nbsp;the&nbsp;column&nbsp;in&nbsp;the&nbsp;DataFrame&nbsp;representing&nbsp;the&nbsp;hour.<br>
+:param&nbsp;minute_name:&nbsp;Name&nbsp;of&nbsp;the&nbsp;column&nbsp;in&nbsp;the&nbsp;DataFrame&nbsp;representing&nbsp;the&nbsp;minute.<br>
+:param&nbsp;new_hour_name:&nbsp;Name&nbsp;of&nbsp;the&nbsp;new&nbsp;column&nbsp;to&nbsp;be&nbsp;added&nbsp;to&nbsp;the&nbsp;DataFrame&nbsp;after&nbsp;scaling.<br>
+:param&nbsp;is_two_days:&nbsp;Boolean&nbsp;flag&nbsp;indicating&nbsp;if&nbsp;the&nbsp;time&nbsp;range&nbsp;covers&nbsp;two&nbsp;days.<br>
+:param&nbsp;middle:&nbsp;The&nbsp;middle&nbsp;minute&nbsp;value&nbsp;for&nbsp;determining&nbsp;the&nbsp;scaling.<br>
+:return:&nbsp;DataFrame&nbsp;with&nbsp;the&nbsp;new&nbsp;scaled&nbsp;hour&nbsp;column&nbsp;added.</span></dd></dl>
+ <dl><dt><a name="-split_date_column"><strong>split_date_column</strong></a>(data, date_column, new_prefix=None)</dt><dd><span class="code">:param&nbsp;data:&nbsp;The&nbsp;DataFrame&nbsp;containing&nbsp;the&nbsp;date&nbsp;column&nbsp;to&nbsp;be&nbsp;split.<br>
+:param&nbsp;date_column:&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;column&nbsp;containing&nbsp;date/time&nbsp;values.<br>
+:param&nbsp;new_prefix:&nbsp;An&nbsp;optional&nbsp;prefix&nbsp;to&nbsp;be&nbsp;added&nbsp;to&nbsp;the&nbsp;names&nbsp;of&nbsp;the&nbsp;new&nbsp;columns.<br>
+:return:&nbsp;The&nbsp;DataFrame&nbsp;with&nbsp;the&nbsp;original&nbsp;date&nbsp;column&nbsp;replaced&nbsp;by&nbsp;new&nbsp;columns&nbsp;for&nbsp;year,&nbsp;month,&nbsp;day,&nbsp;day&nbsp;of&nbsp;the&nbsp;week,&nbsp;hour,&nbsp;and&nbsp;minute.</span></dd></dl>
+</td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>logger</strong> = &lt;Logger labs.lab8.bll.DataFrameUtils (WARNING)&gt;</td></tr></table>
+</body></html>

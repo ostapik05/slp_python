@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module shared.classes.json_data_access</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="shared.html" class="white">shared</a>.<a href="shared.classes.html" class="white">classes</a>.json_data_access</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Coleg0%5Cdesktop%5C%D1%81%D0%BF%D0%B5%D1%86%D1%96%D0%B0%D0%BB%D1%96%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D1%96%20%D0%BC%D0%BF%5Clabs%5Csrc%5Cshared%5Cclasses%5Cjson_data_access.py">c:\users\oleg0\desktop\спеціалізовані мп\labs\src\shared\classes\json_data_access.py</a></td></tr></table>
+    <p><span class="code">This&nbsp;module&nbsp;provides&nbsp;the&nbsp;class&nbsp;<a href="#JsonDataAccess">JsonDataAccess</a>&nbsp;for&nbsp;handling&nbsp;JSON&nbsp;data&nbsp;access&nbsp;with&nbsp;optional&nbsp;caching.</span></p>
+<p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="shared.classes.file_data_access.html#FileDataAccess">shared.classes.file_data_access.FileDataAccess</a>(<a href="shared.classes.data_access.html#DataAccess">shared.classes.data_access.DataAccess</a>)
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="shared.classes.json_data_access.html#JsonDataAccess">JsonDataAccess</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="JsonDataAccess">class <strong>JsonDataAccess</strong></a>(<a href="shared.classes.file_data_access.html#FileDataAccess">shared.classes.file_data_access.FileDataAccess</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#JsonDataAccess">JsonDataAccess</a>(file_path='config/app_settings/default.txt',&nbsp;is_caching=True)<br>
+&nbsp;<br>
+Class&nbsp;for&nbsp;handling&nbsp;JSON&nbsp;data&nbsp;access&nbsp;with&nbsp;optional&nbsp;caching.<br>
+&nbsp;<br>
+:param&nbsp;file_path:&nbsp;The&nbsp;path&nbsp;to&nbsp;the&nbsp;file&nbsp;storing&nbsp;JSON&nbsp;data.&nbsp;Default&nbsp;is<br>
+"config/app_settings/default.txt".<br>
+:param&nbsp;is_caching:&nbsp;Boolean&nbsp;indicating&nbsp;whether&nbsp;caching&nbsp;is&nbsp;enabled.&nbsp;Default&nbsp;is&nbsp;True.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="shared.classes.json_data_access.html#JsonDataAccess">JsonDataAccess</a></dd>
+<dd><a href="shared.classes.file_data_access.html#FileDataAccess">shared.classes.file_data_access.FileDataAccess</a></dd>
+<dd><a href="shared.classes.data_access.html#DataAccess">shared.classes.data_access.DataAccess</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="JsonDataAccess-__init__"><strong>__init__</strong></a>(self, file_path='config/app_settings/default.txt', is_caching=True)</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<dl><dt><a name="JsonDataAccess-get"><strong>get</strong></a>(self) -&gt; ~T</dt><dd><span class="code">Gets&nbsp;the&nbsp;data&nbsp;by&nbsp;decoding&nbsp;the&nbsp;JSON,&nbsp;using&nbsp;the&nbsp;cache&nbsp;if&nbsp;enabled.<br>
+&nbsp;<br>
+:returns:&nbsp;The&nbsp;data&nbsp;read&nbsp;from&nbsp;the&nbsp;JSON&nbsp;file.</span></dd></dl>
+
+<dl><dt><a name="JsonDataAccess-set"><strong>set</strong></a>(self, data: ~T)</dt><dd><span class="code">Sets&nbsp;the&nbsp;data&nbsp;by&nbsp;encoding&nbsp;it&nbsp;into&nbsp;JSON&nbsp;and&nbsp;caching&nbsp;if&nbsp;enabled.<br>
+&nbsp;<br>
+:param&nbsp;data:&nbsp;The&nbsp;data&nbsp;to&nbsp;be&nbsp;stored.</span></dd></dl>
+
+<dl><dt><a name="JsonDataAccess-validate_json"><strong>validate_json</strong></a>(self, is_can_be_empty=False)</dt><dd><span class="code">Validates&nbsp;the&nbsp;JSON&nbsp;by&nbsp;checking&nbsp;if&nbsp;it&nbsp;can&nbsp;be&nbsp;parsed.<br>
+&nbsp;<br>
+:param&nbsp;is_can_be_empty:&nbsp;Flag&nbsp;to&nbsp;allow&nbsp;empty&nbsp;JSON.<br>
+:returns:&nbsp;True&nbsp;if&nbsp;the&nbsp;JSON&nbsp;is&nbsp;valid,&nbsp;False&nbsp;otherwise.</span></dd></dl>
+
+<hr>
+Methods inherited from <a href="shared.classes.file_data_access.html#FileDataAccess">shared.classes.file_data_access.FileDataAccess</a>:<br>
+<dl><dt><a name="JsonDataAccess-set_file_path"><strong>set_file_path</strong></a>(self, file_path)</dt></dl>
+
+<dl><dt><a name="JsonDataAccess-set_is_caching"><strong>set_is_caching</strong></a>(self, is_caching)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="shared.classes.data_access.html#DataAccess">shared.classes.data_access.DataAccess</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>T</strong> = ~T</td></tr></table>
+</body></html>

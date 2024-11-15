@@ -1,12 +1,38 @@
 from datetime import datetime
-from os.path import exists, dirname
 from os import makedirs
+from os.path import dirname, exists
 
 
-# In creation, if file don't exists
-# raise error
 class Logger:
-    # Log to file and to console if needed
+    """
+    Logger class
+
+    Provides logging functionality to either a file, console, or both.
+
+    Methods:
+
+        __init__(file_path=None, is_write_to_console=True)
+            Initializes Logger. Optionally sets file path and console logging.
+
+        console_only()
+            Class method. Initializes Logger to log only to the console.
+
+        file_only(file_path)
+            Class method. Initializes Logger to log only to a specified file.
+
+        console_and_file(file_path)
+            Class method. Initializes Logger to log to both console and file.
+
+        log_error(message, error_level="ERROR")
+            Logs an error message with specified error level. Logs to console and/or file based on Logger settings.
+
+        _ensure_file_exists(file_path)
+            Ensures the specified file exists, creating it if necessary. Handles potential file creation errors.
+
+        _write_to_file(message)
+            Writes a message to the configured log file. Handles potential file writing errors.
+    """
+
     def __init__(self, file_path=None, is_write_to_console=True):
 
         if not file_path is None:
@@ -18,8 +44,8 @@ class Logger:
         self.is_write_to_console = is_write_to_console
 
     @classmethod
-    def console_only(self):
-        return self()
+    def console_only(cls):
+        return cls()
 
     @classmethod
     def file_only(self, file_path):

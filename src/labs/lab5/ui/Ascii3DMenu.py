@@ -1,10 +1,46 @@
-from shared.classes.MenuBuilder import MenuBuilder
-from shared.interfaces.UIInterface import UIInterface
-from shared.classes.Input import StringInput, NumberBetweenInput, BoolInput
 from labs.lab5.bll.Controller import Controller
+from shared.classes.input import BoolInput, NumberBetweenInput, StringInput
+from shared.classes.menu_builder import MenuBuilder
+from shared.interfaces.ui_interface import UIInterface
 
 
 class Ascii3DMenu(UIInterface):
+    """
+    Class that implements a 3D menu interface using ASCII representation.
+
+    class Ascii3DMenu(UIInterface):
+
+        def __init__(self, controller: Controller = None):
+            Initializes the Ascii3DMenu with an optional controller.
+
+            Args:
+                controller (Controller): The controller used to handle menu actions.
+
+        def set_controller(self, controller: Controller):
+            Sets the controller for the menu and builds the menu.
+
+            Args:
+                controller (Controller): The controller to be set.
+
+        def show(self):
+            Displays the menu to the user.
+
+        def __menu_build(self):
+            Builds and returns the menu structure.
+
+            Returns:
+                Menu: The built Menu object.
+
+        def make_scene(self):
+            Handles the action of making a scene. Checks if a file name is set and prompts the user if not.
+
+        def save_scene(self):
+            Handles the action of specifying a file name to save the scene. Prompts the user for a file name.
+
+        def set_height(self):
+            Handles the action of setting the height for the 3D scene. Prompts the user for a height value within a specified range.
+    """
+
     def __init__(self, controller: Controller = None):
         self.controller = controller
         if controller:
@@ -41,25 +77,22 @@ class Ascii3DMenu(UIInterface):
             print(f"Will save your scene in {self.controller.file_name}")
         self.controller.make_scene()
 
-
-
     def save_scene(self):
         message = "Write name: "
         limit = 30  # hardcode variable of key length
         file_name = StringInput().input(message, [1, limit], "Too long") + ".txt"
         self.controller.set_file_name(file_name)
 
-
     def set_height(self):
         min_height = 3
         max_height = 20
         message = f"Set height { min_height }-{ max_height}: "
         warning_message = "Wrong height"
-        input = NumberBetweenInput().input(message, [min_height, max_height], warning_message)
+        input = NumberBetweenInput().input(
+            message, [min_height, max_height], warning_message
+        )
         try:
             input = int(input)
         except:
             return
         self.controller.set_height(input)
-
-

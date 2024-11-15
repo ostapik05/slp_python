@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module shared.services.FileOperations</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="shared.html" class="white">shared</a>.<a href="shared.services.html" class="white">services</a>.FileOperations</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Coleg0%5Cdesktop%5C%D1%81%D0%BF%D0%B5%D1%86%D1%96%D0%B0%D0%BB%D1%96%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D1%96%20%D0%BC%D0%BF%5Clabs%5Csrc%5Cshared%5Cservices%5Cfileoperations.py">c:\users\oleg0\desktop\спеціалізовані мп\labs\src\shared\services\fileoperations.py</a></td></tr></table>
+    <p></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="logging.html">logging</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-ensure_file_exists"><strong>ensure_file_exists</strong></a>(file_path)</dt><dd><span class="code">:param&nbsp;file_path:&nbsp;Path&nbsp;of&nbsp;the&nbsp;file&nbsp;to&nbsp;check&nbsp;and&nbsp;create&nbsp;if&nbsp;it&nbsp;doesn't&nbsp;exist.&nbsp;It&nbsp;should&nbsp;be&nbsp;a&nbsp;string&nbsp;representing&nbsp;the&nbsp;file&nbsp;system&nbsp;path.<br>
+:return:&nbsp;None.&nbsp;This&nbsp;function&nbsp;does&nbsp;not&nbsp;return&nbsp;any&nbsp;value.&nbsp;It&nbsp;ensures&nbsp;that&nbsp;the&nbsp;specified&nbsp;file&nbsp;exists&nbsp;by&nbsp;creating&nbsp;it&nbsp;and&nbsp;its&nbsp;directories&nbsp;if&nbsp;necessary.</span></dd></dl>
+ <dl><dt><a name="-handle_exception"><strong>handle_exception</strong></a>(custom_message, exception)</dt><dd><span class="code">:param&nbsp;custom_message:&nbsp;Custom&nbsp;error&nbsp;message&nbsp;to&nbsp;be&nbsp;logged&nbsp;and&nbsp;included&nbsp;in&nbsp;the&nbsp;raised&nbsp;exception.<br>
+:param&nbsp;exception:&nbsp;Original&nbsp;exception&nbsp;that&nbsp;triggered&nbsp;the&nbsp;error.<br>
+:return:&nbsp;None</span></dd></dl>
+ <dl><dt><a name="-load_from_file"><strong>load_from_file</strong></a>(file_path)</dt><dd><span class="code">:param&nbsp;file_path:&nbsp;The&nbsp;path&nbsp;to&nbsp;the&nbsp;file&nbsp;that&nbsp;needs&nbsp;to&nbsp;be&nbsp;loaded.<br>
+:return:&nbsp;The&nbsp;content&nbsp;of&nbsp;the&nbsp;file&nbsp;as&nbsp;a&nbsp;string&nbsp;if&nbsp;the&nbsp;file&nbsp;is&nbsp;successfully&nbsp;loaded.<br>
+:raises&nbsp;FileNotFoundError:&nbsp;When&nbsp;the&nbsp;specified&nbsp;file&nbsp;does&nbsp;not&nbsp;exist.<br>
+:raises&nbsp;Exception:&nbsp;For&nbsp;any&nbsp;other&nbsp;exceptions&nbsp;that&nbsp;might&nbsp;occur&nbsp;during&nbsp;file&nbsp;reading.</span></dd></dl>
+ <dl><dt><a name="-write_to_file"><strong>write_to_file</strong></a>(data, file_path)</dt><dd><span class="code">:param&nbsp;data:&nbsp;The&nbsp;data&nbsp;to&nbsp;be&nbsp;written&nbsp;to&nbsp;the&nbsp;file.<br>
+:param&nbsp;file_path:&nbsp;The&nbsp;path&nbsp;to&nbsp;the&nbsp;file&nbsp;where&nbsp;data&nbsp;will&nbsp;be&nbsp;written.<br>
+:return:&nbsp;None</span></dd></dl>
+</td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>DEFAULT_MODE</strong> = 'w'<br>
+<strong>logger</strong> = &lt;Logger shared.services.FileOperations (WARNING)&gt;</td></tr></table>
+</body></html>

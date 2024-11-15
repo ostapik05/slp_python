@@ -1,7 +1,35 @@
-from shared.interfaces.PaintTextInterface import PaintTextInterface
+from shared.interfaces.paint_text_interface import PaintTextInterface
 
 
 class CustomPainter(PaintTextInterface):
+    """
+    CustomPainter class inheriting from PaintTextInterface
+
+    This class provides methods to paint text with different colors and to retrieve the list of supported colors.
+
+    color_map:
+        A dictionary mapping color names to their respective ANSI escape codes.
+
+    Methods:
+        paint(cls, text, color):
+            Paints the given text with the specified color using ANSI escape codes.
+
+            Parameters:
+                text (str): The text to be painted.
+                color (str): The color in which to paint the text. Must be one of the keys in the color_map dictionary.
+
+            Returns:
+                str: The painted text with ANSI escape codes.
+
+            Raises:
+                ValueError: If the specified color is not supported.
+
+        get_colors(cls):
+            Retrieves the list of supported colors.
+
+            Returns:
+                list: A list of color names supported by the CustomPainter class.
+    """
 
     color_map = {
         "red": "\x1b[31m",

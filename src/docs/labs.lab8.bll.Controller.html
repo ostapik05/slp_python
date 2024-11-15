@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module labs.lab8.bll.Controller</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="labs.html" class="white">labs</a>.<a href="labs.lab8.html" class="white">lab8</a>.<a href="labs.lab8.bll.html" class="white">bll</a>.Controller</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Coleg0%5Cdesktop%5C%D1%81%D0%BF%D0%B5%D1%86%D1%96%D0%B0%D0%BB%D1%96%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D1%96%20%D0%BC%D0%BF%5Clabs%5Csrc%5Clabs%5Clab8%5Cbll%5Ccontroller.py">c:\users\oleg0\desktop\спеціалізовані мп\labs\src\labs\lab8\bll\controller.py</a></td></tr></table>
+    <p></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="logging.html">logging</a><br>
+</td><td class="multicolumn"><a href="pandas.html">pandas</a><br>
+</td><td class="multicolumn"><a href="matplotlib.pyplot.html">matplotlib.pyplot</a><br>
+</td><td class="multicolumn"><a href="seaborn.html">seaborn</a><br>
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="labs.lab8.bll.Controller.html#Controller">Controller</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Controller">class <strong>Controller</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Controller">Controller</a>(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;settings:&nbsp;labs.lab8.dal.SettingsModel.SettingsModel,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;activity_data,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;sleep_data<br>
+)<br>
+&nbsp;<br>
+<a href="#Controller">Controller</a>&nbsp;Class:<br>
+This&nbsp;class&nbsp;encapsulates&nbsp;functionality&nbsp;to&nbsp;manage&nbsp;and&nbsp;visualize&nbsp;activity&nbsp;and&nbsp;sleep&nbsp;data.<br>
+&nbsp;<br>
+Methods:<br>
+<a href="#Controller-__init__">__init__</a>(settings:&nbsp;SettingsModel,&nbsp;activity_data,&nbsp;sleep_data)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Initializes&nbsp;the&nbsp;<a href="#Controller">Controller</a>&nbsp;with&nbsp;specified&nbsp;settings,&nbsp;activity&nbsp;data,&nbsp;and&nbsp;sleep&nbsp;data.<br>
+&nbsp;<br>
+<a href="#Controller-get_default_save_dir">get_default_save_dir</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Retrieves&nbsp;the&nbsp;default&nbsp;directory&nbsp;path&nbsp;for&nbsp;saving&nbsp;plots&nbsp;from&nbsp;the&nbsp;settings.<br>
+&nbsp;<br>
+<a href="#Controller-get_default_file_name">get_default_file_name</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Gets&nbsp;the&nbsp;default&nbsp;file&nbsp;name&nbsp;for&nbsp;saving&nbsp;plots&nbsp;from&nbsp;the&nbsp;settings.<br>
+&nbsp;<br>
+<a href="#Controller-steps_vs_calories">steps_vs_calories</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Plots&nbsp;the&nbsp;relationship&nbsp;between&nbsp;steps&nbsp;taken&nbsp;and&nbsp;calories&nbsp;burned&nbsp;from&nbsp;the&nbsp;activity&nbsp;data.<br>
+&nbsp;<br>
+<a href="#Controller-rem_and_bed_time">rem_and_bed_time</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Plots&nbsp;REM&nbsp;sleep&nbsp;and&nbsp;bed&nbsp;time&nbsp;data&nbsp;from&nbsp;the&nbsp;sleep&nbsp;data.<br>
+&nbsp;<br>
+<a href="#Controller-sleep_activity_relationships">sleep_activity_relationships</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Plots&nbsp;the&nbsp;relationships&nbsp;between&nbsp;sleep&nbsp;data&nbsp;and&nbsp;activity&nbsp;data.<br>
+&nbsp;<br>
+<a href="#Controller-steps_by_date">steps_by_date</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Plots&nbsp;the&nbsp;steps&nbsp;taken&nbsp;each&nbsp;day&nbsp;from&nbsp;the&nbsp;activity&nbsp;data.<br>
+&nbsp;<br>
+<a href="#Controller-steps_by_years">steps_by_years</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Plots&nbsp;the&nbsp;steps&nbsp;taken&nbsp;each&nbsp;year&nbsp;from&nbsp;the&nbsp;activity&nbsp;data.<br>
+&nbsp;<br>
+<a href="#Controller-sleep_duration">sleep_duration</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Plots&nbsp;the&nbsp;duration&nbsp;of&nbsp;sleep&nbsp;from&nbsp;the&nbsp;activity&nbsp;and&nbsp;sleep&nbsp;data.<br>
+&nbsp;<br>
+<a href="#Controller-correlation_heatmap">correlation_heatmap</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Plots&nbsp;a&nbsp;heatmap&nbsp;showing&nbsp;correlations&nbsp;between&nbsp;various&nbsp;activity&nbsp;and&nbsp;sleep&nbsp;data&nbsp;metrics.<br>
+&nbsp;<br>
+<a href="#Controller-sleep_phases_distribution">sleep_phases_distribution</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Plots&nbsp;the&nbsp;distribution&nbsp;of&nbsp;different&nbsp;sleep&nbsp;phases&nbsp;from&nbsp;the&nbsp;sleep&nbsp;data.<br>
+&nbsp;<br>
+<a href="#Controller-rem_sleep_vs_steps">rem_sleep_vs_steps</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Plots&nbsp;the&nbsp;relationship&nbsp;between&nbsp;REM&nbsp;sleep&nbsp;and&nbsp;steps&nbsp;taken&nbsp;from&nbsp;the&nbsp;activity&nbsp;and&nbsp;sleep&nbsp;data.<br>
+&nbsp;<br>
+<a href="#Controller-monthly_sleep_patterns">monthly_sleep_patterns</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Plots&nbsp;the&nbsp;patterns&nbsp;of&nbsp;sleep&nbsp;on&nbsp;a&nbsp;monthly&nbsp;basis&nbsp;from&nbsp;the&nbsp;sleep&nbsp;data.<br>
+&nbsp;<br>
+<a href="#Controller-nap_days_per_month">nap_days_per_month</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Plots&nbsp;the&nbsp;number&nbsp;of&nbsp;days&nbsp;naps&nbsp;were&nbsp;taken&nbsp;each&nbsp;month&nbsp;from&nbsp;the&nbsp;sleep&nbsp;data.<br>
+&nbsp;<br>
+<a href="#Controller-is_plot_exist">is_plot_exist</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Checks&nbsp;if&nbsp;a&nbsp;plot&nbsp;has&nbsp;been&nbsp;created&nbsp;and&nbsp;is&nbsp;stored&nbsp;in&nbsp;the&nbsp;instance&nbsp;variable.<br>
+&nbsp;<br>
+<a href="#Controller-show">show</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Displays&nbsp;the&nbsp;currently&nbsp;stored&nbsp;plot.<br>
+&nbsp;<br>
+<a href="#Controller-save">save</a>(file_path)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Saves&nbsp;the&nbsp;current&nbsp;plot&nbsp;to&nbsp;the&nbsp;specified&nbsp;file&nbsp;path&nbsp;and&nbsp;then&nbsp;shows&nbsp;the&nbsp;plot.<br>
+&nbsp;<br>
+<a href="#Controller-get_logger_path">get_logger_path</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Retrieves&nbsp;the&nbsp;logger&nbsp;path&nbsp;from&nbsp;the&nbsp;settings.&nbsp;Raises&nbsp;KeyError&nbsp;if&nbsp;logger&nbsp;path&nbsp;is&nbsp;not&nbsp;provided.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="Controller-__init__"><strong>__init__</strong></a>(
+    self,
+    settings: labs.lab8.dal.SettingsModel.SettingsModel,
+    activity_data,
+    sleep_data
+)</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<dl><dt><a name="Controller-correlation_heatmap"><strong>correlation_heatmap</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Controller-get_default_file_name"><strong>get_default_file_name</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Controller-get_default_save_dir"><strong>get_default_save_dir</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Controller-get_logger_path"><strong>get_logger_path</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Controller-is_plot_exist"><strong>is_plot_exist</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Controller-monthly_sleep_patterns"><strong>monthly_sleep_patterns</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Controller-nap_days_per_month"><strong>nap_days_per_month</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Controller-rem_and_bed_time"><strong>rem_and_bed_time</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Controller-rem_sleep_vs_steps"><strong>rem_sleep_vs_steps</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Controller-save"><strong>save</strong></a>(self, file_path)</dt></dl>
+
+<dl><dt><a name="Controller-show"><strong>show</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Controller-sleep_activity_relationships"><strong>sleep_activity_relationships</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Controller-sleep_duration"><strong>sleep_duration</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Controller-sleep_phases_distribution"><strong>sleep_phases_distribution</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Controller-steps_by_date"><strong>steps_by_date</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Controller-steps_by_years"><strong>steps_by_years</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Controller-steps_vs_calories"><strong>steps_vs_calories</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>logger</strong> = &lt;Logger labs.lab8.bll.Controller (WARNING)&gt;</td></tr></table>
+</body></html>

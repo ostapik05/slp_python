@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module labs.lab8.bll.Plots</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="labs.html" class="white">labs</a>.<a href="labs.lab8.html" class="white">lab8</a>.<a href="labs.lab8.bll.html" class="white">bll</a>.Plots</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Coleg0%5Cdesktop%5C%D1%81%D0%BF%D0%B5%D1%86%D1%96%D0%B0%D0%BB%D1%96%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D1%96%20%D0%BC%D0%BF%5Clabs%5Csrc%5Clabs%5Clab8%5Cbll%5Cplots.py">c:\users\oleg0\desktop\спеціалізовані мп\labs\src\labs\lab8\bll\plots.py</a></td></tr></table>
+    <p></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="logging.html">logging</a><br>
+</td><td class="multicolumn"><a href="pandas.html">pandas</a><br>
+</td><td class="multicolumn"><a href="matplotlib.pyplot.html">matplotlib.pyplot</a><br>
+</td><td class="multicolumn"><a href="seaborn.html">seaborn</a><br>
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-plot_calories_vs_sleep_time"><strong>plot_calories_vs_sleep_time</strong></a>(activity_source, sleep_source)</dt><dd><span class="code">:param&nbsp;activity_source:&nbsp;DataFrame&nbsp;containing&nbsp;activity&nbsp;data.<br>
+:param&nbsp;sleep_source:&nbsp;DataFrame&nbsp;containing&nbsp;sleep&nbsp;data.<br>
+:return:&nbsp;A&nbsp;matplotlib&nbsp;plot&nbsp;object&nbsp;showing&nbsp;a&nbsp;scatter&nbsp;plot&nbsp;of&nbsp;calories&nbsp;burned&nbsp;vs.&nbsp;total&nbsp;sleep&nbsp;time.</span></dd></dl>
+ <dl><dt><a name="-plot_correlation_heatmap"><strong>plot_correlation_heatmap</strong></a>(activity_source, sleep_source)</dt><dd><span class="code">:param&nbsp;activity_source:&nbsp;DataFrame&nbsp;that&nbsp;contains&nbsp;activity&nbsp;data&nbsp;with&nbsp;columns&nbsp;such&nbsp;as&nbsp;'date',&nbsp;'Hour',&nbsp;'distance',&nbsp;etc.<br>
+:param&nbsp;sleep_source:&nbsp;DataFrame&nbsp;that&nbsp;contains&nbsp;sleep&nbsp;data&nbsp;with&nbsp;columns&nbsp;such&nbsp;as&nbsp;'start',&nbsp;'stop',&nbsp;'naps',&nbsp;'deepSleepTime',&nbsp;etc.<br>
+:return:&nbsp;The&nbsp;plotted&nbsp;correlation&nbsp;heatmap&nbsp;as&nbsp;a&nbsp;Matplotlib&nbsp;object.</span></dd></dl>
+ <dl><dt><a name="-plot_monthly_activity_summary"><strong>plot_monthly_activity_summary</strong></a>(activity)</dt><dd><span class="code">:param&nbsp;activity:&nbsp;A&nbsp;pandas&nbsp;DataFrame&nbsp;containing&nbsp;at&nbsp;least&nbsp;'date'&nbsp;and&nbsp;'steps'&nbsp;columns,&nbsp;where&nbsp;'date'&nbsp;represents&nbsp;the&nbsp;date&nbsp;of&nbsp;the&nbsp;activity&nbsp;and&nbsp;'steps'&nbsp;represents&nbsp;the&nbsp;number&nbsp;of&nbsp;steps&nbsp;taken&nbsp;on&nbsp;that&nbsp;date.<br>
+:return:&nbsp;A&nbsp;matplotlib&nbsp;'plt'&nbsp;object&nbsp;with&nbsp;a&nbsp;barplot&nbsp;representation&nbsp;of&nbsp;total&nbsp;steps&nbsp;taken&nbsp;each&nbsp;month.</span></dd></dl>
+ <dl><dt><a name="-plot_monthly_sleep_patterns"><strong>plot_monthly_sleep_patterns</strong></a>(sleep)</dt><dd><span class="code">:param&nbsp;sleep:&nbsp;DataFrame&nbsp;containing&nbsp;sleep&nbsp;data&nbsp;with&nbsp;columns&nbsp;'start',&nbsp;'stop',&nbsp;'deepSleepTime',&nbsp;'shallowSleepTime',&nbsp;'wakeTime',&nbsp;and&nbsp;'REMTime'.<br>
+:return:&nbsp;The&nbsp;generated&nbsp;plot&nbsp;as&nbsp;a&nbsp;matplotlib&nbsp;figure&nbsp;object.</span></dd></dl>
+ <dl><dt><a name="-plot_nap_days_per_month"><strong>plot_nap_days_per_month</strong></a>(sleep_source)</dt><dd><span class="code">:param&nbsp;sleep_source:&nbsp;Pandas&nbsp;DataFrame&nbsp;containing&nbsp;sleep&nbsp;data,&nbsp;where&nbsp;each&nbsp;row&nbsp;represents&nbsp;sleep&nbsp;information,&nbsp;including&nbsp;start&nbsp;and&nbsp;stop&nbsp;times&nbsp;and&nbsp;nap&nbsp;details.<br>
+:return:&nbsp;A&nbsp;matplotlib&nbsp;plot&nbsp;object&nbsp;showing&nbsp;the&nbsp;count&nbsp;of&nbsp;days&nbsp;with&nbsp;and&nbsp;without&nbsp;naps&nbsp;for&nbsp;each&nbsp;month.</span></dd></dl>
+ <dl><dt><a name="-plot_rem_and_bed_time"><strong>plot_rem_and_bed_time</strong></a>(sleep_source)</dt><dd><span class="code">:param&nbsp;sleep_source:&nbsp;DataFrame&nbsp;containing&nbsp;sleep&nbsp;data&nbsp;with&nbsp;columns&nbsp;such&nbsp;as&nbsp;'start',&nbsp;'deepSleepTime',&nbsp;'shallowSleepTime',&nbsp;'wakeTime',&nbsp;and&nbsp;'REMTime'<br>
+:return:&nbsp;matplotlib.pyplot&nbsp;object&nbsp;with&nbsp;a&nbsp;scatter&nbsp;plot&nbsp;showing&nbsp;the&nbsp;relationship&nbsp;between&nbsp;REM&nbsp;time&nbsp;and&nbsp;bed&nbsp;time</span></dd></dl>
+ <dl><dt><a name="-plot_rem_sleep_vs_steps"><strong>plot_rem_sleep_vs_steps</strong></a>(activity, sleep)</dt><dd><span class="code">:param&nbsp;activity:&nbsp;DataFrame&nbsp;containing&nbsp;activity&nbsp;data,&nbsp;presumed&nbsp;to&nbsp;have&nbsp;columns&nbsp;'date'&nbsp;and&nbsp;'steps'.<br>
+:param&nbsp;sleep:&nbsp;DataFrame&nbsp;containing&nbsp;sleep&nbsp;data,&nbsp;presumed&nbsp;to&nbsp;have&nbsp;columns&nbsp;'start',&nbsp;'stop',&nbsp;and&nbsp;'REMTime'.<br>
+:return:&nbsp;Matplotlib&nbsp;plot&nbsp;object&nbsp;displaying&nbsp;the&nbsp;correlation&nbsp;between&nbsp;REM&nbsp;sleep&nbsp;time&nbsp;and&nbsp;steps&nbsp;taken.</span></dd></dl>
+ <dl><dt><a name="-plot_sleep_activity_relationships"><strong>plot_sleep_activity_relationships</strong></a>(activity_source, sleep_source)</dt><dd><span class="code">:param&nbsp;activity_source:&nbsp;DataFrame&nbsp;containing&nbsp;activity&nbsp;data&nbsp;with&nbsp;columns&nbsp;such&nbsp;as&nbsp;'date',&nbsp;'steps',&nbsp;etc.<br>
+:param&nbsp;sleep_source:&nbsp;DataFrame&nbsp;containing&nbsp;sleep&nbsp;data&nbsp;with&nbsp;columns&nbsp;such&nbsp;as&nbsp;'start',&nbsp;'deepSleepTime',&nbsp;'shallowSleepTime',&nbsp;'REMTime',&nbsp;'wakeTime',&nbsp;etc.<br>
+:return:&nbsp;A&nbsp;matplotlib&nbsp;pyplot&nbsp;object&nbsp;which&nbsp;shows&nbsp;the&nbsp;relationship&nbsp;between&nbsp;sleep&nbsp;time&nbsp;and&nbsp;daily&nbsp;steps&nbsp;with&nbsp;visual&nbsp;differentiation&nbsp;based&nbsp;on&nbsp;naps.</span></dd></dl>
+ <dl><dt><a name="-plot_sleep_duration"><strong>plot_sleep_duration</strong></a>(activity_source, sleep_source)</dt><dd><span class="code">:param&nbsp;activity_source:&nbsp;DataFrame&nbsp;containing&nbsp;activity&nbsp;data&nbsp;with&nbsp;columns&nbsp;such&nbsp;as&nbsp;date,&nbsp;distance,&nbsp;and&nbsp;runDistance.<br>
+:param&nbsp;sleep_source:&nbsp;DataFrame&nbsp;containing&nbsp;sleep&nbsp;data&nbsp;with&nbsp;columns&nbsp;such&nbsp;as&nbsp;start,&nbsp;stop,&nbsp;deepSleepTime,&nbsp;shallowSleepTime,&nbsp;wakeTime,&nbsp;and&nbsp;REMTime.<br>
+:return:&nbsp;Matplotlib&nbsp;pyplot&nbsp;object&nbsp;showing&nbsp;a&nbsp;plot&nbsp;of&nbsp;sleep&nbsp;duration&nbsp;by&nbsp;date&nbsp;with&nbsp;median&nbsp;inertia.</span></dd></dl>
+ <dl><dt><a name="-plot_sleep_patterns_by_day"><strong>plot_sleep_patterns_by_day</strong></a>(sleep_source)</dt><dd><span class="code">:param&nbsp;sleep_source:&nbsp;A&nbsp;pandas&nbsp;DataFrame&nbsp;containing&nbsp;sleep&nbsp;data&nbsp;with&nbsp;columns&nbsp;for&nbsp;'date',&nbsp;'deepSleepTime',&nbsp;'shallowSleepTime',&nbsp;'wakeTime',&nbsp;and&nbsp;'REMTime'.<br>
+:return:&nbsp;A&nbsp;Matplotlib&nbsp;plot&nbsp;object&nbsp;showing&nbsp;a&nbsp;boxplot&nbsp;of&nbsp;total&nbsp;sleep&nbsp;time&nbsp;by&nbsp;day&nbsp;of&nbsp;the&nbsp;week.</span></dd></dl>
+ <dl><dt><a name="-plot_sleep_phases_distribution"><strong>plot_sleep_phases_distribution</strong></a>(sleep_source)</dt><dd><span class="code">:param&nbsp;sleep_source:&nbsp;DataFrame&nbsp;containing&nbsp;sleep&nbsp;data&nbsp;with&nbsp;columns&nbsp;'deepSleepTime',&nbsp;'shallowSleepTime',&nbsp;'wakeTime',&nbsp;and&nbsp;'REMTime'<br>
+:return:&nbsp;Matplotlib&nbsp;pie&nbsp;plot&nbsp;showing&nbsp;the&nbsp;average&nbsp;distribution&nbsp;of&nbsp;different&nbsp;sleep&nbsp;phases</span></dd></dl>
+ <dl><dt><a name="-plot_steps_by_date"><strong>plot_steps_by_date</strong></a>(activity_source)</dt><dd><span class="code">:param&nbsp;activity_source:&nbsp;DataFrame&nbsp;containing&nbsp;activity&nbsp;data&nbsp;with&nbsp;at&nbsp;least&nbsp;'date'&nbsp;and&nbsp;'steps'&nbsp;columns<br>
+:return:&nbsp;A&nbsp;matplotlib&nbsp;plot&nbsp;showing&nbsp;a&nbsp;scatterplot&nbsp;of&nbsp;steps&nbsp;over&nbsp;time</span></dd></dl>
+ <dl><dt><a name="-plot_steps_by_years"><strong>plot_steps_by_years</strong></a>(activity_source)</dt><dd><span class="code">:param&nbsp;activity_source:&nbsp;DataFrame&nbsp;containing&nbsp;activity&nbsp;data&nbsp;with&nbsp;at&nbsp;least&nbsp;'date'&nbsp;and&nbsp;'steps'&nbsp;columns.<br>
+:return:&nbsp;A&nbsp;Matplotlib&nbsp;figure&nbsp;object&nbsp;with&nbsp;subplots&nbsp;representing&nbsp;steps&nbsp;taken&nbsp;in&nbsp;each&nbsp;year.</span></dd></dl>
+ <dl><dt><a name="-plot_steps_vs_calories"><strong>plot_steps_vs_calories</strong></a>(activity_source)</dt><dd><span class="code">:param&nbsp;activity_source:&nbsp;DataFrame&nbsp;containing&nbsp;activity&nbsp;data&nbsp;with&nbsp;columns&nbsp;'date',&nbsp;'steps',&nbsp;'calories',&nbsp;and&nbsp;'weekDay'<br>
+:return:&nbsp;Matplotlib&nbsp;plot&nbsp;of&nbsp;steps&nbsp;versus&nbsp;calories,&nbsp;colored&nbsp;by&nbsp;day&nbsp;of&nbsp;the&nbsp;week</span></dd></dl>
+</td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>logger</strong> = &lt;Logger labs.lab8.bll.Plots (WARNING)&gt;</td></tr></table>
+</body></html>

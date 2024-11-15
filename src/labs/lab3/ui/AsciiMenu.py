@@ -1,12 +1,50 @@
-from shared.classes.MenuBuilder import MenuBuilder
-from shared.interfaces.UIInterface import UIInterface
-from shared.classes.Input import StringInput
 from labs.lab3.bll.AsciiController import AsciiController
+from shared.classes.input import StringInput
+from shared.classes.menu_builder import MenuBuilder
+from shared.interfaces.ui_interface import UIInterface
 
 
 class AsciiMenu(UIInterface):
+    """
+    AsciiMenu class inheriting from UIInterface, responsible for displaying and interacting with the ASCII art generation menu.
 
-    def __init__(self, settings_ui: UIInterface, arts_folder = None, controller: AsciiController = None):
+    Attributes:
+        __controller (AsciiController): The controller handling ASCII art creation and storage.
+        __settings_ui (UIInterface): Interface for the settings menu.
+        __arts_folder (str): Directory where art files are stored.
+
+    Methods:
+        __init__(settings_ui, arts_folder=None, controller=None):
+            Initializes the AsciiMenu instance with settings UI, arts folder, and controller.
+
+        set_controller(controller):
+            Sets the controller for ASCII art generation and rebuilds the menu.
+
+        show():
+            Displays the ASCII art menu.
+
+        __menu_build():
+            Constructs and returns the complete menu for the ASCII art generator.
+
+        show_settings():
+            Displays the settings UI.
+
+        make_art():
+            Handles the creation of ASCII art based on user input.
+
+        save_art():
+            Saves the generated ASCII art to a text file.
+
+        get_art():
+            Retrieves and returns the currently generated ASCII art, if any.
+    """
+
+    def __init__(
+        self,
+        settings_ui: UIInterface,
+        arts_folder=None,
+        controller: AsciiController = None,
+    ):
         self.__controller = controller
         self.__settings_ui = settings_ui
         self.__arts_folder = arts_folder
@@ -45,9 +83,9 @@ class AsciiMenu(UIInterface):
             print("Limits too low, can't create even 1 symbol, change settings")
             return
         message = (
-                f"Make art up to {char_width} chars"
-                + "\nIf want more change width, height, font or line breaking in settings"
-                + "\n Input text : "
+            f"Make art up to {char_width} chars"
+            + "\nIf want more change width, height, font or line breaking in settings"
+            + "\n Input text : "
         )
         input = StringInput().input(message, [1, char_width], "Too long")
         art = self.__controller.generate(input)
@@ -73,7 +111,6 @@ class AsciiMenu(UIInterface):
         input = StringInput().input(message, [1, limit], "Too long")
         self.__controller.save_art(input)
         print(f"Save your art in {self.__arts_folder}/{input}.txt")
-
 
     def get_art(self):
         if self.__controller.is_art_exist():

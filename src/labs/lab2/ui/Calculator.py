@@ -1,21 +1,81 @@
+from math import sqrt
+
 from colorama.ansi import set_title
 from pygments import highlight
 
-from labs.lab2.dal.Memory import Memory
-from labs.lab2.dal.Logger import Logger
-from labs.lab2.bll.Validator import Validator
 from labs.lab2.bll.Operation import Operation
+from labs.lab2.bll.Validator import Validator
 from labs.lab2.dal.History import History
-from math import sqrt
-from shared.classes.MenuBuilder import MenuBuilder
-from shared.classes.DictJsonDataAccess import DictJsonDataAccess
+from labs.lab2.dal.Logger import Logger
+from labs.lab2.dal.Memory import Memory
+from shared.classes.dict_json import DictJsonDataAccess
+from shared.classes.menu_builder import MenuBuilder
 
 
 class Calculator:
-    def __init__(
-            self,
-            settings_path
-    ):
+    """
+    Calculator class that handles various arithmetic operations and manages operation history, memory, and settings.
+
+    Attributes:
+        settings_path (str): Path to settings file.
+        settings (DictJsonDataAccess): Data access object for handling settings stored in a JSON file.
+        unary_operations (dict): Dictionary of unary operations supported.
+        double_operations (dict): Dictionary of double operations supported.
+        decimals (int): Number of decimal places to display in results.
+        history (History): Object to manage history of operations.
+        memory (Memory): Object representing calculator's memory.
+        operation (Operation): The current operation being processed.
+        validator (Validator): Object responsible for validating input and operations.
+        logger (Logger): Logger object for error and info logging.
+
+    Methods:
+        is_setted_operator_valid():
+            Checks if the currently set operator is valid.
+
+        set_decimals():
+            Sets the number of decimal places to display in results.
+
+        set_operation():
+            Sets the current operation based on user input, including numbers and operator.
+
+        _calculate():
+            Performs the arithmetic calculation based on set operation.
+
+        _add_last_to_history():
+            Adds the last performed operation to the history if it is valid and complete.
+
+        _last_result_to_str():
+            Returns the last result as a formatted string.
+
+        get_formatted_float(value):
+            Returns a formatted string representing the given value with the specified number of decimals.
+
+        get_memory_title():
+            Returns a formatted string representing the current memory value with the specified number of decimals.
+
+        _perform_calculation():
+            Sets up, performs, and logs the result of the current operation.
+
+        _write_result_in_memory():
+            Writes the last calculation result into the calculator memory.
+
+        _add_result_to_memory():
+            Adds the last calculation result to the current memory value.
+
+        _show_calculation_history():
+            Displays the history of calculations.
+
+        _clear_calculation_history():
+            Clears the history of calculations.
+
+        _set_decimals_option():
+            Prompts user to set the number of decimal places to display.
+
+        menu():
+            Displays and manages the menu for user interaction with various calculator operations.
+    """
+
+    def __init__(self, settings_path):
         self.settings = DictJsonDataAccess(settings_path)
         self.unary_operations = self.settings.get("unary_operations")
         self.double_operations = self.settings.get("double_operations")
@@ -64,7 +124,7 @@ class Calculator:
                 else:
                     num2 = self.validator.to_float(num2_input)
                 if not self.validator.to_float(
-                        num2
+                    num2
                 ) != 0.0 or not self.validator.to_float(num2):
                     raise ValueError(f"Wrong second number {num2}")
             else:
@@ -81,7 +141,7 @@ class Calculator:
             operator = operation.get_operator()
             num1 = operation.get_first_number()
             num2 = operation.get_second_number()
-            if not self.validator.is_equasion_incomplete(operation):
+            if not self.validator.is_equation_incomplete(operation):
                 raise ValueError(
                     f"Wrong equasion, can't _calculate num1:{num1} num2: {num2} operator: {operator}"
                 )
@@ -97,7 +157,7 @@ class Calculator:
                         raise ZeroDivisionError("Division by zero")
                     operation.set_result(num1 / num2)
                 case "^":
-                    operation.set_result(num1 ** num2)
+                    operation.set_result(num1**num2)
                 case "√" | "sqrt":
                     if num1 < 0:
                         raise ValueError(f"Can't take square root from {num1}")
@@ -116,7 +176,7 @@ class Calculator:
 
     def _add_last_to_history(self):
         operation = self.operation
-        if not self.validator.is_equasion_complete(operation):
+        if not self.validator.is_equation_complete(operation):
             self.logger.log_error(f"Can't add to history {operation}, wrong")
         if not self.operation.is_complete():
             self.logger.log_error(f"Can't add to history {operation}, incomplete")
@@ -171,21 +231,31 @@ class Calculator:
         self.set_decimals()
 
     def menu(self):
-        menu = (MenuBuilder()
-                .set_title("=== Console calculator ===")
-                .set_dynamic_title(self.get_memory_title)
-                .add_option("1", "1. Calculation", self._perform_calculation)
-                .add_option("2", "\n2. Wrote result in memory MS", self._write_result_in_memory)
-                .add_option("3", "\n3. Add result to memory M+", self._add_result_to_memory)
-                .add_option("4", "\n4. Set memory to 0 MC", self.memory.clear)
-                .add_option("5", "\n5. Show calculation history", self._show_calculation_history)
-                .add_option("6", "\n6. Clear calculation history", self._clear_calculation_history)
-                .add_option("7", "\n7. Set how many decimals to show", self._set_decimals_option)
-                .add_stop_options("\n0", "0. Exit")
-                .update_end_callback(self.save)
-                .set_input_text("Choose (0-6):")
-                .set_warning("Wrong input!")
-                .build())
+        menu = (
+            MenuBuilder()
+            .set_title("=== Console calculator ===")
+            .set_dynamic_title(self.get_memory_title)
+            .add_option("1", "1. Calculation", self._perform_calculation)
+            .add_option(
+                "2", "\n2. Wrote result in memory MS", self._write_result_in_memory
+            )
+            .add_option("3", "\n3. Add result to memory M+", self._add_result_to_memory)
+            .add_option("4", "\n4. Set memory to 0 MC", self.memory.clear)
+            .add_option(
+                "5", "\n5. Show calculation history", self._show_calculation_history
+            )
+            .add_option(
+                "6", "\n6. Clear calculation history", self._clear_calculation_history
+            )
+            .add_option(
+                "7", "\n7. Set how many decimals to show", self._set_decimals_option
+            )
+            .add_stop_options("\n0", "0. Exit")
+            .update_end_callback(self.save)
+            .set_input_text("Choose (0-6):")
+            .set_warning("Wrong input!")
+            .build()
+        )
         menu.show()
 
     # def menu(self):

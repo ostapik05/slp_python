@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module labs.lab7.dal.UserSettingsModel</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="labs.html" class="white">labs</a>.<a href="labs.lab7.html" class="white">lab7</a>.<a href="labs.lab7.dal.html" class="white">dal</a>.UserSettingsModel</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Coleg0%5Cdesktop%5C%D1%81%D0%BF%D0%B5%D1%86%D1%96%D0%B0%D0%BB%D1%96%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D1%96%20%D0%BC%D0%BF%5Clabs%5Csrc%5Clabs%5Clab7%5Cdal%5Cusersettingsmodel.py">c:\users\oleg0\desktop\спеціалізовані мп\labs\src\labs\lab7\dal\usersettingsmodel.py</a></td></tr></table>
+    <p></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="logging.html">logging</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="labs.lab7.dal.UserSettingsModel.html#UserSettingsModel">UserSettingsModel</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="UserSettingsModel">class <strong>UserSettingsModel</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#UserSettingsModel">UserSettingsModel</a>(path)<br>
+&nbsp;<br>
+<a href="#UserSettingsModel">UserSettingsModel</a>&nbsp;provides&nbsp;methods&nbsp;to&nbsp;interact&nbsp;with&nbsp;user-specific&nbsp;settings&nbsp;stored&nbsp;in&nbsp;a&nbsp;JSON&nbsp;file.<br>
+&nbsp;<br>
+Attributes:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;__settings&nbsp;(DictJsonDataAccess):&nbsp;Object&nbsp;used&nbsp;to&nbsp;access&nbsp;and&nbsp;manipulate&nbsp;the&nbsp;settings&nbsp;data.<br>
+&nbsp;<br>
+Methods:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#UserSettingsModel-__init__">__init__</a>(path):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Initializes&nbsp;the&nbsp;<a href="#UserSettingsModel">UserSettingsModel</a>&nbsp;with&nbsp;a&nbsp;path&nbsp;to&nbsp;the&nbsp;settings&nbsp;file.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Validates&nbsp;the&nbsp;settings&nbsp;file&nbsp;and&nbsp;raises&nbsp;a&nbsp;KeyError&nbsp;if&nbsp;it&nbsp;doesn't&nbsp;exist.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#UserSettingsModel-get_selected_fields">get_selected_fields</a>():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Retrieves&nbsp;the&nbsp;'selected_fields'&nbsp;from&nbsp;the&nbsp;settings.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#UserSettingsModel-get_table_fields">get_table_fields</a>():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Retrieves&nbsp;the&nbsp;'table'&nbsp;field&nbsp;from&nbsp;the&nbsp;selected&nbsp;fields&nbsp;in&nbsp;the&nbsp;settings.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#UserSettingsModel-set_table_fields">set_table_fields</a>(table_fields):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets&nbsp;the&nbsp;'table'&nbsp;field&nbsp;in&nbsp;the&nbsp;selected&nbsp;fields&nbsp;of&nbsp;the&nbsp;settings.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#UserSettingsModel-get_list_fields">get_list_fields</a>():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Retrieves&nbsp;the&nbsp;'list'&nbsp;field&nbsp;from&nbsp;the&nbsp;selected&nbsp;fields&nbsp;in&nbsp;the&nbsp;settings.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#UserSettingsModel-set_list_fields">set_list_fields</a>(list_fields):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets&nbsp;the&nbsp;'list'&nbsp;field&nbsp;in&nbsp;the&nbsp;selected&nbsp;fields&nbsp;of&nbsp;the&nbsp;settings.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#UserSettingsModel-get_is_table_print">get_is_table_print</a>():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Retrieves&nbsp;the&nbsp;'is_table_print'&nbsp;setting.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#UserSettingsModel-set_is_table_print">set_is_table_print</a>(is_table_print):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets&nbsp;the&nbsp;'is_table_print'&nbsp;setting.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#UserSettingsModel-get_is_list_print">get_is_list_print</a>():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Retrieves&nbsp;the&nbsp;'is_list_print'&nbsp;setting.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#UserSettingsModel-set_is_list_print">set_is_list_print</a>(is_list_print):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets&nbsp;the&nbsp;'is_list_print'&nbsp;setting.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#UserSettingsModel-get_lang">get_lang</a>():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Retrieves&nbsp;the&nbsp;'lang'&nbsp;setting.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#UserSettingsModel-set_lang">set_lang</a>(lang):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets&nbsp;the&nbsp;'lang'&nbsp;setting.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#UserSettingsModel-get_items_amount">get_items_amount</a>():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Retrieves&nbsp;the&nbsp;'items_amount'&nbsp;setting.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#UserSettingsModel-set_items_amount">set_items_amount</a>(max_results):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets&nbsp;the&nbsp;'items_amount'&nbsp;setting.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#UserSettingsModel-get_field_styles">get_field_styles</a>():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Retrieves&nbsp;the&nbsp;'field_styles'&nbsp;setting.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="UserSettingsModel-__init__"><strong>__init__</strong></a>(self, path)</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<dl><dt><a name="UserSettingsModel-get_field_styles"><strong>get_field_styles</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="UserSettingsModel-get_is_list_print"><strong>get_is_list_print</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="UserSettingsModel-get_is_table_print"><strong>get_is_table_print</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="UserSettingsModel-get_items_amount"><strong>get_items_amount</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="UserSettingsModel-get_lang"><strong>get_lang</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="UserSettingsModel-get_list_fields"><strong>get_list_fields</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="UserSettingsModel-get_selected_fields"><strong>get_selected_fields</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="UserSettingsModel-get_table_fields"><strong>get_table_fields</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="UserSettingsModel-set_is_list_print"><strong>set_is_list_print</strong></a>(self, is_list_print)</dt></dl>
+
+<dl><dt><a name="UserSettingsModel-set_is_table_print"><strong>set_is_table_print</strong></a>(self, is_table_print)</dt></dl>
+
+<dl><dt><a name="UserSettingsModel-set_items_amount"><strong>set_items_amount</strong></a>(self, max_results)</dt></dl>
+
+<dl><dt><a name="UserSettingsModel-set_lang"><strong>set_lang</strong></a>(self, lang)</dt></dl>
+
+<dl><dt><a name="UserSettingsModel-set_list_fields"><strong>set_list_fields</strong></a>(self, list_fields)</dt></dl>
+
+<dl><dt><a name="UserSettingsModel-set_table_fields"><strong>set_table_fields</strong></a>(self, table_fields)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>logger</strong> = &lt;Logger labs.lab7.dal.UserSettingsModel (WARNING)&gt;</td></tr></table>
+</body></html>
