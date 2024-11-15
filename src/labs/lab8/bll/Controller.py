@@ -1,11 +1,74 @@
+import logging
+
 from labs.lab8.bll.Plots import *
 from labs.lab8.dal.SettingsModel import SettingsModel
 from shared.services.relative_to_absolute_path import absolute
-import logging
+
 logger = logging.getLogger(__name__)
 
+
 class Controller:
-    def __init__(self, settings:SettingsModel, activity_data, sleep_data):
+    """
+    Controller Class:
+    This class encapsulates functionality to manage and visualize activity and sleep data.
+
+    Methods:
+    __init__(settings: SettingsModel, activity_data, sleep_data)
+        Initializes the Controller with specified settings, activity data, and sleep data.
+
+    get_default_save_dir()
+        Retrieves the default directory path for saving plots from the settings.
+
+    get_default_file_name()
+        Gets the default file name for saving plots from the settings.
+
+    steps_vs_calories()
+        Plots the relationship between steps taken and calories burned from the activity data.
+
+    rem_and_bed_time()
+        Plots REM sleep and bed time data from the sleep data.
+
+    sleep_activity_relationships()
+        Plots the relationships between sleep data and activity data.
+
+    steps_by_date()
+        Plots the steps taken each day from the activity data.
+
+    steps_by_years()
+        Plots the steps taken each year from the activity data.
+
+    sleep_duration()
+        Plots the duration of sleep from the activity and sleep data.
+
+    correlation_heatmap()
+        Plots a heatmap showing correlations between various activity and sleep data metrics.
+
+    sleep_phases_distribution()
+        Plots the distribution of different sleep phases from the sleep data.
+
+    rem_sleep_vs_steps()
+        Plots the relationship between REM sleep and steps taken from the activity and sleep data.
+
+    monthly_sleep_patterns()
+        Plots the patterns of sleep on a monthly basis from the sleep data.
+
+    nap_days_per_month()
+        Plots the number of days naps were taken each month from the sleep data.
+
+    is_plot_exist()
+        Checks if a plot has been created and is stored in the instance variable.
+
+    show()
+        Displays the currently stored plot.
+
+    save(file_path)
+        Saves the current plot to the specified file path and then shows the plot.
+
+    get_logger_path()
+        Retrieves the logger path from the settings. Raises KeyError if logger path is not provided.
+    """
+
+    def __init__(self, settings: SettingsModel, activity_data, sleep_data):
         self.settings = settings
         self.activity_data = activity_data
         self.sleep_data = sleep_data
@@ -73,7 +136,7 @@ class Controller:
     def show(self):
         self.plot.show()
 
-    def save(self,file_path):
+    def save(self, file_path):
         if file_path:
             self.plot.savefig(file_path)
         self.plot.show()

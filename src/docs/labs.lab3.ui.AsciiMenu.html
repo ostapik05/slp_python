@@ -17,7 +17,7 @@
     
 <tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
 <td class="singlecolumn"><dl>
-<dt class="heading-text"><a href="shared.interfaces.UIInterface.html#UIInterface">shared.interfaces.UIInterface.UIInterface</a>(<a href="abc.html#ABC">abc.ABC</a>)
+<dt class="heading-text"><a href="shared.interfaces.ui_interface.html#UIInterface">shared.interfaces.ui_interface.UIInterface</a>(<a href="abc.html#ABC">abc.ABC</a>)
 </dt><dd>
 <dl>
 <dt class="heading-text"><a href="labs.lab3.ui.AsciiMenu.html#AsciiMenu">AsciiMenu</a>
@@ -27,20 +27,20 @@
  <p>
 <table class="section">
 <tr class="decor title-decor heading-text">
-<td class="section-title" colspan=3>&nbsp;<br><a name="AsciiMenu">class <strong>AsciiMenu</strong></a>(<a href="shared.interfaces.UIInterface.html#UIInterface">shared.interfaces.UIInterface.UIInterface</a>)</td></tr>
+<td class="section-title" colspan=3>&nbsp;<br><a name="AsciiMenu">class <strong>AsciiMenu</strong></a>(<a href="shared.interfaces.ui_interface.html#UIInterface">shared.interfaces.ui_interface.UIInterface</a>)</td></tr>
     
 <tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
 <td class="decor title-decor" colspan=2><span class="code"><a href="#AsciiMenu">AsciiMenu</a>(<br>
-&nbsp;&nbsp;&nbsp;&nbsp;settings_ui:&nbsp;shared.interfaces.<a href="shared.interfaces.UIInterface.html#UIInterface">UIInterface</a>.<a href="shared.interfaces.UIInterface.html#UIInterface">UIInterface</a>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;settings_ui:&nbsp;shared.interfaces.ui_interface.<a href="shared.interfaces.ui_interface.html#UIInterface">UIInterface</a>,<br>
 &nbsp;&nbsp;&nbsp;&nbsp;arts_folder=None,<br>
 &nbsp;&nbsp;&nbsp;&nbsp;controller:&nbsp;labs.lab3.bll.AsciiController.AsciiController&nbsp;=&nbsp;None<br>
 )<br>
 &nbsp;<br>
-<a href="#AsciiMenu">AsciiMenu</a>&nbsp;class&nbsp;inheriting&nbsp;from&nbsp;<a href="shared.interfaces.UIInterface.html#UIInterface">UIInterface</a>,&nbsp;responsible&nbsp;for&nbsp;displaying&nbsp;and&nbsp;interacting&nbsp;with&nbsp;the&nbsp;ASCII&nbsp;art&nbsp;generation&nbsp;menu.<br>
+<a href="#AsciiMenu">AsciiMenu</a>&nbsp;class&nbsp;inheriting&nbsp;from&nbsp;<a href="shared.interfaces.ui_interface.html#UIInterface">UIInterface</a>,&nbsp;responsible&nbsp;for&nbsp;displaying&nbsp;and&nbsp;interacting&nbsp;with&nbsp;the&nbsp;ASCII&nbsp;art&nbsp;generation&nbsp;menu.<br>
 &nbsp;<br>
 Attributes:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;__controller&nbsp;(AsciiController):&nbsp;The&nbsp;controller&nbsp;handling&nbsp;ASCII&nbsp;art&nbsp;creation&nbsp;and&nbsp;storage.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;__settings_ui&nbsp;(<a href="shared.interfaces.UIInterface.html#UIInterface">UIInterface</a>):&nbsp;Interface&nbsp;for&nbsp;the&nbsp;settings&nbsp;menu.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;__settings_ui&nbsp;(<a href="shared.interfaces.ui_interface.html#UIInterface">UIInterface</a>):&nbsp;Interface&nbsp;for&nbsp;the&nbsp;settings&nbsp;menu.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;__arts_folder&nbsp;(str):&nbsp;Directory&nbsp;where&nbsp;art&nbsp;files&nbsp;are&nbsp;stored.<br>
 &nbsp;<br>
 Methods:<br>
@@ -70,7 +70,7 @@ Methods:<br>
 <tr><td>&nbsp;</td>
 <td class="singlecolumn"><dl><dt>Method resolution order:</dt>
 <dd><a href="labs.lab3.ui.AsciiMenu.html#AsciiMenu">AsciiMenu</a></dd>
-<dd><a href="shared.interfaces.UIInterface.html#UIInterface">shared.interfaces.UIInterface.UIInterface</a></dd>
+<dd><a href="shared.interfaces.ui_interface.html#UIInterface">shared.interfaces.ui_interface.UIInterface</a></dd>
 <dd><a href="abc.html#ABC">abc.ABC</a></dd>
 <dd><a href="builtins.html#object">builtins.object</a></dd>
 </dl>
@@ -78,7 +78,7 @@ Methods:<br>
 Methods defined here:<br>
 <dl><dt><a name="AsciiMenu-__init__"><strong>__init__</strong></a>(
     self,
-    settings_ui: shared.interfaces.UIInterface.UIInterface,
+    settings_ui: shared.interfaces.ui_interface.UIInterface,
     arts_folder=None,
     controller: labs.lab3.bll.AsciiController.AsciiController = None
 )</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
@@ -89,9 +89,9 @@ Methods defined here:<br>
 
 <dl><dt><a name="AsciiMenu-save_art"><strong>save_art</strong></a>(self)</dt></dl>
 
-<dl><dt><a name="AsciiMenu-set_controller"><strong>set_controller</strong></a>(self, controller: labs.lab3.bll.AsciiController.AsciiController)</dt></dl>
+<dl><dt><a name="AsciiMenu-set_controller"><strong>set_controller</strong></a>(self, controller: labs.lab3.bll.AsciiController.AsciiController)</dt><dd><span class="code">Sets&nbsp;a&nbsp;controller&nbsp;for&nbsp;the&nbsp;UI.</span></dd></dl>
 
-<dl><dt><a name="AsciiMenu-show"><strong>show</strong></a>(self)</dt></dl>
+<dl><dt><a name="AsciiMenu-show"><strong>show</strong></a>(self)</dt><dd><span class="code">Displays&nbsp;the&nbsp;UI&nbsp;to&nbsp;the&nbsp;user.</span></dd></dl>
 
 <dl><dt><a name="AsciiMenu-show_settings"><strong>show_settings</strong></a>(self)</dt></dl>
 
@@ -100,7 +100,7 @@ Data and other attributes defined here:<br>
 <dl><dt><strong>__abstractmethods__</strong> = frozenset()</dl>
 
 <hr>
-Data descriptors inherited from <a href="shared.interfaces.UIInterface.html#UIInterface">shared.interfaces.UIInterface.UIInterface</a>:<br>
+Data descriptors inherited from <a href="shared.interfaces.ui_interface.html#UIInterface">shared.interfaces.ui_interface.UIInterface</a>:<br>
 <dl><dt><strong>__dict__</strong></dt>
 <dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
 </dl>

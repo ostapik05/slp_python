@@ -2,6 +2,11 @@ from builtins import float
 
 
 class Operation:
+    """
+    Represents a mathematical operation that can be unary or binary.
+    Provides methods for formatting and retrieving operation details.
+    """
+
     def __init__(self, operation, num1, num2=None, result=None):
         self.operation = operation
         self.num1 = num1
@@ -40,7 +45,7 @@ class Operation:
             return f"{self.get_formatted_float(self.num1,decimals)} {self.operation} {self.get_formatted_float(self.num2, decimals)}{result}"
 
     def is_complete(self):
-        if self.result == None:
+        if self.result is None:
             return False
         else:
             return True

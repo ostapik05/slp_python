@@ -1,8 +1,40 @@
-from shared.classes.AsciiGenerator import AsciiGenerator
 from labs.lab4.bll.base_font import base_font
+from shared.classes.ascii_generator import AsciiGenerator
 
 
 class CustomGenerator(AsciiGenerator):
+    """
+    Class representing a custom ASCII generator.
+
+    class CustomGenerator(AsciiGenerator):
+
+    Attributes:
+        name_font (dict): A copy of the base font with some modifications.
+        fonts (dict): A dictionary of fonts, including the base font and the modified name font.
+
+    Methods:
+        generate(cls, data, font='cap_font', width=80):
+            Generates ASCII art from the given data using the specified font.
+
+        string_replace(cls, string, replace_string):
+            Replaces all non-space and non-newline characters in the string with characters from the replace_string.
+
+        is_font_break_lines(cls, font):
+            Determines if the specified font breaks lines.
+
+        get_fonts(cls):
+            Returns a list of available font names.
+
+        get_font(cls, font_name):
+            Retrieves the font dictionary for the specified font name. Raises a ValueError if the font is not found.
+
+        get_font_char_height(cls, font_name):
+            Retrieves the character height of the specified font.
+
+        get_font_char_width(cls, font_name):
+            Retrieves the character width of the specified font.
+    """
+
     name_font = base_font.copy()
     name_font["replace_string"] = "oleh"
     fonts = {"cap": base_font, "oleh_cap": name_font}

@@ -1,11 +1,18 @@
-from ..dal.logger import log_error
-from ..dal.memory import *
-from ..dal.history import show_history, add_to_history
-from ..bll.calculator import calculate
-from ..bll.formatting import get_formatted_float
-from shared.classes.DictJsonDataAccess import DictJsonDataAccess
+from labs.lab1.bll.calculator import calculate
+from labs.lab1.bll.formatting import get_formatted_float
+from labs.lab1.dal.history import add_to_history, show_history
+from labs.lab1.dal.logger import log_error
+from labs.lab1.dal.memory import *
+from shared.classes.dict_json import DictJsonDataAccess
+
 
 def set_decimals(decimals, log_file):
+    """
+    Function to let user change decimal settings
+    :param decimals: The current number of decimal places to be used.
+    :param log_file: The file where errors will be logged.
+    :return: The new number of decimal places entered by the user or the old value in case of an error.
+    """
     try:
         print(f"Кількість знаків після коми: {decimals}")
         decimals = int(input("Введіть нову кількість знаків після коми: "))
@@ -16,6 +23,13 @@ def set_decimals(decimals, log_file):
 
 
 def is_valid_operator(operator, available_operations, log_file):
+    """
+    Check is operator is valid
+    :param operator: The operator to be validated
+    :param available_operations: A list of valid operations
+    :param log_file: The file where errors should be logged
+    :return: True if the operator is valid, otherwise False
+    """
     if operator in available_operations:
         return True
     else:
@@ -24,6 +38,15 @@ def is_valid_operator(operator, available_operations, log_file):
 
 
 def calculation_menu(memory, available_operations, decimals, log_file, history):
+    """
+    Perform a calculation on parameters entered by the user previously.
+    :param memory: Stores previous calculations or results that can be reused in subsequent operations.
+    :param available_operations: A list of arithmetic operations that are supported (e.g., '+', '-', '*', '/').
+    :param decimals: Number of decimal places to format the result.
+    :param log_file: File path or buffer where error logs and information will be recorded.
+    :param history: A list that records all previous calculations including operators, operands, and results.
+    :return: Updated memory and calculation history after performing the operation and managing errors.
+    """
     num1, operator, num2 = get_input(memory, available_operations, log_file)
     if is_valid_operator(operator, available_operations, log_file):
         try:
@@ -50,6 +73,13 @@ def calculation_menu(memory, available_operations, decimals, log_file, history):
 
 
 def get_input(memory, available_operations, log_file):
+    """
+    Function to get valid user input
+    :param memory: Value stored in memory, can be reused by inputting 'mr'.
+    :param available_operations: List of valid operations (e.g., '+', '-', '√', 'sqrt') that the user can choose from.
+    :param log_file: Path to the log file where errors should be logged.
+    :return: A tuple containing the first number, the operator, and the second number (or None if not applicable).
+    """
     try:
         num1_input = input("Введіть перше число або 'mr' для пам'яті: ")
         if num1_input == "mr":
@@ -73,6 +103,16 @@ def get_input(memory, available_operations, log_file):
 
 
 def menu(settings, memory, available_operations, decimals, log_file, history):
+    """
+    Function to navigate the user interface.
+    :param settings: Application settings object for storing and retrieving configurations.
+    :param memory: Current value stored in memory.
+    :param available_operations: List of operations that the calculator can perform.
+    :param decimals: Number of decimal places to display in the results.
+    :param log_file: File path for saving logs.
+    :param history: List of past calculation results.
+    :return: None
+    """
     while True:
         print("\n=== Консольний калькулятор ===")
         print(f"M: {get_formatted_float(memory, decimals, log_file)}")
@@ -114,10 +154,15 @@ def menu(settings, memory, available_operations, decimals, log_file, history):
 
 
 def run(settings_path):
+    """
+    Function set up parameters and run the menu.
+    :param settings_path: Path to the settings JSON file
+    :return: None
+    """
     settings = DictJsonDataAccess(settings_path)
     memory = settings.get("memory")
     available_operations = settings.get("available_operations")
     decimals = settings.get("decimals")
     log_file = settings.get("log_file")
     history = settings.get("history")
-    menu(settings,memory, available_operations, decimals, log_file, history)
+    menu(settings, memory, available_operations, decimals, log_file, history)

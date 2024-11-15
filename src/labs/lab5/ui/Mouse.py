@@ -2,7 +2,28 @@ from OpenGL.GLUT import *
 
 
 class MouseHandler:
-    def __init__(self, controller = None):
+    """
+    MouseHandler class is responsible for handling mouse events and delegating them to the specified controller.
+
+    Methods:
+
+        __init__(controller=None):
+            Initializes the MouseHandler with an optional controller.
+
+        set_controller(controller):
+            Sets the controller to delegate mouse events to.
+
+        mouse(button, state, x, y):
+            Handles mouse button events, passing the button, state, and coordinates to the controller.
+
+        wheel(wheel, direction, x, y):
+            Handles mouse wheel events, passing the wheel, direction, and coordinates to the controller.
+
+        motion(x, y):
+            Handles mouse motion events, passing the coordinates to the controller.
+    """
+
+    def __init__(self, controller=None):
         self.controller = controller
 
     def set_controller(self, controller):

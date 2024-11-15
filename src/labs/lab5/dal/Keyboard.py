@@ -9,11 +9,11 @@ CTRL_ALT = CTRL | ALT
 SHIFT_CTRL_ALT = SHIFT | CTRL | ALT
 
 keys_map = {
-    27: 'esc',
-    32: 'enter',
-    '\x1b': 'esc',
-    '\x03': 'ctrl+c',
-    '\x20': 'enter',
+    27: "esc",
+    32: "enter",
+    "\x1b": "esc",
+    "\x03": "ctrl+c",
+    "\x20": "enter",
     GLUT_KEY_F1: "f1",
     GLUT_KEY_F2: "f2",
     GLUT_KEY_F3: "f3",

@@ -1,16 +1,29 @@
-from shared.classes.AsciiGenerator import AsciiGenerator
-from shared.interfaces.PaintTextInterface import PaintTextInterface
-from shared.classes.KeyDataAccess import KeyDataAccess
+from shared.classes.ascii_generator import AsciiGenerator
+from shared.classes.key_data_access import KeyDataAccess
+from shared.interfaces.paint_text_interface import PaintTextInterface
 
 
 class AsciiController:
+    """
+    AsciiController is responsible for managing ASCII art generation settings and processes.
+    It interacts with the ASCII art generator, coloring interface, and settings storage.
+
+    :param generator: Object responsible for generating ASCII art.
+    :type generator: AsciiGenerator
+    :param coloring: Interface for coloring ASCII art text.
+    :type coloring: PaintTextInterface
+    :param arts_access: Access interface for art storage.
+    :type arts_access: KeyDataAccess
+    :param settings_access: Access interface for settings storage.
+    :type settings_access: KeyDataAccess
+    """
 
     def __init__(
-            self,
-            generator: AsciiGenerator,
-            coloring: PaintTextInterface,
-            arts_access: KeyDataAccess,
-            settings_access: KeyDataAccess,
+        self,
+        generator: AsciiGenerator,
+        coloring: PaintTextInterface,
+        arts_access: KeyDataAccess,
+        settings_access: KeyDataAccess,
     ):
         self._generator = generator
         self._coloring = coloring
@@ -63,6 +76,7 @@ class AsciiController:
 
     def get_colors(self):
         return self._coloring.get_colors()
+
     def get_color(self):
         return self._settings.get("color")
 
@@ -122,7 +136,7 @@ class AsciiController:
         min_height = self.get_min_height()
         if not min_height <= height <= max_height:
             raise ValueError("Height not in diapason")
-        self._settings.set("height",height)
+        self._settings.set("height", height)
 
     def set_width(self, width):
         try:
@@ -227,7 +241,7 @@ class AsciiController:
 
     def generate(self, text, width=None):
         font = self.get_font()
-        if width == None:
+        if width is None:
             width = self.get_width()
         kwargs = {"font": font, "width": width}
 
@@ -245,10 +259,10 @@ class AsciiController:
 
     def cut(self, text, width, height):
         lines = text.split("\n")
-        lines = lines[0: height - 1]
+        lines = lines[0 : height - 1]
         lines_to_return = []
         for line in lines:
-            lines_to_return.append(line[0: width - 1])
+            lines_to_return.append(line[0 : width - 1])
         return "\n".join(lines_to_return)
 
     def justify(self, text):

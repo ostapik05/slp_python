@@ -9,7 +9,9 @@
 <tr class="heading-text decor">
 <td class="title">&nbsp;<br><strong class="title"><a href="shared.html" class="white">shared</a>.<a href="shared.services.html" class="white">services</a>.relative_to_absolute_path</strong></td>
 <td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Coleg0%5Cdesktop%5C%D1%81%D0%BF%D0%B5%D1%86%D1%96%D0%B0%D0%BB%D1%96%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D1%96%20%D0%BC%D0%BF%5Clabs%5Csrc%5Cshared%5Cservices%5Crelative_to_absolute_path.py">c:\users\oleg0\desktop\спеціалізовані мп\labs\src\shared\services\relative_to_absolute_path.py</a></td></tr></table>
-    <p></p>
+    <p><span class="code">This&nbsp;module&nbsp;contains&nbsp;utility&nbsp;functions&nbsp;for&nbsp;path&nbsp;manipulation,<br>
+including&nbsp;functions&nbsp;to&nbsp;get&nbsp;absolute&nbsp;paths&nbsp;from&nbsp;relative&nbsp;paths<br>
+and&nbsp;to&nbsp;obtain&nbsp;the&nbsp;root&nbsp;directory&nbsp;of&nbsp;the&nbsp;project.</span></p>
 <p>
 <table class="section">
 <tr class="decor functions-decor heading-text">
@@ -17,12 +19,20 @@
     
 <tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
 <td class="singlecolumn"><dl><dt><a name="-absolute"><strong>absolute</strong></a>(relative_path=None)</dt><dd><span class="code">Get&nbsp;absolute&nbsp;path&nbsp;from&nbsp;relative&nbsp;path&nbsp;list&nbsp;of&nbsp;components.<br>
+&nbsp;<br>
 :param&nbsp;relative_path:&nbsp;List&nbsp;of&nbsp;path&nbsp;components&nbsp;that&nbsp;need&nbsp;to&nbsp;be&nbsp;joined&nbsp;to&nbsp;form&nbsp;a&nbsp;relative&nbsp;path.<br>
 :type&nbsp;relative_path:&nbsp;list<br>
 :return:&nbsp;Absolute&nbsp;path&nbsp;generated&nbsp;from&nbsp;the&nbsp;relative&nbsp;path&nbsp;components.<br>
 :rtype:&nbsp;str</span></dd></dl>
- <dl><dt><a name="-absolute_from_string"><strong>absolute_from_string</strong></a>(relative_path)</dt><dd><span class="code">:param&nbsp;relative_path:&nbsp;A&nbsp;relative&nbsp;file&nbsp;system&nbsp;path&nbsp;from&nbsp;the&nbsp;root&nbsp;directory&nbsp;of&nbsp;the&nbsp;project<br>
-:return:&nbsp;The&nbsp;absolute&nbsp;file&nbsp;system&nbsp;path&nbsp;derived&nbsp;from&nbsp;the&nbsp;relative&nbsp;path</span></dd></dl>
- <dl><dt><a name="-root_dir"><strong>root_dir</strong></a>()</dt></dl>
+ <dl><dt><a name="-absolute_from_string"><strong>absolute_from_string</strong></a>(relative_path)</dt><dd><span class="code">Get&nbsp;absolute&nbsp;path&nbsp;from&nbsp;a&nbsp;relative&nbsp;path&nbsp;string.<br>
+&nbsp;<br>
+:param&nbsp;relative_path:&nbsp;A&nbsp;relative&nbsp;file&nbsp;system&nbsp;path&nbsp;from&nbsp;the&nbsp;root&nbsp;directory&nbsp;of&nbsp;the&nbsp;project.<br>
+:type&nbsp;relative_path:&nbsp;str<br>
+:return:&nbsp;The&nbsp;absolute&nbsp;file&nbsp;system&nbsp;path&nbsp;derived&nbsp;from&nbsp;the&nbsp;relative&nbsp;path.<br>
+:rtype:&nbsp;str</span></dd></dl>
+ <dl><dt><a name="-root_dir"><strong>root_dir</strong></a>()</dt><dd><span class="code">Get&nbsp;the&nbsp;root&nbsp;directory&nbsp;of&nbsp;the&nbsp;project.<br>
+&nbsp;<br>
+:return:&nbsp;Root&nbsp;directory&nbsp;of&nbsp;the&nbsp;project.<br>
+:rtype:&nbsp;str</span></dd></dl>
 </td></tr></table>
 </body></html>

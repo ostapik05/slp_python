@@ -2,12 +2,19 @@ from labs.lab2.bll.Operation import Operation
 
 
 class History:
+    """
+    Maintains a list of operations performed.
+
+    :param history: A list to store the history of operations.
+    :type history: list
+    """
+
     def __init__(self, history):
         self.history = history
 
     @classmethod
     def empty(self):
-        return self(list())
+        return self([])
 
     def add(self, operation: Operation):
         if not isinstance(operation, Operation):

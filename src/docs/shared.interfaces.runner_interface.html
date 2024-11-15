@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module shared.interfaces.runner_interface</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="shared.html" class="white">shared</a>.<a href="shared.interfaces.html" class="white">interfaces</a>.runner_interface</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Coleg0%5Cdesktop%5C%D1%81%D0%BF%D0%B5%D1%86%D1%96%D0%B0%D0%BB%D1%96%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D1%96%20%D0%BC%D0%BF%5Clabs%5Csrc%5Cshared%5Cinterfaces%5Crunner_interface.py">c:\users\oleg0\desktop\спеціалізовані мп\labs\src\shared\interfaces\runner_interface.py</a></td></tr></table>
+    <p><span class="code">This&nbsp;module&nbsp;defines&nbsp;an&nbsp;interface&nbsp;for&nbsp;creating&nbsp;runner&nbsp;classes&nbsp;that&nbsp;execute&nbsp;tasks&nbsp;and<br>
+&nbsp;measure&nbsp;execution&nbsp;time.</span></p>
+<p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="shared.interfaces.runner_interface.html#RunnerInterface">RunnerInterface</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="RunnerInterface">class <strong>RunnerInterface</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code">An&nbsp;interface&nbsp;for&nbsp;creating&nbsp;runners.<br>
+&nbsp;<br>
+This&nbsp;interface&nbsp;should&nbsp;be&nbsp;inherited&nbsp;by&nbsp;any&nbsp;class&nbsp;that&nbsp;aims&nbsp;to&nbsp;implement<br>
+a&nbsp;runner.&nbsp;The&nbsp;inheriting&nbsp;class&nbsp;must&nbsp;provide&nbsp;an&nbsp;implementation&nbsp;for&nbsp;the<br>
+`run`&nbsp;method.<br>
+&nbsp;<br>
+Methods<br>
+-------<br>
+<a href="#RunnerInterface-run">run</a>():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Executes&nbsp;the&nbsp;runner.&nbsp;Must&nbsp;be&nbsp;implemented&nbsp;by&nbsp;any&nbsp;subclass.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Class methods defined here:<br>
+<dl><dt><a name="RunnerInterface-run_with_statistic"><strong>run_with_statistic</strong></a>()</dt><dd><span class="code">Executes&nbsp;the&nbsp;runner&nbsp;and&nbsp;measures&nbsp;the&nbsp;time&nbsp;taken&nbsp;to&nbsp;complete&nbsp;the&nbsp;execution.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;time&nbsp;taken&nbsp;to&nbsp;execute&nbsp;the&nbsp;`run`&nbsp;method.</span></dd></dl>
+
+<hr>
+Static methods defined here:<br>
+<dl><dt><a name="RunnerInterface-run"><strong>run</strong></a>()</dt><dd><span class="code">Executes&nbsp;the&nbsp;runner.<br>
+&nbsp;<br>
+This&nbsp;method&nbsp;should&nbsp;be&nbsp;implemented&nbsp;by&nbsp;subclasses&nbsp;to&nbsp;define<br>
+the&nbsp;specific&nbsp;runner&nbsp;logic.</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

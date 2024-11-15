@@ -17,7 +17,7 @@
     
 <tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
 <td class="singlecolumn"><dl>
-<dt class="heading-text"><a href="shared.classes.AsciiGenerator.html#AsciiGenerator">shared.classes.AsciiGenerator.AsciiGenerator</a>(<a href="abc.html#ABC">abc.ABC</a>)
+<dt class="heading-text"><a href="shared.classes.ascii_generator.html#AsciiGenerator">shared.classes.ascii_generator.AsciiGenerator</a>(<a href="abc.html#ABC">abc.ABC</a>)
 </dt><dd>
 <dl>
 <dt class="heading-text"><a href="labs.lab4.bll.CustomGenerator.html#CustomGenerator">CustomGenerator</a>
@@ -27,12 +27,12 @@
  <p>
 <table class="section">
 <tr class="decor title-decor heading-text">
-<td class="section-title" colspan=3>&nbsp;<br><a name="CustomGenerator">class <strong>CustomGenerator</strong></a>(<a href="shared.classes.AsciiGenerator.html#AsciiGenerator">shared.classes.AsciiGenerator.AsciiGenerator</a>)</td></tr>
+<td class="section-title" colspan=3>&nbsp;<br><a name="CustomGenerator">class <strong>CustomGenerator</strong></a>(<a href="shared.classes.ascii_generator.html#AsciiGenerator">shared.classes.ascii_generator.AsciiGenerator</a>)</td></tr>
     
 <tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
 <td class="decor title-decor" colspan=2><span class="code">Class&nbsp;representing&nbsp;a&nbsp;custom&nbsp;ASCII&nbsp;generator.<br>
 &nbsp;<br>
-class&nbsp;<a href="#CustomGenerator">CustomGenerator</a>(<a href="shared.classes.AsciiGenerator.html#AsciiGenerator">AsciiGenerator</a>):<br>
+class&nbsp;<a href="#CustomGenerator">CustomGenerator</a>(<a href="shared.classes.ascii_generator.html#AsciiGenerator">AsciiGenerator</a>):<br>
 &nbsp;<br>
 Attributes:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;name_font&nbsp;(dict):&nbsp;A&nbsp;copy&nbsp;of&nbsp;the&nbsp;base&nbsp;font&nbsp;with&nbsp;some&nbsp;modifications.<br>
@@ -62,23 +62,51 @@ Methods:<br>
 <tr><td>&nbsp;</td>
 <td class="singlecolumn"><dl><dt>Method resolution order:</dt>
 <dd><a href="labs.lab4.bll.CustomGenerator.html#CustomGenerator">CustomGenerator</a></dd>
-<dd><a href="shared.classes.AsciiGenerator.html#AsciiGenerator">shared.classes.AsciiGenerator.AsciiGenerator</a></dd>
+<dd><a href="shared.classes.ascii_generator.html#AsciiGenerator">shared.classes.ascii_generator.AsciiGenerator</a></dd>
 <dd><a href="abc.html#ABC">abc.ABC</a></dd>
 <dd><a href="builtins.html#object">builtins.object</a></dd>
 </dl>
 <hr>
 Class methods defined here:<br>
-<dl><dt><a name="CustomGenerator-generate"><strong>generate</strong></a>(data, font='cap_font', width=80)</dt></dl>
+<dl><dt><a name="CustomGenerator-generate"><strong>generate</strong></a>(data, font='cap_font', width=80)</dt><dd><span class="code">Generates&nbsp;ASCII&nbsp;art&nbsp;based&nbsp;on&nbsp;the&nbsp;provided&nbsp;data.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;data&nbsp;(str):&nbsp;The&nbsp;input&nbsp;data&nbsp;for&nbsp;generating&nbsp;ASCII&nbsp;art.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**kwargs:&nbsp;Additional&nbsp;keyword&nbsp;arguments&nbsp;for&nbsp;customization.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;str:&nbsp;The&nbsp;generated&nbsp;ASCII&nbsp;art.</span></dd></dl>
 
 <dl><dt><a name="CustomGenerator-get_font"><strong>get_font</strong></a>(font_name)</dt></dl>
 
-<dl><dt><a name="CustomGenerator-get_font_char_height"><strong>get_font_char_height</strong></a>(font_name)</dt></dl>
+<dl><dt><a name="CustomGenerator-get_font_char_height"><strong>get_font_char_height</strong></a>(font_name)</dt><dd><span class="code">Gets&nbsp;the&nbsp;character&nbsp;height&nbsp;of&nbsp;the&nbsp;given&nbsp;font.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;font&nbsp;(str):&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;font.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int:&nbsp;The&nbsp;character&nbsp;height&nbsp;of&nbsp;the&nbsp;font.</span></dd></dl>
 
-<dl><dt><a name="CustomGenerator-get_font_char_width"><strong>get_font_char_width</strong></a>(font_name)</dt></dl>
+<dl><dt><a name="CustomGenerator-get_font_char_width"><strong>get_font_char_width</strong></a>(font_name)</dt><dd><span class="code">Gets&nbsp;the&nbsp;character&nbsp;width&nbsp;of&nbsp;the&nbsp;given&nbsp;font.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;font&nbsp;(str):&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;font.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int:&nbsp;The&nbsp;character&nbsp;width&nbsp;of&nbsp;the&nbsp;font.</span></dd></dl>
 
-<dl><dt><a name="CustomGenerator-get_fonts"><strong>get_fonts</strong></a>()</dt></dl>
+<dl><dt><a name="CustomGenerator-get_fonts"><strong>get_fonts</strong></a>()</dt><dd><span class="code">Gets&nbsp;a&nbsp;list&nbsp;of&nbsp;available&nbsp;fonts.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list:&nbsp;A&nbsp;list&nbsp;of&nbsp;available&nbsp;font&nbsp;names.</span></dd></dl>
 
-<dl><dt><a name="CustomGenerator-is_font_break_lines"><strong>is_font_break_lines</strong></a>(font)</dt></dl>
+<dl><dt><a name="CustomGenerator-is_font_break_lines"><strong>is_font_break_lines</strong></a>(font)</dt><dd><span class="code">Checks&nbsp;if&nbsp;the&nbsp;given&nbsp;font&nbsp;breaks&nbsp;lines.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;font&nbsp;(str):&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;font&nbsp;to&nbsp;check.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;True&nbsp;if&nbsp;the&nbsp;font&nbsp;breaks&nbsp;lines,&nbsp;False&nbsp;otherwise.</span></dd></dl>
 
 <dl><dt><a name="CustomGenerator-string_replace"><strong>string_replace</strong></a>(string, replace_string)</dt></dl>
 
@@ -91,13 +119,33 @@ Data and other attributes defined here:<br>
 <dl><dt><strong>name_font</strong> = {'height': 5, 'is_breaks_lines': True, 'name': 'cap_font', 'replace_string': 'oleh', 'symbols': {' ': ['      ', '      ', '      ', '      ', '      '], '!': ['  @   ', '  @   ', '  @   ', '      ', '  @   '], '(': ['   @  ', '  @   ', '  @   ', '  @   ', '   @  '], ')': ['  @   ', '   @  ', '   @  ', '   @  ', '  @   '], ',': ['      ', '      ', '      ', '  @   ', ' @    '], '-': ['      ', '      ', ' @@@  ', '      ', '      '], '.': ['      ', '      ', '      ', '  @   ', '  @   '], '0': [' @@@@@', '@   @ ', '@ @ @ ', '@   @ ', ' @@@  '], '1': ['  @@@@', ' @@   ', '  @   ', '  @   ', '@@@@  '], '2': [' @@@@@', '@   @ ', '  @@  ', ' @    ', '@@@@@ '], ...}, 'width': 6}</dl>
 
 <hr>
-Static methods inherited from <a href="shared.classes.AsciiGenerator.html#AsciiGenerator">shared.classes.AsciiGenerator.AsciiGenerator</a>:<br>
-<dl><dt><a name="CustomGenerator-alignment_text"><strong>alignment_text</strong></a>(text: str, alignment, width)</dt></dl>
+Static methods inherited from <a href="shared.classes.ascii_generator.html#AsciiGenerator">shared.classes.ascii_generator.AsciiGenerator</a>:<br>
+<dl><dt><a name="CustomGenerator-alignment_text"><strong>alignment_text</strong></a>(text: str, alignment, width)</dt><dd><span class="code">Aligns&nbsp;the&nbsp;given&nbsp;text&nbsp;to&nbsp;the&nbsp;specified&nbsp;alignment&nbsp;within&nbsp;the&nbsp;given&nbsp;width.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;text&nbsp;(str):&nbsp;The&nbsp;text&nbsp;to&nbsp;align.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;alignment&nbsp;(str):&nbsp;The&nbsp;alignment&nbsp;type&nbsp;('left',&nbsp;'center',&nbsp;'right').<br>
+&nbsp;&nbsp;&nbsp;&nbsp;width&nbsp;(int):&nbsp;The&nbsp;total&nbsp;width&nbsp;for&nbsp;alignment.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;str:&nbsp;The&nbsp;aligned&nbsp;text.<br>
+&nbsp;<br>
+Raises:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ValueError:&nbsp;If&nbsp;the&nbsp;alignment&nbsp;type&nbsp;is&nbsp;invalid.</span></dd></dl>
 
-<dl><dt><a name="CustomGenerator-replace"><strong>replace</strong></a>(data: str, bright_symbol, empty_symbol)</dt></dl>
+<dl><dt><a name="CustomGenerator-replace"><strong>replace</strong></a>(data: str, bright_symbol, empty_symbol)</dt><dd><span class="code">Replaces&nbsp;non-space&nbsp;characters&nbsp;in&nbsp;data&nbsp;with&nbsp;bright_symbol&nbsp;and&nbsp;space<br>
+characters&nbsp;with&nbsp;empty_symbol.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;data&nbsp;(str):&nbsp;The&nbsp;input&nbsp;data&nbsp;string.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bright_symbol&nbsp;(str):&nbsp;The&nbsp;symbol&nbsp;to&nbsp;replace&nbsp;non-space&nbsp;characters.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;empty_symbol&nbsp;(str):&nbsp;The&nbsp;symbol&nbsp;to&nbsp;replace&nbsp;space&nbsp;characters.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;str:&nbsp;The&nbsp;data&nbsp;string&nbsp;after&nbsp;replacements.</span></dd></dl>
 
 <hr>
-Data descriptors inherited from <a href="shared.classes.AsciiGenerator.html#AsciiGenerator">shared.classes.AsciiGenerator.AsciiGenerator</a>:<br>
+Data descriptors inherited from <a href="shared.classes.ascii_generator.html#AsciiGenerator">shared.classes.ascii_generator.AsciiGenerator</a>:<br>
 <dl><dt><strong>__dict__</strong></dt>
 <dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
 </dl>

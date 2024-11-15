@@ -1,10 +1,18 @@
-from labs.lab5.dal.Scene import SceneData
 from OpenGL.GL import *
-from OpenGL.GLUT import *
 from OpenGL.GLU import *
+from OpenGL.GLUT import *
+
+from labs.lab5.dal.Scene import SceneData
 
 
 class Scene:
+    """
+    Class representing a scene containing figures and a camera.
+
+    Attributes:
+        data (SceneData): The scene's data, including figures, camera, and selection information.
+    """
+
     def __init__(self, data=None):
         self.data = data if data else SceneData()
 
@@ -39,7 +47,9 @@ class Scene:
         projection = glGetDoublev(GL_PROJECTION_MATRIX)
         self.deselect_figure()
         for figure in self.data.figures:
-            if figure.contains_point(x, window_height - y - 1, modelview, projection, viewport):
+            if figure.contains_point(
+                x, window_height - y - 1, modelview, projection, viewport
+            ):
                 self.select_figure(figure)
                 break
 
@@ -52,7 +62,9 @@ class Scene:
             projection = glGetDoublev(GL_PROJECTION_MATRIX)
             self.deselect_figure()
             for figure in self.data.figures:
-                if figure.contains_point(x, window_height - y - 1, modelview, projection, viewport):
+                if figure.contains_point(
+                    x, window_height - y - 1, modelview, projection, viewport
+                ):
                     self.select_figure(figure)
                     break
 
@@ -65,7 +77,9 @@ class Scene:
             projection = glGetDoublev(GL_PROJECTION_MATRIX)
             self.deselect_figure()
             for figure in self.data.figures:
-                if figure.contains_point(x, window_height - y - 1, modelview, projection, viewport):
+                if figure.contains_point(
+                    x, window_height - y - 1, modelview, projection, viewport
+                ):
                     self.select_figure(figure)
                     break
 
@@ -85,9 +99,19 @@ class Scene:
         point_size = self.data.point_size if self.data.point_size is not None else 5
         line_width = self.data.line_width if self.data.line_width is not None else 2
         alpha = self.data.alpha if self.data.alpha is not None else 0.5
-        highlight_color = self.data.highlight_color if self.data.highlight_color is not None else (1, 1, 1)
-        highlight_line_width = self.data.highlight_line_width if self.data.highlight_line_width is not None else 2
+        highlight_color = (
+            self.data.highlight_color
+            if self.data.highlight_color is not None
+            else (1, 1, 1)
+        )
+        highlight_line_width = (
+            self.data.highlight_line_width
+            if self.data.highlight_line_width is not None
+            else 2
+        )
         if self.data.camera:
             self.data.camera.apply_transformations()
         for figure in self.data.figures:
-            figure.draw_custom(point_size, line_width, alpha, highlight_color, highlight_line_width)
+            figure.draw_custom(
+                point_size, line_width, alpha, highlight_color, highlight_line_width
+            )

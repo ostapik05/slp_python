@@ -17,7 +17,7 @@
     
 <tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
 <td class="singlecolumn"><dl>
-<dt class="heading-text"><a href="shared.interfaces.PaintTextInterface.html#PaintTextInterface">shared.interfaces.PaintTextInterface.PaintTextInterface</a>(<a href="abc.html#ABC">abc.ABC</a>)
+<dt class="heading-text"><a href="shared.interfaces.paint_text_interface.html#PaintTextInterface">shared.interfaces.paint_text_interface.PaintTextInterface</a>(<a href="abc.html#ABC">abc.ABC</a>)
 </dt><dd>
 <dl>
 <dt class="heading-text"><a href="labs.lab4.bll.CustomPainter.html#CustomPainter">CustomPainter</a>
@@ -27,10 +27,10 @@
  <p>
 <table class="section">
 <tr class="decor title-decor heading-text">
-<td class="section-title" colspan=3>&nbsp;<br><a name="CustomPainter">class <strong>CustomPainter</strong></a>(<a href="shared.interfaces.PaintTextInterface.html#PaintTextInterface">shared.interfaces.PaintTextInterface.PaintTextInterface</a>)</td></tr>
+<td class="section-title" colspan=3>&nbsp;<br><a name="CustomPainter">class <strong>CustomPainter</strong></a>(<a href="shared.interfaces.paint_text_interface.html#PaintTextInterface">shared.interfaces.paint_text_interface.PaintTextInterface</a>)</td></tr>
     
 <tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
-<td class="decor title-decor" colspan=2><span class="code"><a href="#CustomPainter">CustomPainter</a>&nbsp;class&nbsp;inheriting&nbsp;from&nbsp;<a href="shared.interfaces.PaintTextInterface.html#PaintTextInterface">PaintTextInterface</a><br>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#CustomPainter">CustomPainter</a>&nbsp;class&nbsp;inheriting&nbsp;from&nbsp;<a href="shared.interfaces.paint_text_interface.html#PaintTextInterface">PaintTextInterface</a><br>
 &nbsp;<br>
 This&nbsp;class&nbsp;provides&nbsp;methods&nbsp;to&nbsp;paint&nbsp;text&nbsp;with&nbsp;different&nbsp;colors&nbsp;and&nbsp;to&nbsp;retrieve&nbsp;the&nbsp;list&nbsp;of&nbsp;supported&nbsp;colors.<br>
 &nbsp;<br>
@@ -59,15 +59,22 @@ Methods:<br>
 <tr><td>&nbsp;</td>
 <td class="singlecolumn"><dl><dt>Method resolution order:</dt>
 <dd><a href="labs.lab4.bll.CustomPainter.html#CustomPainter">CustomPainter</a></dd>
-<dd><a href="shared.interfaces.PaintTextInterface.html#PaintTextInterface">shared.interfaces.PaintTextInterface.PaintTextInterface</a></dd>
+<dd><a href="shared.interfaces.paint_text_interface.html#PaintTextInterface">shared.interfaces.paint_text_interface.PaintTextInterface</a></dd>
 <dd><a href="abc.html#ABC">abc.ABC</a></dd>
 <dd><a href="builtins.html#object">builtins.object</a></dd>
 </dl>
 <hr>
 Class methods defined here:<br>
-<dl><dt><a name="CustomPainter-get_colors"><strong>get_colors</strong></a>()</dt></dl>
+<dl><dt><a name="CustomPainter-get_colors"><strong>get_colors</strong></a>()</dt><dd><span class="code">Retrieve&nbsp;the&nbsp;list&nbsp;of&nbsp;available&nbsp;colors.<br>
+&nbsp;<br>
+Returns:<br>
+-&nbsp;list:&nbsp;A&nbsp;list&nbsp;of&nbsp;available&nbsp;color&nbsp;names.</span></dd></dl>
 
-<dl><dt><a name="CustomPainter-paint"><strong>paint</strong></a>(text, color)</dt></dl>
+<dl><dt><a name="CustomPainter-paint"><strong>paint</strong></a>(text, color)</dt><dd><span class="code">Paint&nbsp;the&nbsp;given&nbsp;text&nbsp;with&nbsp;the&nbsp;specified&nbsp;color.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;text&nbsp;(str):&nbsp;The&nbsp;text&nbsp;to&nbsp;be&nbsp;painted.<br>
+-&nbsp;color&nbsp;(str):&nbsp;The&nbsp;color&nbsp;to&nbsp;paint&nbsp;the&nbsp;text.</span></dd></dl>
 
 <hr>
 Data and other attributes defined here:<br>
@@ -76,7 +83,7 @@ Data and other attributes defined here:<br>
 <dl><dt><strong>color_map</strong> = {'black': '<span class="repr">\x1b</span>[30m', 'blue': '<span class="repr">\x1b</span>[34m', 'cyan': '<span class="repr">\x1b</span>[36m', 'dark_gray': '<span class="repr">\x1b</span>[90m', 'default': '<span class="repr">\x1b</span>[0m', 'green': '<span class="repr">\x1b</span>[32m', 'light_gray': '<span class="repr">\x1b</span>[37m', 'magenta': '<span class="repr">\x1b</span>[35m', 'red': '<span class="repr">\x1b</span>[31m', 'white': '<span class="repr">\x1b</span>[97m', ...}</dl>
 
 <hr>
-Data descriptors inherited from <a href="shared.interfaces.PaintTextInterface.html#PaintTextInterface">shared.interfaces.PaintTextInterface.PaintTextInterface</a>:<br>
+Data descriptors inherited from <a href="shared.interfaces.paint_text_interface.html#PaintTextInterface">shared.interfaces.paint_text_interface.PaintTextInterface</a>:<br>
 <dl><dt><strong>__dict__</strong></dt>
 <dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
 </dl>
