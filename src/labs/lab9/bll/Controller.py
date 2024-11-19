@@ -55,6 +55,7 @@ class Controller:
     def generate_docs(self):
         generate_docs(self.get_docs_dir())
 
+
     @staticmethod
     def get_module_docs_text(module_name):
         doc_text = pydoc.render_doc(module_name)

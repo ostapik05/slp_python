@@ -2,8 +2,9 @@ import logging
 import os
 from importlib.util import find_spec
 
+from Cython.Shadow import returns
 from pyautogui import mouseUp
-
+from docs.generator import generate_docs
 from labs.lab9.bll.Controller import Controller
 from labs.lab9.bll.tree_print import folder_tree
 from shared.classes.input import BoolInput, StringInput
@@ -34,14 +35,18 @@ class UserInterface:
             .set_title("Docs")
             .add_option("1", "\n1. Docs in browser", self.browser_docs)
             .add_option("2", "\n2. Docs in console", self.console_docs)
+            .add_option("3", "\n3. Generate all HTML docs", self.generate_docs)
             .add_option(
-                "3", "\n3. List all available modules", self.list_available_modules
+                "4", "\n4. List all available modules", self.list_available_modules
             )
             .add_stop_options(["0", "Exit", "exit", "e", "q"], "0. Exit")
             .build()
         )
         logger.debug("Build main menu")
         return menu
+
+    def generate_docs(self):
+        self.controller.generate_docs()
 
     def browser_docs(self):
         module_name = self.get_module_name()
