@@ -43,7 +43,8 @@ def list_to_tree(
             string_element = flag_format.format(element)
         else:
             string_element = element
-        string += f"{level * indent}{nest_indent if level>0 else ""}{string_element}\n"
+        string += f"{level * indent}{nest_indent if level > 0 else ''}{string_element}\n"
+
 
         if lists_with_first_element:
             string = list_to_tree(

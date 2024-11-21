@@ -156,7 +156,7 @@ class UserInterface:
         false_options = ["no", "n", "-"]
         message = "Do you want to save (yes/no)?"
         warning_message = (
-            f"There no such option. {",".join(true_options + false_options)} only"
+            f"There no such option. ",".join(true_options + false_options)} only"
         )
         is_want = BoolInput.input(
             message, [true_options, false_options], warning_message

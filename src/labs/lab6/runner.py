@@ -19,7 +19,7 @@ def run_in_new_terminal():
     :return: None
     """
     test_path = path.join("tests", "Calculator_lab2_bll_test.py")
-    # parent_dir = path.abspath(path.join(current_dir, '../../'))
+    parent_dir = path.abspath(path.join(current_dir, '../../'))
 
     command = f"python {test_path} & timeout /t {TIMEOUT} & exit"
     subprocess.Popen(["start", "cmd", "/C", command], shell=True, cwd=current_dir)

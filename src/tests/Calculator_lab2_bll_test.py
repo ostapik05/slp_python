@@ -1,4 +1,7 @@
 import unittest
+import sys
+
+print(sys.path)
 
 from labs.lab2.bll.Operation import Operation
 

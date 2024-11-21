@@ -1,6 +1,6 @@
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 
-load_dotenv()
+#load_dotenv()
 import logging
 import os
 
@@ -74,3 +74,6 @@ def main():
     set_up_logging(logger_path)
     ui = UserInterface(controller)
     ui.show()
+
+if __name__ == "__main__":
+    main()
